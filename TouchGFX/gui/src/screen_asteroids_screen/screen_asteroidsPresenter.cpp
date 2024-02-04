@@ -189,20 +189,18 @@ void screen_asteroidsPresenter::move_bullets()
 		}
 	}
 
-	// check if any bullet is offscreen
-	for(int i = 0; i < BULLET_COUNT; i++) {
-		if( view.bullets[i].getY() < 0 ) {
-			// remove the offscreen bullet
-			view.move_bullet_offscreen(&view.bullets[i]);
-		}
-	}
-
-	// move all the bullets
 	for(int i = 0; i < BULLET_COUNT; i++) {
 		if( !view.bullets[i].isVisible() )
 			continue;
 
+		// move the bullet
 		view.move_bullet(&view.bullets[i], view.bullets[i].getX(), view.bullets[i].getY() - BULLET_MOVES_PER_TICK);
+
+		// check if bullet is offscreen
+		if( view.bullets[i].getY() < 0 ) {
+			// remove the offscreen bullet
+			view.move_bullet_offscreen(&view.bullets[i]);
+		}
 	}
 }
 
