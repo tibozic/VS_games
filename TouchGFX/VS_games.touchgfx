@@ -1,0 +1,546 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "screen_asteroids",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "bg_grey",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 51,
+              "Green": 51,
+              "Blue": 51
+            }
+          },
+          {
+            "Type": "Container",
+            "Name": "btn_back",
+            "Width": 50,
+            "Height": 50,
+            "Components": [
+              {
+                "Type": "FlexButton",
+                "Name": "_btn_back",
+                "Width": 50,
+                "Height": 50,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 50,
+                    "Height": 50,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 5,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Box",
+                "Name": "bg_black",
+                "Width": 50,
+                "Height": 50
+              },
+              {
+                "Type": "TextArea",
+                "Name": "lbl_back",
+                "X": 13,
+                "Y": 15,
+                "Width": 25,
+                "Height": 20,
+                "TextId": "__SingleUse_UBH9",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "AutoSize": true
+              }
+            ]
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "icon_rock",
+            "X": 285,
+            "Y": 79,
+            "Width": 34,
+            "Height": 29,
+            "Visible": false,
+            "Filename": "asteroids_rock.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "Shape",
+            "Name": "icon_ship",
+            "X": 225,
+            "Y": 227,
+            "Width": 30,
+            "Height": 30,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Points": [
+              {
+                "X": 15.0
+              },
+              {
+                "X": 30.0,
+                "Y": 30.0
+              },
+              {
+                "Y": 30.0
+              }
+            ],
+            "XScale": 1.0,
+            "YScale": 1.0
+          },
+          {
+            "Type": "TextArea",
+            "Name": "lbl_score",
+            "X": 338,
+            "Y": 3,
+            "Width": 138,
+            "Height": 20,
+            "TextId": "__SingleUse_W1MR",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "score_value",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "Container",
+            "Name": "container_health",
+            "X": 233,
+            "Y": 4,
+            "Width": 92,
+            "Height": 20,
+            "Components": [
+              {
+                "Type": "ScalableImage",
+                "Name": "icon_heart1",
+                "X": 72,
+                "Y": 1,
+                "Width": 20,
+                "Height": 20,
+                "LockPosition": true,
+                "Filename": "heart_icon.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "icon_heart2",
+                "X": 49,
+                "Y": 1,
+                "Width": 20,
+                "Height": 20,
+                "LockPosition": true,
+                "Filename": "heart_icon.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "icon_heart3",
+                "X": 26,
+                "Y": 1,
+                "Width": 20,
+                "Height": 20,
+                "LockPosition": true,
+                "Filename": "heart_icon.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "container_controls",
+            "X": 368,
+            "Y": 155,
+            "Width": 108,
+            "Height": 108,
+            "Components": [
+              {
+                "Type": "ButtonWithIcon",
+                "Name": "btn_right",
+                "X": 72,
+                "Y": 36,
+                "Width": 36,
+                "Height": 36,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_pressed.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_normal.png",
+                "IconPressed": "__generated\\icon_theme_images_action_done_50_50_E8F6FB.svg.png",
+                "IconReleased": "__generated\\icon_theme_images_hardware_keyboard_arrow_right_50_50_E8F6FB.svg.png",
+                "IconX": -7,
+                "IconY": -7,
+                "IconHeight": 50,
+                "IconWidth": 50,
+                "Preset": "alternate_theme\\presets\\button\\icon\\round\\micro_fill_normal.json"
+              },
+              {
+                "Type": "ButtonWithIcon",
+                "Name": "btn_down",
+                "X": 36,
+                "Y": 72,
+                "Width": 36,
+                "Height": 36,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_pressed.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_normal.png",
+                "IconPressed": "__generated\\icon_theme_images_action_done_50_50_E8F6FB.svg.png",
+                "IconReleased": "__generated\\icon_theme_images_hardware_keyboard_arrow_down_50_50_E8F6FB.svg.png",
+                "IconX": -6,
+                "IconY": -6,
+                "IconHeight": 50,
+                "IconWidth": 50,
+                "Preset": "alternate_theme\\presets\\button\\icon\\round\\micro_fill_normal.json"
+              },
+              {
+                "Type": "ButtonWithIcon",
+                "Name": "btn_left",
+                "Y": 36,
+                "Width": 36,
+                "Height": 36,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_pressed.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_normal.png",
+                "IconPressed": "__generated\\icon_theme_images_action_done_50_50_E8F6FB.svg.png",
+                "IconReleased": "__generated\\icon_theme_images_hardware_keyboard_arrow_left_50_50_E8F6FB.svg.png",
+                "IconX": -7,
+                "IconY": -7,
+                "IconHeight": 50,
+                "IconWidth": 50,
+                "Preset": "alternate_theme\\presets\\button\\icon\\round\\micro_fill_normal.json"
+              },
+              {
+                "Type": "ButtonWithIcon",
+                "Name": "btn_up",
+                "X": 36,
+                "Width": 36,
+                "Height": 36,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_pressed.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_normal.png",
+                "IconPressed": "__generated\\icon_theme_images_action_done_50_50_E8F6FB.svg.png",
+                "IconReleased": "__generated\\icon_theme_images_hardware_keyboard_arrow_up_50_50_E8F6FB.svg.png",
+                "IconX": -6,
+                "IconY": -6,
+                "IconHeight": 50,
+                "IconWidth": 50,
+                "Preset": "alternate_theme\\presets\\button\\icon\\round\\micro_fill_normal.json"
+              }
+            ]
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "btn_shoot",
+            "X": 25,
+            "Y": 191,
+            "Width": 36,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_normal.png",
+            "IconPressed": "__generated\\icon_theme_images_action_done_30_30_E8F6FB.svg.png",
+            "IconReleased": "__generated\\icon_theme_images_maps_local_fire_department_30_30_E8F6FB.svg.png",
+            "IconX": 2,
+            "IconY": 2,
+            "IconHeight": 30,
+            "IconWidth": 30,
+            "Preset": "alternate_theme\\presets\\button\\icon\\round\\micro_fill_normal.json"
+          },
+          {
+            "Type": "Box",
+            "Name": "bullet",
+            "X": 238,
+            "Y": 219,
+            "Width": 4,
+            "Height": 4,
+            "Visible": false,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "interaction_resume_asteroids_task",
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "resume_asteroids_task"
+            }
+          },
+          {
+            "InteractionName": "suspend_asteroid_task",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "_btn_back"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "suspend_asteroids_task"
+            }
+          },
+          {
+            "InteractionName": "interaction_transition_to_home",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "suspend_asteroid_task"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "screen_game_select"
+            }
+          },
+          {
+            "InteractionName": "interaction_start_asteroids_game",
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "start_asteroids_game"
+            }
+          },
+          {
+            "InteractionName": "interaction_btn_shoot",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_shoot"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "btn_shoot_pressed"
+            }
+          },
+          {
+            "InteractionName": "interaction_btn_up",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_up"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "btn_up_pressed"
+            }
+          },
+          {
+            "InteractionName": "interaction_btn_down",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_down"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "btn_down_pressed"
+            }
+          },
+          {
+            "InteractionName": "interaction_btn_right",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_right"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "btn_right_pressed"
+            }
+          },
+          {
+            "InteractionName": "interaction_btn_left",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_left"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "btn_left_pressed"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "screen_game_select",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "bg_grey",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 61,
+              "Green": 61,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "Container",
+            "Name": "btn_asteroids",
+            "X": 15,
+            "Y": 20,
+            "Width": 240,
+            "Height": 56,
+            "Components": [
+              {
+                "Type": "FlexButton",
+                "Name": "_btn_asteroids",
+                "Width": 240,
+                "Height": 56,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 240,
+                    "Height": 56,
+                    "LockToFlexButtonSize": true,
+                    "ColorReleased": {
+                      "Red": 199,
+                      "Green": 199,
+                      "Blue": 60
+                    },
+                    "ColorPressed": {
+                      "Red": 122,
+                      "Green": 122,
+                      "Blue": 5
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "TextArea",
+                "Name": "lbl_asteroids",
+                "X": 27,
+                "Y": 8,
+                "Width": 186,
+                "Height": 41,
+                "TextId": "__SingleUse_19SB",
+                "TextRotation": "0",
+                "AutoSize": true
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "game_asteroids",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "_btn_asteroids"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "screen_asteroids"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "VS_games",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "screen_game_select",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32H7",
+    "SubFamily": "STM32H750 Value line",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m7",
+    "ProjectFile": "../STM32H750B-DK.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "CWRVector",
+      "Video"
+    ]
+  },
+  "Version": "4.23.0",
+  "CreatedBy": "4.23.0"
+}

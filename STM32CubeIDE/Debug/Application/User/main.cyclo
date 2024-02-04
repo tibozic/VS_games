@@ -1,0 +1,8 @@
+C:/TouchGFXProjects/VS_games/Core/Src/main.c:729:6:asteroidsTaskFunction	1
+C:/TouchGFXProjects/VS_games/Core/Src/main.c:706:6:StartDefaultTask	3
+C:/TouchGFXProjects/VS_games/Core/Src/main.c:129:6:check_resume_asteroids_task	2
+C:/TouchGFXProjects/VS_games/Core/Src/main.c:138:6:check_suspend_asteroids_task	2
+C:/TouchGFXProjects/VS_games/Core/Src/main.c:275:6:SystemClock_Config	2
+C:/TouchGFXProjects/VS_games/Core/Src/main.c:156:5:main	5
+C:/TouchGFXProjects/VS_games/Core/Src/main.c:826:6:HAL_TIM_PeriodElapsedCallback	2
+C:/TouchGFXProjects/VS_games/Core/Src/main.c:843:6:Error_Handler	1

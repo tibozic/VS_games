@@ -1,0 +1,11 @@
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:18:18:virtual void ModelListener::move_ship()	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:19:18:virtual void ModelListener::move_bullets()	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:20:18:virtual void ModelListener::move_rocks()	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:22:18:virtual bool ModelListener::is_asteroids_game_started()	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:24:18:virtual void ModelListener::check_ship_collisions()	0	static
+../../TouchGFX/gui/include/gui/screen_game_select_screen/screen_game_selectPresenter.hpp:28:13:screen_game_selectPresenter::~screen_game_selectPresenter()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_game_select_screen/screen_game_selectPresenter.cpp:10:6:virtual void screen_game_selectPresenter::activate()	0	static
+../../TouchGFX/gui/include/gui/screen_game_select_screen/screen_game_selectPresenter.hpp:28:13:virtual screen_game_selectPresenter::~screen_game_selectPresenter()	8	static
+../../TouchGFX/gui/include/gui/screen_game_select_screen/screen_game_selectPresenter.hpp:28:13:virtual void* screen_game_selectPresenter::_ZThn4_N27screen_game_selectPresenterD1Ev()	0	static
+../../TouchGFX/gui/include/gui/screen_game_select_screen/screen_game_selectPresenter.hpp:28:13:virtual void* screen_game_selectPresenter::_ZThn4_N27screen_game_selectPresenterD0Ev()	16	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_game_select_screen/screen_game_selectPresenter.cpp:4:1:screen_game_selectPresenter::screen_game_selectPresenter(screen_game_selectView&)	4	static
