@@ -9,8 +9,9 @@
 #define SCREEN_WIDTH 480
 #define SCREEN_HEIGHT 272
 
-#define SHIP_MOVES_PER_TICK 10
+#define SHIP_MOVES_PER_TICK 5
 #define ROCK_MOVES_PER_TICK 1
+#define BULLET_MOVES_PER_TICK 10
 
 #define ROCK_OFFSCREEN_X 0
 #define ROCK_OFFSCREEN_Y 0
@@ -55,9 +56,15 @@ public:
 
     virtual void move_ship();
     virtual void move_rocks();
-    // virtual void move_bullets();
+    virtual void move_bullets();
+
+    virtual void hide_rocks();
+    virtual void hide_bullets();
+
+    virtual Drawable* get_next_invisible_bullet();
 
     virtual void check_ship_collisions();
+    virtual void check_bullet_collisions();
 
 private:
     screen_asteroidsPresenter();

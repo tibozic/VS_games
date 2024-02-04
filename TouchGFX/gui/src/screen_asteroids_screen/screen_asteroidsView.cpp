@@ -47,6 +47,24 @@ void screen_asteroidsView::start_asteroids_game()
 	presenter->start_asteroids_game();
 }
 
+void screen_asteroidsView::show_endgame_screen()
+{
+	presenter->hide_rocks();
+	presenter->hide_bullets();
+	container_game_over.setVisible(true);
+	container_controls.setVisible(false);
+	container_controls.getParent()->invalidateContent();
+	container_game_over.getParent()->invalidateContent();
+}
+
+void screen_asteroidsView::hide_endgame_screen()
+{
+	container_game_over.setVisible(false);
+	container_controls.setVisible(true);
+	container_controls.getParent()->invalidateContent();
+	container_game_over.getParent()->invalidateContent();
+}
+
 void screen_asteroidsView::update_hearts(char lives)
 {
 	if( lives == 0 ) {
@@ -134,11 +152,11 @@ void screen_asteroidsView::move_rock(touchgfx::ScalableImage *rock, int x, int y
 	rock->getParent()->invalidateContent();
 }
 
-void screen_asteroidsView::move_bullet(touchgfx::Box bullet, int x, int y)
+void screen_asteroidsView::move_bullet(touchgfx::Box *bullet, int x, int y)
 {
-	bullet.setX(x);
-	bullet.setY(y);
-	bullet.getParent()->invalidateContent();
+	bullet->setX(x);
+	bullet->setY(y);
+	bullet->getParent()->invalidateContent();
 }
 
 void screen_asteroidsView::move_rock_offscreen(touchgfx::ScalableImage *rock)
@@ -146,6 +164,24 @@ void screen_asteroidsView::move_rock_offscreen(touchgfx::ScalableImage *rock)
 	move_rock(rock, ROCK_OFFSCREEN_X, ROCK_OFFSCREEN_Y);
 	rock->setVisible(false);
 	rock->getParent()->invalidateContent();
+}
+
+void screen_asteroidsView::move_bullet_offscreen(touchgfx::Box *bullet)
+{
+	move_bullet(bullet, BULLET_OFFSCREEN_X, BULLET_OFFSCREEN_Y);
+	bullet->setVisible(false);
+	bullet->getParent()->invalidateContent();
+}
+
+bool screen_asteroidsView::bullet_button_pressed()
+{
+	return btn_shoot.getPressedState();
+}
+
+void screen_asteroidsView::hide_element(Drawable *element)
+{
+	element->setVisible(false);
+	element->getParent()->invalidateContent();
 }
 
 

@@ -6,14 +6,14 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_DW7K" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">Game over</Translation>
+      </Text>
       <Text Id="score_value" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">00000</Translation>
       </Text>
       <Text Id="__SingleUse_W1MR" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Score: &lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_UBH9" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">&lt;-</Translation>
       </Text>
       <Text Id="__SingleUse_19SB" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">Asteroids</Translation>
@@ -21,8 +21,8 @@
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0xfe" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0xfe" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0xfe" />
   </Typographies>
 </TextDatabase>

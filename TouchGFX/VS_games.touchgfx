@@ -17,71 +17,6 @@
             }
           },
           {
-            "Type": "Container",
-            "Name": "btn_back",
-            "Width": 50,
-            "Height": 50,
-            "Components": [
-              {
-                "Type": "FlexButton",
-                "Name": "_btn_back",
-                "Width": 50,
-                "Height": 50,
-                "ButtonTrigger": {
-                  "Type": "ClickButtonTrigger"
-                },
-                "ButtonStyles": [
-                  {
-                    "Type": "BoxWithBorderButtonStyle",
-                    "Width": 50,
-                    "Height": 50,
-                    "LockToFlexButtonSize": true,
-                    "BorderSize": 5,
-                    "ColorReleased": {
-                      "Green": 102,
-                      "Blue": 153
-                    },
-                    "ColorPressed": {
-                      "Green": 153,
-                      "Blue": 204
-                    },
-                    "ColorBorderReleased": {
-                      "Green": 51,
-                      "Blue": 102
-                    },
-                    "ColorBorderPressed": {
-                      "Red": 51,
-                      "Green": 102,
-                      "Blue": 153
-                    }
-                  }
-                ]
-              },
-              {
-                "Type": "Box",
-                "Name": "bg_black",
-                "Width": 50,
-                "Height": 50
-              },
-              {
-                "Type": "TextArea",
-                "Name": "lbl_back",
-                "X": 13,
-                "Y": 15,
-                "Width": 25,
-                "Height": 20,
-                "TextId": "__SingleUse_UBH9",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "AutoSize": true
-              }
-            ]
-          },
-          {
             "Type": "ScalableImage",
             "Name": "icon_rock",
             "X": 285,
@@ -186,21 +121,21 @@
           {
             "Type": "Container",
             "Name": "container_controls",
-            "X": 368,
-            "Y": 155,
-            "Width": 108,
+            "X": 15,
+            "Y": 158,
+            "Width": 451,
             "Height": 108,
             "Components": [
               {
                 "Type": "ButtonWithIcon",
                 "Name": "btn_right",
-                "X": 72,
+                "X": 415,
                 "Y": 36,
                 "Width": 36,
                 "Height": 36,
                 "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_pressed.png",
                 "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_normal.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_50_50_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_hardware_keyboard_arrow_right_50_50_E8F6FB.svg.png",
                 "IconReleased": "__generated\\icon_theme_images_hardware_keyboard_arrow_right_50_50_E8F6FB.svg.png",
                 "IconX": -7,
                 "IconY": -7,
@@ -211,13 +146,13 @@
               {
                 "Type": "ButtonWithIcon",
                 "Name": "btn_down",
-                "X": 36,
+                "X": 379,
                 "Y": 72,
                 "Width": 36,
                 "Height": 36,
                 "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_pressed.png",
                 "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_normal.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_50_50_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_hardware_keyboard_arrow_down_50_50_E8F6FB.svg.png",
                 "IconReleased": "__generated\\icon_theme_images_hardware_keyboard_arrow_down_50_50_E8F6FB.svg.png",
                 "IconX": -6,
                 "IconY": -6,
@@ -228,12 +163,13 @@
               {
                 "Type": "ButtonWithIcon",
                 "Name": "btn_left",
+                "X": 343,
                 "Y": 36,
                 "Width": 36,
                 "Height": 36,
                 "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_pressed.png",
                 "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_normal.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_50_50_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_hardware_keyboard_arrow_left_50_50_E8F6FB.svg.png",
                 "IconReleased": "__generated\\icon_theme_images_hardware_keyboard_arrow_left_50_50_E8F6FB.svg.png",
                 "IconX": -7,
                 "IconY": -7,
@@ -244,37 +180,36 @@
               {
                 "Type": "ButtonWithIcon",
                 "Name": "btn_up",
-                "X": 36,
+                "X": 379,
                 "Width": 36,
                 "Height": 36,
                 "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_pressed.png",
                 "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_normal.png",
-                "IconPressed": "__generated\\icon_theme_images_action_done_50_50_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_hardware_keyboard_arrow_up_50_50_E8F6FB.svg.png",
                 "IconReleased": "__generated\\icon_theme_images_hardware_keyboard_arrow_up_50_50_E8F6FB.svg.png",
                 "IconX": -6,
                 "IconY": -6,
                 "IconHeight": 50,
                 "IconWidth": 50,
                 "Preset": "alternate_theme\\presets\\button\\icon\\round\\micro_fill_normal.json"
+              },
+              {
+                "Type": "ButtonWithIcon",
+                "Name": "btn_shoot",
+                "Y": 36,
+                "Width": 36,
+                "Height": 36,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_pressed.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_normal.png",
+                "IconPressed": "__generated\\icon_theme_images_maps_local_fire_department_30_30_E8F6FB.svg.png",
+                "IconReleased": "__generated\\icon_theme_images_maps_local_fire_department_30_30_E8F6FB.svg.png",
+                "IconX": 2,
+                "IconY": 2,
+                "IconHeight": 30,
+                "IconWidth": 30,
+                "Preset": "alternate_theme\\presets\\button\\icon\\round\\micro_fill_normal.json"
               }
             ]
-          },
-          {
-            "Type": "ButtonWithIcon",
-            "Name": "btn_shoot",
-            "X": 25,
-            "Y": 191,
-            "Width": 36,
-            "Height": 36,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_pressed.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_normal.png",
-            "IconPressed": "__generated\\icon_theme_images_action_done_30_30_E8F6FB.svg.png",
-            "IconReleased": "__generated\\icon_theme_images_maps_local_fire_department_30_30_E8F6FB.svg.png",
-            "IconX": 2,
-            "IconY": 2,
-            "IconHeight": 30,
-            "IconWidth": 30,
-            "Preset": "alternate_theme\\presets\\button\\icon\\round\\micro_fill_normal.json"
           },
           {
             "Type": "Box",
@@ -289,6 +224,77 @@
               "Green": 255,
               "Blue": 255
             }
+          },
+          {
+            "Type": "Container",
+            "Name": "container_game_over",
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "LockPosition": true,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "bg_light_grey",
+                "X": 93,
+                "Y": 73,
+                "Width": 295,
+                "Height": 126,
+                "Color": {
+                  "Red": 130,
+                  "Green": 130,
+                  "Blue": 130
+                }
+              },
+              {
+                "Type": "ButtonWithIcon",
+                "Name": "btn_retry",
+                "X": 274,
+                "Y": 137,
+                "Width": 36,
+                "Height": 36,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_action.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_action.png",
+                "IconPressed": "__generated\\icon_theme_images_action_cached_40_40_E8F6FB.svg.png",
+                "IconReleased": "__generated\\icon_theme_images_action_cached_40_40_E8F6FB.svg.png",
+                "IconX": -1,
+                "IconY": -1,
+                "IconHeight": 40,
+                "IconWidth": 40
+              },
+              {
+                "Type": "ButtonWithIcon",
+                "Name": "btn_back",
+                "X": 171,
+                "Y": 137,
+                "Width": 36,
+                "Height": 36,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_action.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_action.png",
+                "IconPressed": "__generated\\icon_theme_images_navigation_arrow_back_40_40_E8F6FB.svg.png",
+                "IconReleased": "__generated\\icon_theme_images_navigation_arrow_back_40_40_E8F6FB.svg.png",
+                "IconX": -1,
+                "IconY": -1,
+                "IconHeight": 40,
+                "IconWidth": 40
+              },
+              {
+                "Type": "TextArea",
+                "Name": "lbl_over",
+                "X": 130,
+                "Y": 80,
+                "Width": 221,
+                "Height": 41,
+                "TextId": "__SingleUse_DW7K",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 133,
+                  "Green": 23,
+                  "Blue": 23
+                },
+                "AutoSize": true
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -307,7 +313,7 @@
             "HasCompletedTrigger": true,
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "_btn_back"
+              "TriggerComponent": "btn_back"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -338,58 +344,14 @@
             }
           },
           {
-            "InteractionName": "interaction_btn_shoot",
+            "InteractionName": "interaction_restart",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "btn_shoot"
+              "TriggerComponent": "btn_retry"
             },
             "Action": {
               "Type": "ActionCustom",
-              "FunctionName": "btn_shoot_pressed"
-            }
-          },
-          {
-            "InteractionName": "interaction_btn_up",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "btn_up"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "btn_up_pressed"
-            }
-          },
-          {
-            "InteractionName": "interaction_btn_down",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "btn_down"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "btn_down_pressed"
-            }
-          },
-          {
-            "InteractionName": "interaction_btn_right",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "btn_right"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "btn_right_pressed"
-            }
-          },
-          {
-            "InteractionName": "interaction_btn_left",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "btn_left"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "btn_left_pressed"
+              "FunctionName": "start_asteroids_game"
             }
           }
         ]

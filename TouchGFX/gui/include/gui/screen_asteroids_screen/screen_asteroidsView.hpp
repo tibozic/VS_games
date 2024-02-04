@@ -36,12 +36,16 @@ public:
     virtual void update_hearts(char lives);
     virtual void update_score(unsigned int score);
 
+    virtual void show_endgame_screen();
+    virtual void hide_endgame_screen();
+
+    virtual void hide_element(Drawable *element);
+
     /*
      * SHIP STUFF
      * */
     virtual void getShipPosition(int *x, int *y);
     virtual void move_ship(int x, int y);
-    virtual void move_bullet(touchgfx::Box bullet, int x, int y);
 
     void move_rock_offscreen(touchgfx::ScalableImage *rock);
 
@@ -53,6 +57,14 @@ public:
      * */
     virtual void move_rock(touchgfx::ScalableImage *rock, int x, int y);
     virtual void new_rock_position(touchgfx::ScalableImage *rock);
+
+    /*
+     * BULLET STUFF
+     */
+    virtual bool bullet_button_pressed();
+    virtual void move_bullet_offscreen(touchgfx::Box *bullet);
+    virtual void move_bullet(touchgfx::Box *bullet, int x, int y);
+
 protected:
 };
 

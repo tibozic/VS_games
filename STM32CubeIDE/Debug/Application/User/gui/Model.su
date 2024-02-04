@@ -1,7 +1,9 @@
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:18:18:virtual void ModelListener::move_ship()	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:19:18:virtual void ModelListener::move_bullets()	0	static
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:20:18:virtual void ModelListener::move_rocks()	0	static
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:22:18:virtual bool ModelListener::is_asteroids_game_started()	0	static
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:24:18:virtual void ModelListener::check_ship_collisions()	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::check_bullet_collisions()	0	static
 C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:11:1:Model::Model()	0	static
 C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:16:6:void Model::tick()	8	static
 C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:23:6:void Model::asteroids_tick()	8	static

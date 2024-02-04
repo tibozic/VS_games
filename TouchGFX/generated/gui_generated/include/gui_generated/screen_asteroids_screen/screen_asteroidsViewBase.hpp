@@ -8,14 +8,13 @@
 #include <mvp/View.hpp>
 #include <gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/containers/Container.hpp>
-#include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/canvas/Shape.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/ButtonWithIcon.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class screen_asteroidsViewBase : public touchgfx::View<screen_asteroidsPresenter>
 {
@@ -40,26 +39,6 @@ public:
     {
         // Override and implement this function in screen_asteroids
     }
-    virtual void btn_shoot_pressed()
-    {
-        // Override and implement this function in screen_asteroids
-    }
-    virtual void btn_up_pressed()
-    {
-        // Override and implement this function in screen_asteroids
-    }
-    virtual void btn_down_pressed()
-    {
-        // Override and implement this function in screen_asteroids
-    }
-    virtual void btn_right_pressed()
-    {
-        // Override and implement this function in screen_asteroids
-    }
-    virtual void btn_left_pressed()
-    {
-        // Override and implement this function in screen_asteroids
-    }
 
 protected:
     FrontendApplication& application() {
@@ -71,10 +50,6 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box bg_grey;
-    touchgfx::Container btn_back;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  _btn_back;
-    touchgfx::Box bg_black;
-    touchgfx::TextArea lbl_back;
     touchgfx::ScalableImage icon_rock;
     touchgfx::Shape<3> icon_ship;
     touchgfx::PainterRGB565 icon_shipPainter;
@@ -90,6 +65,11 @@ protected:
     touchgfx::ButtonWithIcon btn_up;
     touchgfx::ButtonWithIcon btn_shoot;
     touchgfx::Box bullet;
+    touchgfx::Container container_game_over;
+    touchgfx::Box bg_light_grey;
+    touchgfx::ButtonWithIcon btn_retry;
+    touchgfx::ButtonWithIcon btn_back;
+    touchgfx::TextArea lbl_over;
 
     /*
      * Wildcard Buffers
@@ -108,13 +88,11 @@ private:
     /*
      * Callback Declarations
      */
-    touchgfx::Callback<screen_asteroidsViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
     touchgfx::Callback<screen_asteroidsViewBase, const touchgfx::AbstractButton&> buttonCallback;
 
     /*
      * Callback Handler Declarations
      */
-    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };

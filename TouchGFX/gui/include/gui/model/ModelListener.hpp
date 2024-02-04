@@ -22,6 +22,7 @@ public:
     virtual bool is_asteroids_game_started() {return false;}
 
     virtual void check_ship_collisions(){}
+    virtual void check_bullet_collisions(){}
 protected:
     Model* model;
 };

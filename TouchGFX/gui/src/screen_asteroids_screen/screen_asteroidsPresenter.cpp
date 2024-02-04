@@ -37,12 +37,19 @@ bool screen_asteroidsPresenter::is_asteroids_game_started()
 void screen_asteroidsPresenter::start_asteroids_game()
 {
 	init_game();
-
 }
 
+void screen_asteroidsPresenter::game_over()
+{
+	game_started = false;
+
+	view.show_endgame_screen();
+}
 
 void screen_asteroidsPresenter::init_game()
 {
+	view.hide_endgame_screen();
+
 	/* SHIP STUFF */
 	// move the ship to the starting position
 	view.move_ship(225, 227);
@@ -51,7 +58,7 @@ void screen_asteroidsPresenter::init_game()
 	// hide all the bullets
 
 	for(int i = 0; i < BULLET_COUNT; i++ ) {
-		view.move_bullet(view.bullets[i], BULLET_OFFSCREEN_X, BULLET_OFFSCREEN_Y);
+		view.move_bullet(&view.bullets[i], BULLET_OFFSCREEN_X, BULLET_OFFSCREEN_Y);
 		view.bullets[i].setVisible(false);
 		view.bullets[i].getParent()->invalidateContent();
 	}
@@ -129,15 +136,88 @@ void screen_asteroidsPresenter::move_rocks()
 {
 	for(int i = 0; i < ROCK_COUNT; i++) {
 		touchgfx::ScalableImage *rock = &view.rocks[i];
-		if( !rock->isVisible() )
-			continue;
+		if( !rock->isVisible() ) {
+			// spawn new rock
+			view.new_rock_position(rock);
 
+			continue;
+		}
+
+		// move the rock
 		view.move_rock(rock, rock->getX(), rock->getY() + ROCK_MOVES_PER_TICK);
 
+		// check if rock is offscreen
 		if( rock->getY() > SCREEN_HEIGHT ) {
+			// remove the rock
 			view.move_rock_offscreen(rock);
 		}
 		rock->getParent()->invalidateContent();
+	}
+}
+
+Drawable *get_next_invisible_bullet()
+{
+
+	return NULL;
+}
+
+Drawable* screen_asteroidsPresenter::get_next_invisible_bullet()
+{
+	for(int i = 0; i < BULLET_COUNT; i++) {
+		if( !view.bullets[i].isVisible() )
+			return &view.bullets[i];
+	}
+
+	return NULL;
+}
+
+void screen_asteroidsPresenter::move_bullets()
+{
+	Drawable *ship = view.get_ship_pointer();
+
+	// check if button for new bullet is pressed
+	if( view.bullet_button_pressed() )
+	{
+		// spawn new bullet
+		Drawable *new_bullet = get_next_invisible_bullet();
+
+		if( new_bullet != NULL )
+		{
+			new_bullet->setVisible(true);
+			new_bullet->setX(ship->getX() + (ship->getWidth()/2) - 1);
+			new_bullet->setY(ship->getY() + 1);
+		}
+	}
+
+	// check if any bullet is offscreen
+	for(int i = 0; i < BULLET_COUNT; i++) {
+		if( view.bullets[i].getY() < 0 ) {
+			// remove the offscreen bullet
+			view.move_bullet_offscreen(&view.bullets[i]);
+		}
+	}
+
+	// move all the bullets
+	for(int i = 0; i < BULLET_COUNT; i++) {
+		if( !view.bullets[i].isVisible() )
+			continue;
+
+		view.move_bullet(&view.bullets[i], view.bullets[i].getX(), view.bullets[i].getY() - BULLET_MOVES_PER_TICK);
+	}
+}
+
+void screen_asteroidsPresenter::hide_rocks()
+{
+	for(int i = 0; i < ROCK_COUNT; i++) {
+		view.hide_element(&view.rocks[i]);
+	}
+}
+
+
+void screen_asteroidsPresenter::hide_bullets()
+{
+	for(int i = 0; i < BULLET_COUNT; i++) {
+		view.hide_element(&view.bullets[i]);
 	}
 }
 
@@ -168,9 +248,25 @@ void screen_asteroidsPresenter::check_ship_collisions()
 	}
 }
 
-void screen_asteroidsPresenter::game_over()
+void screen_asteroidsPresenter::check_bullet_collisions()
 {
+	for(int i = 0; i < BULLET_COUNT; i++) {
+		if( !view.bullets[i].isVisible() )
+			continue;
 
+		for(int j = 0; j < ROCK_COUNT; j++) {
+			if( !view.rocks[j].isVisible() )
+				continue;
+
+			if(elements_collide(&view.bullets[i], &view.rocks[j])) {
+				view.move_rock_offscreen(&view.rocks[j]);
+				view.move_bullet_offscreen(&view.bullets[i]);
+
+				score++;
+				view.update_score(score);
+			}
+		}
+	}
 }
 
 bool screen_asteroidsPresenter::elements_collide(Drawable *element1, Drawable *element2)

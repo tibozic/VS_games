@@ -22,9 +22,9 @@ void Model::tick()
 
 void Model::asteroids_tick() {
 	modelListener->move_ship();
-	//modelListener->move_bullets();
+	modelListener->move_bullets();
 	modelListener->move_rocks();
-	//modelListener->check_bullet_collisions();
+	modelListener->check_bullet_collisions();
 	modelListener->check_ship_collisions();
 }
 

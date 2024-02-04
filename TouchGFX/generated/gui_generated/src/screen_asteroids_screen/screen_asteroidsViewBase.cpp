@@ -4,11 +4,10 @@
 #include <gui_generated/screen_asteroids_screen/screen_asteroidsViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 screen_asteroidsViewBase::screen_asteroidsViewBase() :
-    flexButtonCallback(this, &screen_asteroidsViewBase::flexButtonCallbackHandler),
     buttonCallback(this, &screen_asteroidsViewBase::buttonCallbackHandler)
 {
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
@@ -20,26 +19,6 @@ screen_asteroidsViewBase::screen_asteroidsViewBase() :
     bg_grey.setPosition(0, 0, 480, 272);
     bg_grey.setColor(touchgfx::Color::getColorFromRGB(51, 51, 51));
     add(bg_grey);
-
-    btn_back.setPosition(0, 0, 50, 50);
-    _btn_back.setBoxWithBorderPosition(0, 0, 50, 50);
-    _btn_back.setBorderSize(5);
-    _btn_back.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    _btn_back.setAction(flexButtonCallback);
-    _btn_back.setPosition(0, 0, 50, 50);
-    btn_back.add(_btn_back);
-
-    bg_black.setPosition(0, 0, 50, 50);
-    bg_black.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    btn_back.add(bg_black);
-
-    lbl_back.setXY(13, 15);
-    lbl_back.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    lbl_back.setLinespacing(0);
-    lbl_back.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UBH9));
-    btn_back.add(lbl_back);
-
-    add(btn_back);
 
     icon_rock.setBitmap(touchgfx::Bitmap(BITMAP_ASTEROIDS_ROCK_ID));
     icon_rock.setPosition(285, 79, 34, 29);
@@ -84,43 +63,64 @@ screen_asteroidsViewBase::screen_asteroidsViewBase() :
 
     add(container_health);
 
-    container_controls.setPosition(368, 155, 108, 108);
-    btn_right.setXY(72, 36);
-    btn_right.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_PRESSED_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_HARDWARE_KEYBOARD_ARROW_RIGHT_50_50_E8F6FB_SVG_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_50_50_E8F6FB_SVG_ID));
+    container_controls.setPosition(15, 158, 451, 108);
+    btn_right.setXY(415, 36);
+    btn_right.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_PRESSED_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_HARDWARE_KEYBOARD_ARROW_RIGHT_50_50_E8F6FB_SVG_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_HARDWARE_KEYBOARD_ARROW_RIGHT_50_50_E8F6FB_SVG_ID));
     btn_right.setIconXY(-7, -7);
-    btn_right.setAction(buttonCallback);
     container_controls.add(btn_right);
 
-    btn_down.setXY(36, 72);
-    btn_down.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_PRESSED_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_HARDWARE_KEYBOARD_ARROW_DOWN_50_50_E8F6FB_SVG_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_50_50_E8F6FB_SVG_ID));
+    btn_down.setXY(379, 72);
+    btn_down.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_PRESSED_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_HARDWARE_KEYBOARD_ARROW_DOWN_50_50_E8F6FB_SVG_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_HARDWARE_KEYBOARD_ARROW_DOWN_50_50_E8F6FB_SVG_ID));
     btn_down.setIconXY(-6, -6);
-    btn_down.setAction(buttonCallback);
     container_controls.add(btn_down);
 
-    btn_left.setXY(0, 36);
-    btn_left.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_PRESSED_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_HARDWARE_KEYBOARD_ARROW_LEFT_50_50_E8F6FB_SVG_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_50_50_E8F6FB_SVG_ID));
+    btn_left.setXY(343, 36);
+    btn_left.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_PRESSED_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_HARDWARE_KEYBOARD_ARROW_LEFT_50_50_E8F6FB_SVG_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_HARDWARE_KEYBOARD_ARROW_LEFT_50_50_E8F6FB_SVG_ID));
     btn_left.setIconXY(-7, -7);
-    btn_left.setAction(buttonCallback);
     container_controls.add(btn_left);
 
-    btn_up.setXY(36, 0);
-    btn_up.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_PRESSED_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_HARDWARE_KEYBOARD_ARROW_UP_50_50_E8F6FB_SVG_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_50_50_E8F6FB_SVG_ID));
+    btn_up.setXY(379, 0);
+    btn_up.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_PRESSED_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_HARDWARE_KEYBOARD_ARROW_UP_50_50_E8F6FB_SVG_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_HARDWARE_KEYBOARD_ARROW_UP_50_50_E8F6FB_SVG_ID));
     btn_up.setIconXY(-6, -6);
-    btn_up.setAction(buttonCallback);
     container_controls.add(btn_up);
 
-    add(container_controls);
-
-    btn_shoot.setXY(25, 191);
-    btn_shoot.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_PRESSED_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_MAPS_LOCAL_FIRE_DEPARTMENT_30_30_E8F6FB_SVG_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_30_30_E8F6FB_SVG_ID));
+    btn_shoot.setXY(0, 36);
+    btn_shoot.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_PRESSED_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_MAPS_LOCAL_FIRE_DEPARTMENT_30_30_E8F6FB_SVG_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_MAPS_LOCAL_FIRE_DEPARTMENT_30_30_E8F6FB_SVG_ID));
     btn_shoot.setIconXY(2, 2);
-    btn_shoot.setAction(buttonCallback);
-    add(btn_shoot);
+    container_controls.add(btn_shoot);
+
+    add(container_controls);
 
     bullet.setPosition(238, 219, 4, 4);
     bullet.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     bullet.setVisible(false);
     add(bullet);
+
+    container_game_over.setPosition(0, 0, 480, 272);
+    container_game_over.setVisible(false);
+    bg_light_grey.setPosition(93, 73, 295, 126);
+    bg_light_grey.setColor(touchgfx::Color::getColorFromRGB(130, 130, 130));
+    container_game_over.add(bg_light_grey);
+
+    btn_retry.setXY(274, 137);
+    btn_retry.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_ACTION_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_CACHED_40_40_E8F6FB_SVG_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_CACHED_40_40_E8F6FB_SVG_ID));
+    btn_retry.setIconXY(-1, -1);
+    btn_retry.setAction(buttonCallback);
+    container_game_over.add(btn_retry);
+
+    btn_back.setXY(171, 137);
+    btn_back.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_ACTION_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_BACK_40_40_E8F6FB_SVG_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_BACK_40_40_E8F6FB_SVG_ID));
+    btn_back.setIconXY(-1, -1);
+    btn_back.setAction(buttonCallback);
+    container_game_over.add(btn_back);
+
+    lbl_over.setXY(130, 80);
+    lbl_over.setColor(touchgfx::Color::getColorFromRGB(133, 23, 23));
+    lbl_over.setLinespacing(0);
+    lbl_over.setTypedText(touchgfx::TypedText(T___SINGLEUSE_DW7K));
+    container_game_over.add(lbl_over);
+
+    add(container_game_over);
 }
 
 screen_asteroidsViewBase::~screen_asteroidsViewBase()
@@ -133,12 +133,12 @@ void screen_asteroidsViewBase::setupScreen()
 
 }
 
-void screen_asteroidsViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+void screen_asteroidsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &_btn_back)
+    if (&src == &btn_back)
     {
         //suspend_asteroid_task
-        //When _btn_back clicked call virtual function
+        //When btn_back clicked call virtual function
         //Call suspend_asteroids_task
         suspend_asteroids_task();
     
@@ -147,44 +147,12 @@ void screen_asteroidsViewBase::flexButtonCallbackHandler(const touchgfx::Abstrac
         //Go to screen_game_select with screen transition towards West
         application().gotoscreen_game_selectScreenSlideTransitionWest();
     }
-}
-
-void screen_asteroidsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
-{
-    if (&src == &btn_shoot)
+    if (&src == &btn_retry)
     {
-        //interaction_btn_shoot
-        //When btn_shoot clicked call virtual function
-        //Call btn_shoot_pressed
-        btn_shoot_pressed();
-    }
-    if (&src == &btn_up)
-    {
-        //interaction_btn_up
-        //When btn_up clicked call virtual function
-        //Call btn_up_pressed
-        btn_up_pressed();
-    }
-    if (&src == &btn_down)
-    {
-        //interaction_btn_down
-        //When btn_down clicked call virtual function
-        //Call btn_down_pressed
-        btn_down_pressed();
-    }
-    if (&src == &btn_right)
-    {
-        //interaction_btn_right
-        //When btn_right clicked call virtual function
-        //Call btn_right_pressed
-        btn_right_pressed();
-    }
-    if (&src == &btn_left)
-    {
-        //interaction_btn_left
-        //When btn_left clicked call virtual function
-        //Call btn_left_pressed
-        btn_left_pressed();
+        //interaction_restart
+        //When btn_retry clicked call virtual function
+        //Call start_asteroids_game
+        start_asteroids_game();
     }
 }
 
