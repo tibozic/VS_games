@@ -295,6 +295,19 @@
                 "AutoSize": true
               }
             ]
+          },
+          {
+            "Type": "Box",
+            "Name": "cover_red",
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "Color": {
+              "Red": 133,
+              "Green": 19,
+              "Blue": 19
+            },
+            "Alpha": 78
           }
         ],
         "Interactions": [

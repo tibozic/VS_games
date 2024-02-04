@@ -51,6 +51,11 @@ void screen_asteroidsView::show_endgame_screen()
 {
 	presenter->hide_rocks();
 	presenter->hide_bullets();
+
+	cover_red.setVisible(false);
+	cover_red.invalidateContent();
+	cover_red.getParent()->invalidateContent();
+
 	container_game_over.setVisible(true);
 	container_controls.setVisible(false);
 	container_controls.getParent()->invalidateContent();
@@ -141,9 +146,13 @@ void screen_asteroidsView::set_ship_invincible(bool value)
 {
 	if( value ) {
 		icon_shipPainter.setColor(touchgfx::Color::getColorFromRGB(0, 255, 0));
+		cover_red.setVisible(true);
+		cover_red.getParent()->invalidateContent();
 	}
 	else {
 		icon_shipPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+		cover_red.setVisible(false);
+		cover_red.getParent()->invalidateContent();
 	}
 }
 

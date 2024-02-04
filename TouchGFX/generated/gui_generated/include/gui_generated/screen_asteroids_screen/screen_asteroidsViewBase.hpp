@@ -70,6 +70,7 @@ protected:
     touchgfx::ButtonWithIcon btn_retry;
     touchgfx::ButtonWithIcon btn_back;
     touchgfx::TextArea lbl_over;
+    touchgfx::Box cover_red;
 
     /*
      * Wildcard Buffers

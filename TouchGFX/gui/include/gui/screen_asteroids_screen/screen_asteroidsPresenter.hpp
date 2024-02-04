@@ -95,6 +95,7 @@ private:
 
     char lives = 3;
     unsigned int score = 0;
+    unsigned int high_score = 0;
 
     ShipDirection direction = NONE;
 

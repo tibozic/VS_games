@@ -121,6 +121,12 @@ screen_asteroidsViewBase::screen_asteroidsViewBase() :
     container_game_over.add(lbl_over);
 
     add(container_game_over);
+
+    cover_red.setPosition(0, 0, 480, 272);
+    cover_red.setColor(touchgfx::Color::getColorFromRGB(133, 19, 19));
+    cover_red.setAlpha(78);
+    cover_red.setVisible(false);
+    add(cover_red);
 }
 
 screen_asteroidsViewBase::~screen_asteroidsViewBase()

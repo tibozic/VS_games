@@ -20,12 +20,10 @@ void screen_asteroidsPresenter::deactivate()
 
 void screen_asteroidsPresenter::resume_asteroids_task()
 {
-	model->resume_asteroids_task();
 }
 
 void screen_asteroidsPresenter::suspend_asteroids_task()
 {
-	model->suspend_asteroids_task();
 }
 
 
@@ -42,6 +40,9 @@ void screen_asteroidsPresenter::start_asteroids_game()
 void screen_asteroidsPresenter::game_over()
 {
 	game_started = false;
+
+	if( score > high_score )
+		high_score = score;
 
 	view.show_endgame_screen();
 }
@@ -88,6 +89,9 @@ void screen_asteroidsPresenter::init_game()
 	// reset health to full
 	lives = 3;
 	view.update_hearts(lives);
+
+	// reset the ship
+	set_invincible(false);
 
 	// start the game
 	game_started = true;
@@ -277,6 +281,7 @@ void screen_asteroidsPresenter::check_ship_collisions()
 			// if player has 0 lives game is over
 			if( lives == 0 ) {
 				game_over();
+				return;
 			}
 
 			// trigger temporary invincibility
