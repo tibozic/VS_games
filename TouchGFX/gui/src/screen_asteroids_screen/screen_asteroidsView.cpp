@@ -137,6 +137,15 @@ ShipDirection screen_asteroidsView::get_ship_direction()
 	return NONE;
 }
 
+void screen_asteroidsView::set_ship_invincible(bool value)
+{
+	if( value ) {
+		icon_shipPainter.setColor(touchgfx::Color::getColorFromRGB(0, 255, 0));
+	}
+	else {
+		icon_shipPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+	}
+}
 
 void screen_asteroidsView::move_ship(int x, int y)
 {

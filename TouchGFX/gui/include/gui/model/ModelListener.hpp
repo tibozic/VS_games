@@ -26,6 +26,7 @@ public:
 
     virtual void set_allowed_to_shoot(bool value){}
 
+    virtual void set_invincible(bool value){}
 protected:
     Model* model;
 };

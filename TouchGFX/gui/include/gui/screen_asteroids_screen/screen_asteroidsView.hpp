@@ -47,10 +47,12 @@ public:
     virtual void getShipPosition(int *x, int *y);
     virtual void move_ship(int x, int y);
 
-    void move_rock_offscreen(touchgfx::ScalableImage *rock);
+    virtual void move_rock_offscreen(touchgfx::ScalableImage *rock);
 
     virtual Drawable* get_ship_pointer();
     virtual ShipDirection get_ship_direction();
+
+    virtual void set_ship_invincible(bool value);
 
     /*
      * ROCK STUFF

@@ -240,6 +240,18 @@ void screen_asteroidsPresenter::hide_bullets()
 	}
 }
 
+void screen_asteroidsPresenter::set_invincible(bool value)
+{
+	invincible = value;
+
+	view.set_ship_invincible(invincible);
+}
+
+bool screen_asteroidsPresenter::is_invincible()
+{
+	return invincible;
+}
+
 void screen_asteroidsPresenter::check_ship_collisions()
 {
 	// get ship pointer
@@ -248,6 +260,9 @@ void screen_asteroidsPresenter::check_ship_collisions()
 	// check if ship collides with any of the rocks
 	for(int i = 0; i < ROCK_COUNT; i++) {
 		if( !view.rocks[i].isVisible() )
+			continue;
+
+		if( is_invincible() )
 			continue;
 
 		// if ship collides with rock the player loses a life
@@ -263,6 +278,10 @@ void screen_asteroidsPresenter::check_ship_collisions()
 			if( lives == 0 ) {
 				game_over();
 			}
+
+			// trigger temporary invincibility
+			model->start_invincibility_timer();
+			set_invincible(true);
 		}
 	}
 }

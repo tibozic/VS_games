@@ -6,6 +6,9 @@
 extern "C" {
 	extern osSemaphoreId_t bullet_timer_started_semaphoreHandle;
 	extern osSemaphoreId_t bullet_timer_ended_semaphoreHandle;
+
+	extern osSemaphoreId_t invincibility_timer_started_semaphoreHandle;
+	extern osSemaphoreId_t invincibility_timer_ended_semaphoreHandle;
 }
 
 Model::Model() : modelListener(0)
@@ -22,6 +25,7 @@ void Model::tick()
 
 void Model::asteroids_tick() {
 	bullet_timer_ended();
+	invincibility_timer_ended();
 
 	modelListener->move_ship();
 	modelListener->move_bullets();
@@ -40,6 +44,19 @@ void Model::bullet_timer_ended()
 	if( osSemaphoreGetCount(bullet_timer_ended_semaphoreHandle) == 0 ) {
 		osSemaphoreRelease(bullet_timer_ended_semaphoreHandle);
 		modelListener->set_allowed_to_shoot(true);
+	}
+}
+
+void Model::start_invincibility_timer()
+{
+	osSemaphoreAcquire(invincibility_timer_started_semaphoreHandle, 0U);
+}
+
+void Model::invincibility_timer_ended()
+{
+	if( osSemaphoreGetCount(invincibility_timer_ended_semaphoreHandle) == 0 ) {
+		osSemaphoreRelease(invincibility_timer_ended_semaphoreHandle);
+		modelListener->set_invincible(false);
 	}
 }
 

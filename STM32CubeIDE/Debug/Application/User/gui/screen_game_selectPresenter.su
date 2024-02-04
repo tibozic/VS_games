@@ -5,6 +5,7 @@
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:24:18:virtual void ModelListener::check_ship_collisions()	0	static
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::check_bullet_collisions()	0	static
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:27:18:virtual void ModelListener::set_allowed_to_shoot(bool)	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:29:18:virtual void ModelListener::set_invincible(bool)	0	static
 ../../TouchGFX/gui/include/gui/screen_game_select_screen/screen_game_selectPresenter.hpp:28:13:screen_game_selectPresenter::~screen_game_selectPresenter()	0	static
 C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_game_select_screen/screen_game_selectPresenter.cpp:10:6:virtual void screen_game_selectPresenter::activate()	0	static
 ../../TouchGFX/gui/include/gui/screen_game_select_screen/screen_game_selectPresenter.hpp:28:13:virtual screen_game_selectPresenter::~screen_game_selectPresenter()	8	static

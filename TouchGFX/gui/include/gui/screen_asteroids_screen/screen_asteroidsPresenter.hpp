@@ -62,6 +62,8 @@ public:
     virtual void set_allowed_to_shoot(bool value);
     virtual bool is_allowed_to_shoot();
 
+    virtual void set_invincible(bool value);
+    virtual bool is_invincible();
 
     /*
      * SHIP STUFF
@@ -99,6 +101,8 @@ private:
     bool game_started = false;
 
     bool allowed_to_shoot = true;
+
+    bool invincible = false;
 
     screen_asteroidsView& view;
 };

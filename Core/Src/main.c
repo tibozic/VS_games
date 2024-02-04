@@ -87,6 +87,13 @@ const osThreadAttr_t bullet_timer_ta_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for invincibility_t */
+osThreadId_t invincibility_tHandle;
+const osThreadAttr_t invincibility_t_attributes = {
+  .name = "invincibility_t",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for bullet_timer_started_semaphore */
 osSemaphoreId_t bullet_timer_started_semaphoreHandle;
 const osSemaphoreAttr_t bullet_timer_started_semaphore_attributes = {
@@ -96,6 +103,16 @@ const osSemaphoreAttr_t bullet_timer_started_semaphore_attributes = {
 osSemaphoreId_t bullet_timer_ended_semaphoreHandle;
 const osSemaphoreAttr_t bullet_timer_ended_semaphore_attributes = {
   .name = "bullet_timer_ended_semaphore"
+};
+/* Definitions for invincibility_timer_started_semaphore */
+osSemaphoreId_t invincibility_timer_started_semaphoreHandle;
+const osSemaphoreAttr_t invincibility_timer_started_semaphore_attributes = {
+  .name = "invincibility_timer_started_semaphore"
+};
+/* Definitions for invincibility_timer_ended_semaphore */
+osSemaphoreId_t invincibility_timer_ended_semaphoreHandle;
+const osSemaphoreAttr_t invincibility_timer_ended_semaphore_attributes = {
+  .name = "invincibility_timer_ended_semaphore"
 };
 /* USER CODE BEGIN PV */
 
@@ -118,6 +135,7 @@ void StartDefaultTask(void *argument);
 extern void TouchGFX_Task(void *argument);
 extern void videoTaskFunc(void *argument);
 void bullet_timer_task_function(void *argument);
+void invincibility_timer_task_function(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -203,6 +221,12 @@ int main(void)
   /* creation of bullet_timer_ended_semaphore */
   bullet_timer_ended_semaphoreHandle = osSemaphoreNew(1, 0, &bullet_timer_ended_semaphore_attributes);
 
+  /* creation of invincibility_timer_started_semaphore */
+  invincibility_timer_started_semaphoreHandle = osSemaphoreNew(1, 0, &invincibility_timer_started_semaphore_attributes);
+
+  /* creation of invincibility_timer_ended_semaphore */
+  invincibility_timer_ended_semaphoreHandle = osSemaphoreNew(1, 0, &invincibility_timer_ended_semaphore_attributes);
+
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
@@ -227,6 +251,9 @@ int main(void)
 
   /* creation of bullet_timer_ta */
   bullet_timer_taHandle = osThreadNew(bullet_timer_task_function, NULL, &bullet_timer_ta_attributes);
+
+  /* creation of invincibility_t */
+  invincibility_tHandle = osThreadNew(invincibility_timer_task_function, NULL, &invincibility_t_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -719,13 +746,34 @@ void bullet_timer_task_function(void *argument)
   for(;;)
   {
 	  if( osSemaphoreGetCount(bullet_timer_started_semaphoreHandle) == 0 ) {
-		  osSemaphoreRelease(bullet_timer_started_semaphoreHandle);
 		  osDelay(100);
+		  osSemaphoreRelease(bullet_timer_started_semaphoreHandle);
 		  osSemaphoreAcquire(bullet_timer_ended_semaphoreHandle, 0U);
 	  }
-	  osDelay(100);
   }
   /* USER CODE END bullet_timer_task_function */
+}
+
+/* USER CODE BEGIN Header_invincibility_timer_task_function */
+/**
+* @brief Function implementing the invincibility_t thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_invincibility_timer_task_function */
+void invincibility_timer_task_function(void *argument)
+{
+  /* USER CODE BEGIN invincibility_timer_task_function */
+  /* Infinite loop */
+  for(;;)
+  {
+	  if( osSemaphoreGetCount(invincibility_timer_started_semaphoreHandle) == 0 ) {
+		  osDelay(1000);
+		  osSemaphoreRelease(invincibility_timer_started_semaphoreHandle);
+		  osSemaphoreAcquire(invincibility_timer_ended_semaphoreHandle, 0U);
+	  }
+  }
+  /* USER CODE END invincibility_timer_task_function */
 }
 
 /* MPU Configuration */

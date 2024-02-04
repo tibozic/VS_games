@@ -22,6 +22,9 @@ public:
 
     void start_bullet_timer();
     void bullet_timer_ended();
+
+    void start_invincibility_timer();
+    void invincibility_timer_ended();
 protected:
     ModelListener* modelListener;
 };
