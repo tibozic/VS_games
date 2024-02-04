@@ -23,6 +23,9 @@ public:
 
     virtual void check_ship_collisions(){}
     virtual void check_bullet_collisions(){}
+
+    virtual void set_allowed_to_shoot(bool value){}
+
 protected:
     Model* model;
 };

@@ -4,8 +4,11 @@
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:22:18:virtual bool ModelListener::is_asteroids_game_started()	0	static
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:24:18:virtual void ModelListener::check_ship_collisions()	0	static
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::check_bullet_collisions()	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:27:18:virtual void ModelListener::set_allowed_to_shoot(bool)	0	static
 C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:11:1:Model::Model()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:16:6:void Model::tick()	8	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:23:6:void Model::asteroids_tick()	8	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:31:6:void Model::resume_asteroids_task()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:37:6:void Model::suspend_asteroids_task()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:16:6:void Model::tick()	16	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:23:6:void Model::asteroids_tick()	16	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:33:6:void Model::start_bullet_timer()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:38:6:void Model::bullet_timer_ended()	16	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:46:6:void Model::resume_asteroids_task()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:51:6:void Model::suspend_asteroids_task()	0	static

@@ -43,6 +43,9 @@ public:
 
     virtual ~screen_asteroidsPresenter() {}
 
+    /*
+     * GENERAL GAME STUFF
+     */
     virtual void resume_asteroids_task();
     virtual void suspend_asteroids_task();
 
@@ -54,17 +57,36 @@ public:
 
     virtual bool elements_collide(Drawable *element1, Drawable *element2);
 
-    virtual void move_ship();
-    virtual void move_rocks();
-    virtual void move_bullets();
+    virtual void shoot_bullet();
 
+    virtual void set_allowed_to_shoot(bool value);
+    virtual bool is_allowed_to_shoot();
+
+
+    /*
+     * SHIP STUFF
+     */
+    virtual void move_ship();
+    virtual void check_ship_collisions();
+
+
+    /*
+     * ROCK STUFF
+     */
+    virtual void move_rocks();
     virtual void hide_rocks();
+
+
+    /*
+     * BULLET STUFF
+     */
+    virtual void move_bullets();
     virtual void hide_bullets();
 
     virtual Drawable* get_next_invisible_bullet();
 
-    virtual void check_ship_collisions();
     virtual void check_bullet_collisions();
+
 
 private:
     screen_asteroidsPresenter();
@@ -75,6 +97,8 @@ private:
     ShipDirection direction = NONE;
 
     bool game_started = false;
+
+    bool allowed_to_shoot = true;
 
     screen_asteroidsView& view;
 };

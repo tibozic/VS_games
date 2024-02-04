@@ -80,22 +80,22 @@ const osThreadAttr_t videoTask_attributes = {
   .stack_size = 1000 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
-/* Definitions for asteroidsTask */
-osThreadId_t asteroidsTaskHandle;
-const osThreadAttr_t asteroidsTask_attributes = {
-  .name = "asteroidsTask",
+/* Definitions for bullet_timer_ta */
+osThreadId_t bullet_timer_taHandle;
+const osThreadAttr_t bullet_timer_ta_attributes = {
+  .name = "bullet_timer_ta",
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
-/* Definitions for resumeAsteroidsTaskSemaphore */
-osSemaphoreId_t resumeAsteroidsTaskSemaphoreHandle;
-const osSemaphoreAttr_t resumeAsteroidsTaskSemaphore_attributes = {
-  .name = "resumeAsteroidsTaskSemaphore"
+/* Definitions for bullet_timer_started_semaphore */
+osSemaphoreId_t bullet_timer_started_semaphoreHandle;
+const osSemaphoreAttr_t bullet_timer_started_semaphore_attributes = {
+  .name = "bullet_timer_started_semaphore"
 };
-/* Definitions for suspendAsteroidsTaskSemaphore */
-osSemaphoreId_t suspendAsteroidsTaskSemaphoreHandle;
-const osSemaphoreAttr_t suspendAsteroidsTaskSemaphore_attributes = {
-  .name = "suspendAsteroidsTaskSemaphore"
+/* Definitions for bullet_timer_ended_semaphore */
+osSemaphoreId_t bullet_timer_ended_semaphoreHandle;
+const osSemaphoreAttr_t bullet_timer_ended_semaphore_attributes = {
+  .name = "bullet_timer_ended_semaphore"
 };
 /* USER CODE BEGIN PV */
 
@@ -117,7 +117,7 @@ static void MX_CRC_Init(void);
 void StartDefaultTask(void *argument);
 extern void TouchGFX_Task(void *argument);
 extern void videoTaskFunc(void *argument);
-void asteroidsTaskFunction(void *argument);
+void bullet_timer_task_function(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -127,22 +127,9 @@ void asteroidsTaskFunction(void *argument);
 /* USER CODE BEGIN 0 */
 
 void check_resume_asteroids_task() {
-	// resumes the asteroid task
-	if( osSemaphoreGetCount(resumeAsteroidsTaskSemaphoreHandle) == 0 )
-	{
-		osSemaphoreRelease(resumeAsteroidsTaskSemaphoreHandle);
-		osThreadResume(asteroidsTaskHandle);
-	}
 }
 
 void check_suspend_asteroids_task() {
-	// resumes the asteroid task
-
-	if( osSemaphoreGetCount(suspendAsteroidsTaskSemaphoreHandle) == 0 )
-	{
-		osSemaphoreRelease(suspendAsteroidsTaskSemaphoreHandle);
-		osThreadSuspend(asteroidsTaskHandle);
-	}
 }
 
 
@@ -210,11 +197,11 @@ int main(void)
   /* USER CODE END RTOS_MUTEX */
 
   /* Create the semaphores(s) */
-  /* creation of resumeAsteroidsTaskSemaphore */
-  resumeAsteroidsTaskSemaphoreHandle = osSemaphoreNew(1, 0, &resumeAsteroidsTaskSemaphore_attributes);
+  /* creation of bullet_timer_started_semaphore */
+  bullet_timer_started_semaphoreHandle = osSemaphoreNew(1, 0, &bullet_timer_started_semaphore_attributes);
 
-  /* creation of suspendAsteroidsTaskSemaphore */
-  suspendAsteroidsTaskSemaphoreHandle = osSemaphoreNew(1, 0, &suspendAsteroidsTaskSemaphore_attributes);
+  /* creation of bullet_timer_ended_semaphore */
+  bullet_timer_ended_semaphoreHandle = osSemaphoreNew(1, 0, &bullet_timer_ended_semaphore_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -238,8 +225,8 @@ int main(void)
   /* creation of videoTask */
   videoTaskHandle = osThreadNew(videoTaskFunc, NULL, &videoTask_attributes);
 
-  /* creation of asteroidsTask */
-  asteroidsTaskHandle = osThreadNew(asteroidsTaskFunction, NULL, &asteroidsTask_attributes);
+  /* creation of bullet_timer_ta */
+  bullet_timer_taHandle = osThreadNew(bullet_timer_task_function, NULL, &bullet_timer_ta_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -249,8 +236,6 @@ int main(void)
   /* USER CODE BEGIN RTOS_EVENTS */
   /* add events, ... */
 
-
-  volatile osStatus_t status = osThreadSuspend(asteroidsTaskHandle);
   /* USER CODE END RTOS_EVENTS */
 
   /* Start scheduler */
@@ -719,28 +704,28 @@ void StartDefaultTask(void *argument)
   /* USER CODE END 5 */
 }
 
-/* USER CODE BEGIN Header_asteroidsTaskFunction */
+/* USER CODE BEGIN Header_bullet_timer_task_function */
 /**
-* @brief Function implementing the asteroidsTask thread.
+* @brief Function implementing the bullet_timer_ta thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_asteroidsTaskFunction */
-void asteroidsTaskFunction(void *argument)
+/* USER CODE END Header_bullet_timer_task_function */
+void bullet_timer_task_function(void *argument)
 {
-  /* USER CODE BEGIN asteroidsTaskFunction */
-
-	volatile osStatus_t status = osThreadSuspend(asteroidsTaskHandle);
-
+  /* USER CODE BEGIN bullet_timer_task_function */
   /* Infinite loop */
+
   for(;;)
   {
-	 HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
-	 osDelay(1000);
-	 HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
-	 osDelay(1000);
+	  if( osSemaphoreGetCount(bullet_timer_started_semaphoreHandle) == 0 ) {
+		  osSemaphoreRelease(bullet_timer_started_semaphoreHandle);
+		  osDelay(100);
+		  osSemaphoreAcquire(bullet_timer_ended_semaphoreHandle, 0U);
+	  }
+	  osDelay(100);
   }
-  /* USER CODE END asteroidsTaskFunction */
+  /* USER CODE END bullet_timer_task_function */
 }
 
 /* MPU Configuration */

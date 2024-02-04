@@ -4,8 +4,8 @@
 #include "cmsis_os.h"
 
 extern "C" {
-	extern osSemaphoreId_t resumeAsteroidsTaskSemaphoreHandle;
-	extern osSemaphoreId_t suspendAsteroidsTaskSemaphoreHandle;
+	extern osSemaphoreId_t bullet_timer_started_semaphoreHandle;
+	extern osSemaphoreId_t bullet_timer_ended_semaphoreHandle;
 }
 
 Model::Model() : modelListener(0)
@@ -21,6 +21,8 @@ void Model::tick()
 }
 
 void Model::asteroids_tick() {
+	bullet_timer_ended();
+
 	modelListener->move_ship();
 	modelListener->move_bullets();
 	modelListener->move_rocks();
@@ -28,14 +30,25 @@ void Model::asteroids_tick() {
 	modelListener->check_ship_collisions();
 }
 
+void Model::start_bullet_timer()
+{
+	osSemaphoreAcquire(bullet_timer_started_semaphoreHandle, 0U);
+}
+
+void Model::bullet_timer_ended()
+{
+	if( osSemaphoreGetCount(bullet_timer_ended_semaphoreHandle) == 0 ) {
+		osSemaphoreRelease(bullet_timer_ended_semaphoreHandle);
+		modelListener->set_allowed_to_shoot(true);
+	}
+}
+
 void Model::resume_asteroids_task()
 {
-	osSemaphoreAcquire(resumeAsteroidsTaskSemaphoreHandle, 0U);
 }
 
 
 void Model::suspend_asteroids_task()
 {
-	osSemaphoreAcquire(suspendAsteroidsTaskSemaphoreHandle, 0U);
 }
 

@@ -8,18 +8,22 @@ C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_ast
 C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:49:6:virtual void screen_asteroidsPresenter::init_game()	4
 C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:96:6:virtual void screen_asteroidsPresenter::move_ship()	9
 C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:164:11:virtual touchgfx::Drawable* screen_asteroidsPresenter::get_next_invisible_bullet()	11
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:209:6:virtual void screen_asteroidsPresenter::hide_rocks()	2
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:217:6:virtual void screen_asteroidsPresenter::hide_bullets()	2
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:174:6:virtual void screen_asteroidsPresenter::move_bullets()	4
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:193:6:virtual bool screen_asteroidsPresenter::is_allowed_to_shoot()	1
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:198:6:virtual void screen_asteroidsPresenter::set_allowed_to_shoot(bool)	1
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:228:6:virtual void screen_asteroidsPresenter::hide_rocks()	2
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:236:6:virtual void screen_asteroidsPresenter::hide_bullets()	2
 ../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp:44:13:virtual screen_asteroidsPresenter::~screen_asteroidsPresenter()	1
 C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:21:6:virtual void screen_asteroidsPresenter::resume_asteroids_task()	1
 C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:26:6:virtual void screen_asteroidsPresenter::suspend_asteroids_task()	1
 C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:135:6:virtual void screen_asteroidsPresenter::move_rocks()	4
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:272:6:virtual bool screen_asteroidsPresenter::elements_collide(touchgfx::Drawable*, touchgfx::Drawable*)	4
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:291:6:virtual bool screen_asteroidsPresenter::elements_collide(touchgfx::Drawable*, touchgfx::Drawable*)	4
 ../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp:44:13:virtual void* screen_asteroidsPresenter::_ZThn4_N25screen_asteroidsPresenterD1Ev()	1
-../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp:49:18:virtual bool screen_asteroidsPresenter::_ZThn4_N25screen_asteroidsPresenter25is_asteroids_game_startedEv()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:251:6:virtual void screen_asteroidsPresenter::check_bullet_collisions()	11
+../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp:52:18:virtual bool screen_asteroidsPresenter::_ZThn4_N25screen_asteroidsPresenter25is_asteroids_game_startedEv()	1
+../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp:62:18:virtual void screen_asteroidsPresenter::_ZThn4_N25screen_asteroidsPresenter20set_allowed_to_shootEb(bool)	1
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:270:6:virtual void screen_asteroidsPresenter::check_bullet_collisions()	11
 ../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp:44:13:virtual void* screen_asteroidsPresenter::_ZThn4_N25screen_asteroidsPresenterD0Ev()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:224:6:virtual void screen_asteroidsPresenter::check_ship_collisions()	11
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:174:6:virtual void screen_asteroidsPresenter::move_bullets()	29
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:243:6:virtual void screen_asteroidsPresenter::check_ship_collisions()	11
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:203:6:virtual void screen_asteroidsPresenter::shoot_bullet()	20
 C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:4:1:screen_asteroidsPresenter::screen_asteroidsPresenter(screen_asteroidsView&)	1
 C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsPresenter.cpp:158:11:touchgfx::Drawable* get_next_invisible_bullet()	1

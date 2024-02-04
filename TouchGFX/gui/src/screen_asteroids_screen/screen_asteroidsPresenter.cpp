@@ -173,21 +173,7 @@ Drawable* screen_asteroidsPresenter::get_next_invisible_bullet()
 
 void screen_asteroidsPresenter::move_bullets()
 {
-	Drawable *ship = view.get_ship_pointer();
-
-	// check if button for new bullet is pressed
-	if( view.bullet_button_pressed() )
-	{
-		// spawn new bullet
-		Drawable *new_bullet = get_next_invisible_bullet();
-
-		if( new_bullet != NULL )
-		{
-			new_bullet->setVisible(true);
-			new_bullet->setX(ship->getX() + (ship->getWidth()/2) - 1);
-			new_bullet->setY(ship->getY() + 1);
-		}
-	}
+	shoot_bullet();
 
 	for(int i = 0; i < BULLET_COUNT; i++) {
 		if( !view.bullets[i].isVisible() )
@@ -200,6 +186,41 @@ void screen_asteroidsPresenter::move_bullets()
 		if( view.bullets[i].getY() < 0 ) {
 			// remove the offscreen bullet
 			view.move_bullet_offscreen(&view.bullets[i]);
+		}
+	}
+}
+
+bool screen_asteroidsPresenter::is_allowed_to_shoot()
+{
+	return allowed_to_shoot;
+}
+
+void screen_asteroidsPresenter::set_allowed_to_shoot(bool value)
+{
+	allowed_to_shoot = value;
+}
+
+void screen_asteroidsPresenter::shoot_bullet()
+{
+	if( !is_allowed_to_shoot() )
+		return;
+
+	Drawable *ship = view.get_ship_pointer();
+
+	// check if button for new bullet is pressed
+	if( view.bullet_button_pressed() )
+	{
+		model->start_bullet_timer();
+		set_allowed_to_shoot(false);
+
+		// spawn new bullet
+		Drawable *new_bullet = get_next_invisible_bullet();
+
+		if( new_bullet != NULL )
+		{
+			new_bullet->setVisible(true);
+			new_bullet->setX(ship->getX() + (ship->getWidth()/2) - 1);
+			new_bullet->setY(ship->getY() + 1);
 		}
 	}
 }
