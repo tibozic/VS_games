@@ -37,6 +37,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define RFID_DISABLE
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -912,6 +914,11 @@ void invincibility_timer_task_function(void *argument)
 void MFRC_Ch_fun(void *argument)
 {
   /* USER CODE BEGIN MFRC_Ch_fun */
+
+#ifdef RFID_DISABLE
+	osThreadSuspend(MFRC_ChHandle);
+#endif
+
 	int ok = 0;
 		uint8_t myID[5];
 		uint8_t cmp[] = {145, 221, 185, 27};

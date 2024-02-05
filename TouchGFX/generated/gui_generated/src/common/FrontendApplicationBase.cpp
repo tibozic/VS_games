@@ -9,10 +9,16 @@
 #include <touchgfx/Texts.hpp>
 #include <touchgfx/hal/HAL.hpp>
 #include <platform/driver/lcd/LCD16bpp.hpp>
-#include <gui/screen_asteroids_screen/screen_asteroidsView.hpp>
-#include <gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp>
+#include <gui/screen_locked_screen/screen_lockedView.hpp>
+#include <gui/screen_locked_screen/screen_lockedPresenter.hpp>
+#include <gui/screen_authorized_screen/screen_authorizedView.hpp>
+#include <gui/screen_authorized_screen/screen_authorizedPresenter.hpp>
 #include <gui/screen_game_select_screen/screen_game_selectView.hpp>
 #include <gui/screen_game_select_screen/screen_game_selectPresenter.hpp>
+#include <gui/screen_scoreboard_screen/screen_scoreboardView.hpp>
+#include <gui/screen_scoreboard_screen/screen_scoreboardPresenter.hpp>
+#include <gui/screen_asteroids_screen/screen_asteroidsView.hpp>
+#include <gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -32,30 +38,30 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
  * Screen Transition Declarations
  */
 
-// screen_asteroids
+// screen_locked
 
-void FrontendApplicationBase::gotoscreen_asteroidsScreenSlideTransitionEast()
+void FrontendApplicationBase::gotoscreen_lockedScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_asteroidsScreenSlideTransitionEastImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_lockedScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoscreen_asteroidsScreenSlideTransitionEastImpl()
+void FrontendApplicationBase::gotoscreen_lockedScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<screen_asteroidsView, screen_asteroidsPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<screen_lockedView, screen_lockedPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 // screen_game_select
 
-void FrontendApplicationBase::gotoscreen_game_selectScreenNoTransition()
+void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionEast()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_game_selectScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionEastImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoscreen_game_selectScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionEastImpl()
 {
-    touchgfx::makeTransition<screen_game_selectView, screen_game_selectPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<screen_game_selectView, screen_game_selectPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionWest()
@@ -67,4 +73,17 @@ void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionWest()
 void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionWestImpl()
 {
     touchgfx::makeTransition<screen_game_selectView, screen_game_selectPresenter, touchgfx::SlideTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// screen_asteroids
+
+void FrontendApplicationBase::gotoscreen_asteroidsScreenSlideTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_asteroidsScreenSlideTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoscreen_asteroidsScreenSlideTransitionEastImpl()
+{
+    touchgfx::makeTransition<screen_asteroidsView, screen_asteroidsPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

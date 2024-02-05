@@ -1,6 +1,6 @@
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:115:7:pvPortMalloc	21
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:266:6:vPortFree	10
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:315:8:xPortGetFreeHeapSize	1
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:321:8:xPortGetMinimumEverFreeHeapSize	1
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:327:6:vPortInitialiseBlocks	1
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:442:6:vPortGetHeapStats	3
+C:/TouchGFXProjects/VS_games/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:115:7:pvPortMalloc	21
+C:/TouchGFXProjects/VS_games/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:266:6:vPortFree	10
+C:/TouchGFXProjects/VS_games/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:315:8:xPortGetFreeHeapSize	1
+C:/TouchGFXProjects/VS_games/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:321:8:xPortGetMinimumEverFreeHeapSize	1
+C:/TouchGFXProjects/VS_games/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:327:6:vPortInitialiseBlocks	1
+C:/TouchGFXProjects/VS_games/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:442:6:vPortGetHeapStats	3

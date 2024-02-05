@@ -196,6 +196,42 @@
     <Filter Include="Header Files\generated\simulator\include\simulator\video">
       <UniqueIdentifier>86CDB5C5-DD8B-D31A-C899-3277ECB4FAC0</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\screen_authorized_screen">
+      <UniqueIdentifier>E5F7F7CD-1BFF-35B9-91AB-E84E68F045DB</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen_authorized_screen">
+      <UniqueIdentifier>773DD4CB-9952-D580-9048-00F48E2C597F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen_locked_screen">
+      <UniqueIdentifier>42FB90BA-D2DF-8A87-8261-857059DCA9A4</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screen_locked_screen">
+      <UniqueIdentifier>627F72AD-8316-0CDC-9542-98ACC7E66EF9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen_locked_screen">
+      <UniqueIdentifier>1F25A1DE-A6E3-00F4-C3E9-62D7485F3C96</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen_locked_screen">
+      <UniqueIdentifier>CAB7DDAD-D2E9-4F54-B750-F943869BB0BB</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen_authorized_screen">
+      <UniqueIdentifier>903FCBDF-CEE4-95AB-840B-461B0EA4F597</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen_authorized_screen">
+      <UniqueIdentifier>F1B95318-AE76-230B-3201-62C39F1306F3</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screen_scoreboard_screen">
+      <UniqueIdentifier>5C93F266-0C76-0A65-6C60-0183166FE632</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen_scoreboard_screen">
+      <UniqueIdentifier>0FDA8C14-6F56-F4F6-81D8-5767E5BFCB26</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen_scoreboard_screen">
+      <UniqueIdentifier>36AE42D9-BA64-AF11-2782-E6C6B5F9A44A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen_scoreboard_screen">
+      <UniqueIdentifier>A86D7EB3-A285-E33E-23BC-0A1DBBFBF5BE</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -245,6 +281,33 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_authorized_screen\screen_authorizedPresenter.cpp">
+      <Filter>Source Files\gui\screen_authorized_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_authorized_screen\screen_authorizedView.cpp">
+      <Filter>Source Files\gui\screen_authorized_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_authorized_screen\screen_authorizedViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen_authorized_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_locked_screen\screen_lockedPresenter.cpp">
+      <Filter>Source Files\gui\screen_locked_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_locked_screen\screen_lockedView.cpp">
+      <Filter>Source Files\gui\screen_locked_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_locked_screen\screen_lockedViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen_locked_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_scoreboard_screen\screen_scoreboardPresenter.cpp">
+      <Filter>Source Files\gui\screen_scoreboard_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_scoreboard_screen\screen_scoreboardView.cpp">
+      <Filter>Source Files\gui\screen_scoreboard_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_scoreboard_screen\screen_scoreboardViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen_scoreboard_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -705,6 +768,33 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
       <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_authorized_screen\screen_authorizedPresenter.hpp">
+      <Filter>Header Files\gui\screen_authorized_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_authorized_screen\screen_authorizedView.hpp">
+      <Filter>Header Files\gui\screen_authorized_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_authorized_screen\screen_authorizedViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen_authorized_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_locked_screen\screen_lockedPresenter.hpp">
+      <Filter>Header Files\gui\screen_locked_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_locked_screen\screen_lockedView.hpp">
+      <Filter>Header Files\gui\screen_locked_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_locked_screen\screen_lockedViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen_locked_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_scoreboard_screen\screen_scoreboardPresenter.hpp">
+      <Filter>Header Files\gui\screen_scoreboard_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_scoreboard_screen\screen_scoreboardView.hpp">
+      <Filter>Header Files\gui\screen_scoreboard_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_scoreboard_screen\screen_scoreboardViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen_scoreboard_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

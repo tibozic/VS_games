@@ -6,12 +6,12 @@
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::check_bullet_collisions()	0	static
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:27:18:virtual void ModelListener::set_allowed_to_shoot(bool)	0	static
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:29:18:virtual void ModelListener::set_invincible(bool)	0	static
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:14:1:Model::Model()	0	static
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:26:6:void Model::asteroids_tick()	16	static
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:19:6:void Model::tick()	8	static
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:37:6:void Model::start_bullet_timer()	0	static
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:42:6:void Model::bullet_timer_ended()	16	static
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:50:6:void Model::start_invincibility_timer()	0	static
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:55:6:void Model::invincibility_timer_ended()	16	static
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:63:6:void Model::resume_asteroids_task()	0	static
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:68:6:void Model::suspend_asteroids_task()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:14:1:Model::Model()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:26:6:void Model::asteroids_tick()	16	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:19:6:void Model::tick()	8	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:37:6:void Model::start_bullet_timer()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:42:6:void Model::bullet_timer_ended()	16	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:50:6:void Model::start_invincibility_timer()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:55:6:void Model::invincibility_timer_ended()	16	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:63:6:void Model::resume_asteroids_task()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:68:6:void Model::suspend_asteroids_task()	0	static

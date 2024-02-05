@@ -2,6 +2,424 @@
   "Application": {
     "Screens": [
       {
+        "Name": "screen_locked",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "bg_red",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 186,
+              "Green": 15,
+              "Blue": 15
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "icon_lock",
+            "X": 200,
+            "Y": 40,
+            "Width": 80,
+            "Height": 80,
+            "Filename": "lock.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "lbl_instructions",
+            "X": 164,
+            "Y": 150,
+            "Width": 152,
+            "Height": 72,
+            "TextId": "__SingleUse_7J6J",
+            "TextRotation": "0",
+            "AutoSize": true
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "screen_authorized",
+        "Components": [
+          {
+            "Type": "FlexButton",
+            "Name": "btn_next",
+            "Width": 480,
+            "Height": 272,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 480,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Box",
+            "Name": "bg_blue",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 62,
+              "Green": 83,
+              "Blue": 173
+            }
+          },
+          {
+            "Type": "Container",
+            "Name": "container_user_data",
+            "X": 89,
+            "Y": 63,
+            "Width": 301,
+            "Height": 146,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "bg_white",
+                "Width": 300,
+                "Height": 146,
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "icon_person",
+                "X": 15,
+                "Y": 33,
+                "Width": 80,
+                "Height": 80,
+                "Filename": "person_icon.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "lbl_name",
+                "X": 106,
+                "Y": 33,
+                "Width": 88,
+                "Height": 30,
+                "TextId": "__SingleUse_XBZ0",
+                "TextRotation": "0",
+                "AutoSize": true,
+                "Wildcard1": {
+                  "TextId": "user_name",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "lbl_high_score",
+                "X": 106,
+                "Y": 65,
+                "Width": 138,
+                "Height": 24,
+                "TextId": "__SingleUse_0N4R",
+                "TextRotation": "0",
+                "AutoSize": true,
+                "Wildcard1": {
+                  "TextId": "user_high_score",
+                  "UseBuffer": true,
+                  "BufferSize": 6
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "lbl_tag",
+                "X": 105,
+                "Y": 89,
+                "Width": 139,
+                "Height": 24,
+                "TextId": "__SingleUse_YUQU",
+                "TextRotation": "0",
+                "AutoSize": true,
+                "Wildcard1": {
+                  "TextId": "user_tag_id"
+                }
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "next_screen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_next"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "screen_game_select"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "screen_game_select",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "bg_grey",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 61,
+              "Green": 61,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "Container",
+            "Name": "btn_asteroids",
+            "X": 120,
+            "Y": 63,
+            "Width": 240,
+            "Height": 56,
+            "Components": [
+              {
+                "Type": "FlexButton",
+                "Name": "_btn_asteroids",
+                "Width": 240,
+                "Height": 56,
+                "LockPosition": true,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 240,
+                    "Height": 56,
+                    "LockToFlexButtonSize": true,
+                    "ColorReleased": {
+                      "Red": 199,
+                      "Green": 199,
+                      "Blue": 60
+                    },
+                    "ColorPressed": {
+                      "Red": 122,
+                      "Green": 122,
+                      "Blue": 5
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "TextArea",
+                "Name": "lbl_asteroids",
+                "X": 27,
+                "Y": 8,
+                "Width": 186,
+                "Height": 41,
+                "LockPosition": true,
+                "TextId": "__SingleUse_19SB",
+                "TextRotation": "0",
+                "AutoSize": true
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "btn_scoreboard",
+            "X": 120,
+            "Y": 153,
+            "Width": 240,
+            "Height": 56,
+            "Components": [
+              {
+                "Type": "FlexButton",
+                "Name": "_btn_scoreboard",
+                "Width": 240,
+                "Height": 56,
+                "LockPosition": true,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 240,
+                    "Height": 56,
+                    "LockToFlexButtonSize": true,
+                    "ColorReleased": {
+                      "Red": 199,
+                      "Green": 199,
+                      "Blue": 60
+                    },
+                    "ColorPressed": {
+                      "Red": 122,
+                      "Green": 122,
+                      "Blue": 5
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "TextArea",
+                "Name": "lbl_scoreboard",
+                "X": 6,
+                "Y": 8,
+                "Width": 228,
+                "Height": 41,
+                "LockPosition": true,
+                "TextId": "__SingleUse_NWOF",
+                "TextRotation": "0",
+                "AutoSize": true
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "game_asteroids",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "_btn_asteroids"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "screen_asteroids"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "screen_scoreboard",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "bg_grey",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 61,
+              "Green": 61,
+              "Blue": 61
+            }
+          },
+          {
+            "Type": "ListLayout",
+            "Name": "list_scores",
+            "X": 120,
+            "Y": 12,
+            "Width": 240,
+            "Height": 50,
+            "Direction": "South",
+            "Components": [
+              {
+                "Type": "Container",
+                "Name": "container_score_entry",
+                "Width": 240,
+                "Height": 50,
+                "LockPosition": true,
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "bg_white",
+                    "Width": 240,
+                    "Height": 50,
+                    "LockPosition": true,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "lbl_score",
+                    "X": 166,
+                    "Y": 13,
+                    "Width": 65,
+                    "Height": 24,
+                    "LockPosition": true,
+                    "TextId": "__SingleUse_G1L1",
+                    "TextRotation": "0",
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "player_score",
+                      "UseBuffer": true,
+                      "BufferSize": 6
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "lbl_player_name",
+                    "X": 8,
+                    "Y": 13,
+                    "Width": 152,
+                    "Height": 24,
+                    "LockPosition": true,
+                    "TextId": "__SingleUse_MBWY",
+                    "TextRotation": "0",
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "player_position",
+                      "UseBuffer": true,
+                      "BufferSize": 3
+                    },
+                    "Wildcard2": {
+                      "TextId": "player_name",
+                      "UseBuffer": true,
+                      "BufferSize": 20
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "Interactions": []
+      },
+      {
         "Name": "screen_asteroids",
         "CanvasBufferSize": 7200,
         "Components": [
@@ -60,7 +478,7 @@
             "X": 338,
             "Y": 3,
             "Width": 138,
-            "Height": 20,
+            "Height": 24,
             "TextId": "__SingleUse_W1MR",
             "TextRotation": "0",
             "Color": {
@@ -368,94 +786,6 @@
             }
           }
         ]
-      },
-      {
-        "Name": "screen_game_select",
-        "Components": [
-          {
-            "Type": "Box",
-            "Name": "bg_grey",
-            "Width": 480,
-            "Height": 272,
-            "Color": {
-              "Red": 61,
-              "Green": 61,
-              "Blue": 61
-            }
-          },
-          {
-            "Type": "Container",
-            "Name": "btn_asteroids",
-            "X": 15,
-            "Y": 20,
-            "Width": 240,
-            "Height": 56,
-            "Components": [
-              {
-                "Type": "FlexButton",
-                "Name": "_btn_asteroids",
-                "Width": 240,
-                "Height": 56,
-                "ButtonTrigger": {
-                  "Type": "ClickButtonTrigger"
-                },
-                "ButtonStyles": [
-                  {
-                    "Type": "BoxWithBorderButtonStyle",
-                    "Width": 240,
-                    "Height": 56,
-                    "LockToFlexButtonSize": true,
-                    "ColorReleased": {
-                      "Red": 199,
-                      "Green": 199,
-                      "Blue": 60
-                    },
-                    "ColorPressed": {
-                      "Red": 122,
-                      "Green": 122,
-                      "Blue": 5
-                    },
-                    "ColorBorderReleased": {
-                      "Green": 51,
-                      "Blue": 102
-                    },
-                    "ColorBorderPressed": {
-                      "Red": 51,
-                      "Green": 102,
-                      "Blue": 153
-                    }
-                  }
-                ]
-              },
-              {
-                "Type": "TextArea",
-                "Name": "lbl_asteroids",
-                "X": 27,
-                "Y": 8,
-                "Width": 186,
-                "Height": 41,
-                "TextId": "__SingleUse_19SB",
-                "TextRotation": "0",
-                "AutoSize": true
-              }
-            ]
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "game_asteroids",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "_btn_asteroids"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionSlide",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "screen_asteroids"
-            }
-          }
-        ]
       }
     ],
     "CustomContainerDefinitions": [],
@@ -465,7 +795,7 @@
       "Height": 272
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "screen_game_select",
+    "StartupScreenName": "screen_locked",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

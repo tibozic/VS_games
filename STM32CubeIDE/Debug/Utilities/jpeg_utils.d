@@ -1,6 +1,6 @@
 Utilities/jpeg_utils.o: \
- C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Utilities/JPEG/jpeg_utils.c \
- C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Utilities/JPEG/jpeg_utils.h \
+ C:/TouchGFXProjects/VS_games/Utilities/JPEG/jpeg_utils.c \
+ C:/TouchGFXProjects/VS_games/Utilities/JPEG/jpeg_utils.h \
  ../../Core/Inc/jpeg_utils_conf.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../Core/Inc/stm32h7xx_hal_conf.h \
@@ -45,7 +45,7 @@ Utilities/jpeg_utils.o: \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Utilities/JPEG/jpeg_utils.h:
+C:/TouchGFXProjects/VS_games/Utilities/JPEG/jpeg_utils.h:
 ../../Core/Inc/jpeg_utils_conf.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../Core/Inc/stm32h7xx_hal_conf.h:

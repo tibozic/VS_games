@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/tgfx_jpeg_utils.o: \
- C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/target/generated/tgfx_jpeg_utils.c \
+ C:/TouchGFXProjects/VS_games/TouchGFX/target/generated/tgfx_jpeg_utils.c \
  ../../Utilities/JPEG/jpeg_utils.h ../../Core/Inc/jpeg_utils_conf.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../Core/Inc/stm32h7xx_hal_conf.h \

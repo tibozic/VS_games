@@ -27,6 +27,15 @@
     <ClCompile Include="..\..\gui\src\screen_game_select_screen\screen_game_selectView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\screen_game_select_screen\screen_game_selectViewBase.cpp"/>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_authorized_screen\screen_authorizedPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_authorized_screen\screen_authorizedView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_authorized_screen\screen_authorizedViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_locked_screen\screen_lockedPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_locked_screen\screen_lockedView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_locked_screen\screen_lockedViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_scoreboard_screen\screen_scoreboardPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_scoreboard_screen\screen_scoreboardView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_scoreboard_screen\screen_scoreboardViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -183,6 +192,15 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_game_select_screen\screen_game_selectViewBase.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp"/>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_authorized_screen\screen_authorizedPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_authorized_screen\screen_authorizedView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_authorized_screen\screen_authorizedViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_locked_screen\screen_lockedPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_locked_screen\screen_lockedView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_locked_screen\screen_lockedViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_scoreboard_screen\screen_scoreboardPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_scoreboard_screen\screen_scoreboardView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_scoreboard_screen\screen_scoreboardViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

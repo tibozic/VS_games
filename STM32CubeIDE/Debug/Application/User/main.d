@@ -1,5 +1,4 @@
-Application/User/main.o: \
- C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Core/Src/main.c \
+Application/User/main.o: C:/TouchGFXProjects/VS_games/Core/Src/main.c \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../Core/Inc/stm32h7xx_hal_conf.h \
@@ -67,7 +66,7 @@ Application/User/main.o: \
  ../../Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_sdram.h \
  ../../Drivers/BSP/STM32H750B-DK/../Components/mt48lc4m32b2/mt48lc4m32b2.h \
  ../../Core/Inc/mt48lc4m32b2_conf.h \
- C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/STM32CubeIDE/Application/User/LibsNV/mfrc522.h
+ C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/LibsNV/mfrc522.h
 ../../Core/Inc/main.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../Core/Inc/stm32h7xx_hal_conf.h:
@@ -137,4 +136,4 @@ Application/User/main.o: \
 ../../Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_sdram.h:
 ../../Drivers/BSP/STM32H750B-DK/../Components/mt48lc4m32b2/mt48lc4m32b2.h:
 ../../Core/Inc/mt48lc4m32b2_conf.h:
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/STM32CubeIDE/Application/User/LibsNV/mfrc522.h:
+C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/LibsNV/mfrc522.h:

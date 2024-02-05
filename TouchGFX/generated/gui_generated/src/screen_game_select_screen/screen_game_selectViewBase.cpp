@@ -16,7 +16,7 @@ screen_game_selectViewBase::screen_game_selectViewBase() :
     bg_grey.setColor(touchgfx::Color::getColorFromRGB(61, 61, 61));
     add(bg_grey);
 
-    btn_asteroids.setPosition(15, 20, 240, 56);
+    btn_asteroids.setPosition(120, 63, 240, 56);
     _btn_asteroids.setBoxWithBorderPosition(0, 0, 240, 56);
     _btn_asteroids.setBorderSize(0);
     _btn_asteroids.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(199, 199, 60), touchgfx::Color::getColorFromRGB(122, 122, 5), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
@@ -31,6 +31,21 @@ screen_game_selectViewBase::screen_game_selectViewBase() :
     btn_asteroids.add(lbl_asteroids);
 
     add(btn_asteroids);
+
+    btn_scoreboard.setPosition(120, 153, 240, 56);
+    _btn_scoreboard.setBoxWithBorderPosition(0, 0, 240, 56);
+    _btn_scoreboard.setBorderSize(0);
+    _btn_scoreboard.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(199, 199, 60), touchgfx::Color::getColorFromRGB(122, 122, 5), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    _btn_scoreboard.setPosition(0, 0, 240, 56);
+    btn_scoreboard.add(_btn_scoreboard);
+
+    lbl_scoreboard.setXY(6, 8);
+    lbl_scoreboard.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    lbl_scoreboard.setLinespacing(0);
+    lbl_scoreboard.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NWOF));
+    btn_scoreboard.add(lbl_scoreboard);
+
+    add(btn_scoreboard);
 }
 
 screen_game_selectViewBase::~screen_game_selectViewBase()

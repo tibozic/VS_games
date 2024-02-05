@@ -1,5 +1,5 @@
 Application/User/stm32h7xx_it.o: \
- C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Core/Src/stm32h7xx_it.c \
+ C:/TouchGFXProjects/VS_games/Core/Src/stm32h7xx_it.c \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../Core/Inc/stm32h7xx_hal_conf.h \

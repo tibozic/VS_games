@@ -14,10 +14,16 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/screen_asteroids_screen/screen_asteroidsView.hpp>
-#include <gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp>
+#include <gui/screen_locked_screen/screen_lockedView.hpp>
+#include <gui/screen_locked_screen/screen_lockedPresenter.hpp>
+#include <gui/screen_authorized_screen/screen_authorizedView.hpp>
+#include <gui/screen_authorized_screen/screen_authorizedPresenter.hpp>
 #include <gui/screen_game_select_screen/screen_game_selectView.hpp>
 #include <gui/screen_game_select_screen/screen_game_selectPresenter.hpp>
+#include <gui/screen_scoreboard_screen/screen_scoreboardView.hpp>
+#include <gui/screen_scoreboard_screen/screen_scoreboardPresenter.hpp>
+#include <gui/screen_asteroids_screen/screen_asteroidsView.hpp>
+#include <gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp>
 
 
 /**
@@ -40,9 +46,12 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< screen_asteroidsView,
+    typedef touchgfx::meta::TypeList< screen_lockedView,
+            touchgfx::meta::TypeList< screen_authorizedView,
             touchgfx::meta::TypeList< screen_game_selectView,
-            touchgfx::meta::Nil >
+            touchgfx::meta::TypeList< screen_scoreboardView,
+            touchgfx::meta::TypeList< screen_asteroidsView,
+            touchgfx::meta::Nil > > > >
             > GeneratedViewTypes;
 
     /**
@@ -54,9 +63,12 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< screen_asteroidsPresenter,
+    typedef touchgfx::meta::TypeList< screen_lockedPresenter,
+            touchgfx::meta::TypeList< screen_authorizedPresenter,
             touchgfx::meta::TypeList< screen_game_selectPresenter,
-            touchgfx::meta::Nil >
+            touchgfx::meta::TypeList< screen_scoreboardPresenter,
+            touchgfx::meta::TypeList< screen_asteroidsPresenter,
+            touchgfx::meta::Nil > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -69,8 +81,8 @@ public:
      * @note All transition types used in the application MUST be added to this list!
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
-            touchgfx::meta::TypeList< SlideTransition<WEST>,
             touchgfx::meta::TypeList< SlideTransition<EAST>,
+            touchgfx::meta::TypeList< SlideTransition<WEST>,
             touchgfx::meta::Nil > >
             > GeneratedTransitionTypes;
 
@@ -81,7 +93,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoscreen_game_selectScreenNoTransition();
+        app.gotoscreen_lockedScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

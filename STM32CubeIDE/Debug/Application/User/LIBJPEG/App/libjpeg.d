@@ -1,6 +1,6 @@
 Application/User/LIBJPEG/App/libjpeg.o: \
- C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/LIBJPEG/App/libjpeg.c \
- C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/LIBJPEG/App/libjpeg.h \
+ C:/TouchGFXProjects/VS_games/LIBJPEG/App/libjpeg.c \
+ C:/TouchGFXProjects/VS_games/LIBJPEG/App/libjpeg.h \
  ../../Middlewares/Third_Party/LibJPEG/include/jpeglib.h \
  ../../LIBJPEG/Target/jconfig.h ../../LIBJPEG/Target/jdata_conf.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
@@ -15,7 +15,7 @@ Application/User/LIBJPEG/App/libjpeg.o: \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../LIBJPEG/Target/jmorecfg.h
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/LIBJPEG/App/libjpeg.h:
+C:/TouchGFXProjects/VS_games/LIBJPEG/App/libjpeg.h:
 ../../Middlewares/Third_Party/LibJPEG/include/jpeglib.h:
 ../../LIBJPEG/Target/jconfig.h:
 ../../LIBJPEG/Target/jdata_conf.h:

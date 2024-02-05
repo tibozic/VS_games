@@ -32,6 +32,9 @@ protected:
     touchgfx::Container btn_asteroids;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  _btn_asteroids;
     touchgfx::TextArea lbl_asteroids;
+    touchgfx::Container btn_scoreboard;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  _btn_scoreboard;
+    touchgfx::TextArea lbl_scoreboard;
 
 private:
 

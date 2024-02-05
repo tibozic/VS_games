@@ -1,8 +1,8 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_game_select_screen/screen_game_selectView.cpp:13:6:virtual void screen_game_selectView::tearDownScreen()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_game_select_screen/screen_game_selectView.cpp:13:6:virtual void screen_game_selectView::tearDownScreen()	0	static
 ../../TouchGFX/gui/include/gui/screen_game_select_screen/screen_game_selectView.hpp:11:13:screen_game_selectView::~screen_game_selectView()	8	static
 ../../TouchGFX/gui/include/gui/screen_game_select_screen/screen_game_selectView.hpp:11:13:virtual screen_game_selectView::~screen_game_selectView()	8	static
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_game_select_screen/screen_game_selectView.cpp:3:1:screen_game_selectView::screen_game_selectView()	8	static
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_game_select_screen/screen_game_selectView.cpp:8:6:virtual void screen_game_selectView::setupScreen()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_game_select_screen/screen_game_selectView.cpp:3:1:screen_game_selectView::screen_game_selectView()	8	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_game_select_screen/screen_game_selectView.cpp:8:6:virtual void screen_game_selectView::setupScreen()	0	static

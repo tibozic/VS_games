@@ -17,29 +17,35 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoscreen_game_selectScreenNoTransition();
+        gotoscreen_lockedScreenNoTransition();
     }
+
+    // screen_locked
+    void gotoscreen_lockedScreenNoTransition();
+
+    // screen_game_select
+    void gotoscreen_game_selectScreenSlideTransitionEast();
+
+    void gotoscreen_game_selectScreenSlideTransitionWest();
 
     // screen_asteroids
     void gotoscreen_asteroidsScreenSlideTransitionEast();
-
-    // screen_game_select
-    void gotoscreen_game_selectScreenNoTransition();
-
-    void gotoscreen_game_selectScreenSlideTransitionWest();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
     Model& model;
 
-    // screen_asteroids
-    void gotoscreen_asteroidsScreenSlideTransitionEastImpl();
+    // screen_locked
+    void gotoscreen_lockedScreenNoTransitionImpl();
 
     // screen_game_select
-    void gotoscreen_game_selectScreenNoTransitionImpl();
+    void gotoscreen_game_selectScreenSlideTransitionEastImpl();
 
     void gotoscreen_game_selectScreenSlideTransitionWestImpl();
+
+    // screen_asteroids
+    void gotoscreen_asteroidsScreenSlideTransitionEastImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP
