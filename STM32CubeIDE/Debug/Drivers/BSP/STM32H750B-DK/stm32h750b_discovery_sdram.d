@@ -1,6 +1,6 @@
 Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_sdram.o: \
- C:/TouchGFXProjects/VS_games/Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_sdram.c \
- C:/TouchGFXProjects/VS_games/Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_sdram.h \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_sdram.c \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_sdram.h \
  ../../Core/Inc/stm32h750b_discovery_conf.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../Core/Inc/stm32h7xx_hal_conf.h \
@@ -39,12 +39,16 @@ Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_sdram.o: \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
+ ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h \
+ ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
- C:/TouchGFXProjects/VS_games/Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_errno.h \
- C:/TouchGFXProjects/VS_games/Drivers/BSP/STM32H750B-DK/../Components/mt48lc4m32b2/mt48lc4m32b2.h \
+ ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
+ ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_errno.h \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Drivers/BSP/STM32H750B-DK/../Components/mt48lc4m32b2/mt48lc4m32b2.h \
  ../../Core/Inc/mt48lc4m32b2_conf.h
-C:/TouchGFXProjects/VS_games/Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_sdram.h:
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_sdram.h:
 ../../Core/Inc/stm32h750b_discovery_conf.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../Core/Inc/stm32h7xx_hal_conf.h:
@@ -83,8 +87,12 @@ C:/TouchGFXProjects/VS_games/Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_sdra
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
+../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h:
+../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
-C:/TouchGFXProjects/VS_games/Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_errno.h:
-C:/TouchGFXProjects/VS_games/Drivers/BSP/STM32H750B-DK/../Components/mt48lc4m32b2/mt48lc4m32b2.h:
+../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
+../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_errno.h:
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Drivers/BSP/STM32H750B-DK/../Components/mt48lc4m32b2/mt48lc4m32b2.h:
 ../../Core/Inc/mt48lc4m32b2_conf.h:

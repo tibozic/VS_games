@@ -2,27 +2,27 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:30:6:virtual void screen_asteroidsView::tearDownScreen()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:35:6:virtual void screen_asteroidsView::resume_asteroids_task()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:40:6:virtual void screen_asteroidsView::suspend_asteroids_task()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:45:6:virtual void screen_asteroidsView::start_asteroids_game()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:65:6:virtual void screen_asteroidsView::hide_endgame_screen()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:117:6:virtual void screen_asteroidsView::getShipPosition(int*, int*)	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:123:11:virtual touchgfx::Drawable* screen_asteroidsView::get_ship_pointer()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:159:6:virtual void screen_asteroidsView::move_ship(int, int)	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:194:6:virtual bool screen_asteroidsView::bullet_button_pressed()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:199:6:virtual void screen_asteroidsView::hide_element(touchgfx::Drawable*)	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:101:6:virtual void screen_asteroidsView::update_score(unsigned int)	2
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:30:6:virtual void screen_asteroidsView::tearDownScreen()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:35:6:virtual void screen_asteroidsView::resume_asteroids_task()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:40:6:virtual void screen_asteroidsView::suspend_asteroids_task()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:45:6:virtual void screen_asteroidsView::start_asteroids_game()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:65:6:virtual void screen_asteroidsView::hide_endgame_screen()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:117:6:virtual void screen_asteroidsView::getShipPosition(int*, int*)	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:123:11:virtual touchgfx::Drawable* screen_asteroidsView::get_ship_pointer()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:159:6:virtual void screen_asteroidsView::move_ship(int, int)	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:194:6:virtual bool screen_asteroidsView::bullet_button_pressed()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:199:6:virtual void screen_asteroidsView::hide_element(touchgfx::Drawable*)	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:101:6:virtual void screen_asteroidsView::update_score(unsigned int)	2
 ../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsView.hpp:24:13:screen_asteroidsView::~screen_asteroidsView()	3
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:128:15:virtual ShipDirection screen_asteroidsView::get_ship_direction()	4
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:145:6:virtual void screen_asteroidsView::set_ship_invincible(bool)	2
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:50:6:virtual void screen_asteroidsView::show_endgame_screen()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:166:6:virtual void screen_asteroidsView::move_rock(touchgfx::ScalableImage*, int, int)	3
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:173:6:virtual void screen_asteroidsView::move_bullet(touchgfx::Box*, int, int)	3
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:73:6:virtual void screen_asteroidsView::update_hearts(char)	12
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:128:15:virtual ShipDirection screen_asteroidsView::get_ship_direction()	4
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:145:6:virtual void screen_asteroidsView::set_ship_invincible(bool)	2
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:50:6:virtual void screen_asteroidsView::show_endgame_screen()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:166:6:virtual void screen_asteroidsView::move_rock(touchgfx::ScalableImage*, int, int)	3
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:173:6:virtual void screen_asteroidsView::move_bullet(touchgfx::Box*, int, int)	3
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:73:6:virtual void screen_asteroidsView::update_hearts(char)	12
 ../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsView.hpp:24:13:virtual screen_asteroidsView::~screen_asteroidsView()	3
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:187:6:virtual void screen_asteroidsView::move_bullet_offscreen(touchgfx::Box*)	4
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:180:6:virtual void screen_asteroidsView::move_rock_offscreen(touchgfx::ScalableImage*)	4
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:107:6:virtual void screen_asteroidsView::new_rock_position(touchgfx::ScalableImage*)	4
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:3:1:screen_asteroidsView::screen_asteroidsView()	2
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:8:6:virtual void screen_asteroidsView::setupScreen()	7
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:187:6:virtual void screen_asteroidsView::move_bullet_offscreen(touchgfx::Box*)	4
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:180:6:virtual void screen_asteroidsView::move_rock_offscreen(touchgfx::ScalableImage*)	4
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:107:6:virtual void screen_asteroidsView::new_rock_position(touchgfx::ScalableImage*)	4
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:3:1:screen_asteroidsView::screen_asteroidsView()	2
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_asteroids_screen/screen_asteroidsView.cpp:8:6:virtual void screen_asteroidsView::setupScreen()	7

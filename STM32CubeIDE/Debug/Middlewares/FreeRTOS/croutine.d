@@ -1,5 +1,5 @@
 Middlewares/FreeRTOS/croutine.o: \
- C:/TouchGFXProjects/VS_games/Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

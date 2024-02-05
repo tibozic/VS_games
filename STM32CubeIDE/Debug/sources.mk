@@ -41,6 +41,7 @@ CPP_DEPS :=
 SUBDIRS := \
 Application/Startup \
 Application/User/LIBJPEG/App \
+Application/User/LibsNV \
 Application/User/TouchGFX/App \
 Application/User/TouchGFX/target \
 Application/User/TouchGFX/target/generated \

@@ -1,5 +1,5 @@
 Application/User/generated/screen_game_selectViewBase.o: \
- C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_game_select_screen/screen_game_selectViewBase.cpp \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/screen_game_select_screen/screen_game_selectViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_game_select_screen/screen_game_selectViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

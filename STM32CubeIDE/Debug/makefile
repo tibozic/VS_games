@@ -21,6 +21,7 @@ RM := rm -rf
 -include Application/User/TouchGFX/target/generated/subdir.mk
 -include Application/User/TouchGFX/target/subdir.mk
 -include Application/User/TouchGFX/App/subdir.mk
+-include Application/User/LibsNV/subdir.mk
 -include Application/User/LIBJPEG/App/subdir.mk
 -include Application/User/subdir.mk
 -include Application/Startup/subdir.mk
@@ -99,8 +100,8 @@ all: main-build
 main-build: STM32H750B-DK.elf secondary-outputs
 
 # Tool invocations
-STM32H750B-DK.elf STM32H750B-DK.map: $(OBJS) $(USER_OBJS) C:\TouchGFXProjects\VS_games\STM32CubeIDE\STM32H750XBHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "STM32H750B-DK.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\TouchGFXProjects\VS_games\STM32CubeIDE\STM32H750XBHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32H750B-DK.map" -Wl,--gc-sections -static -L../../Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+STM32H750B-DK.elf STM32H750B-DK.map: $(OBJS) $(USER_OBJS) C:\Users\nejcv\Desktop\Nejc\Fakulteta\VS_SRC\VS_games\STM32CubeIDE\STM32H750XBHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "STM32H750B-DK.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\nejcv\Desktop\Nejc\Fakulteta\VS_SRC\VS_games\STM32CubeIDE\STM32H750XBHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32H750B-DK.map" -Wl,--gc-sections -static -L../../Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
