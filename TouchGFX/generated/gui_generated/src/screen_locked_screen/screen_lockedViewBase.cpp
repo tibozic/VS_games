@@ -6,11 +6,19 @@
 #include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
-screen_lockedViewBase::screen_lockedViewBase()
+screen_lockedViewBase::screen_lockedViewBase() :
+    flexButtonCallback(this, &screen_lockedViewBase::flexButtonCallbackHandler)
 {
     __background.setPosition(0, 0, 480, 272);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
+
+    btn_next.setBoxWithBorderPosition(0, 0, 480, 272);
+    btn_next.setBorderSize(5);
+    btn_next.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    btn_next.setAction(flexButtonCallback);
+    btn_next.setPosition(0, 0, 480, 272);
+    add(btn_next);
 
     bg_red.setPosition(0, 0, 480, 272);
     bg_red.setColor(touchgfx::Color::getColorFromRGB(186, 15, 15));
@@ -36,4 +44,15 @@ screen_lockedViewBase::~screen_lockedViewBase()
 void screen_lockedViewBase::setupScreen()
 {
 
+}
+
+void screen_lockedViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &btn_next)
+    {
+        //transition_authorized
+        //When btn_next clicked change screen to screen_authorized
+        //Go to screen_authorized with screen transition towards East
+        application().gotoscreen_authorizedScreenSlideTransitionEast();
+    }
 }

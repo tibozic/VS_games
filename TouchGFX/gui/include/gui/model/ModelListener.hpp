@@ -27,6 +27,8 @@ public:
     virtual void set_allowed_to_shoot(bool value){}
 
     virtual void set_invincible(bool value){}
+
+    virtual void update_scoreboard(){}
 protected:
     Model* model;
 };

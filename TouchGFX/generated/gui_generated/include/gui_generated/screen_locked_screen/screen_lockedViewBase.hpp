@@ -8,6 +8,7 @@
 #include <mvp/View.hpp>
 #include <gui/screen_locked_screen/screen_lockedPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 
@@ -27,11 +28,22 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  btn_next;
     touchgfx::Box bg_red;
     touchgfx::ScalableImage icon_lock;
     touchgfx::TextArea lbl_instructions;
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<screen_lockedViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

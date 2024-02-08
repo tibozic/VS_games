@@ -37,12 +37,35 @@ void screen_asteroidsPresenter::start_asteroids_game()
 	init_game();
 }
 
+int screen_asteroidsPresenter::new_score_position(unsigned int score)
+{
+	for(int i = 0; i < 5; i++) {
+		if( score > model->scores[i].player_score)
+			return i;
+	}
+	return -1;
+}
+
 void screen_asteroidsPresenter::game_over()
 {
+	char player_name[] = "Timi";
 	game_started = false;
 
-	if( score > high_score )
-		high_score = score;
+	// update the scoreboard
+	int score_position = new_score_position(score);
+	if( score_position != -1 ) {
+		score_entry new_score_entry;
+		strcpy(new_score_entry.player_name, player_name);
+		new_score_entry.player_score = score;
+
+		for(int i = 3; i > score_position; i--) {
+			model->scores[i+1] = model->scores[i];
+		}
+
+		model->scores[score_position] = new_score_entry;
+	}
+	model->update_scoreboard();
+
 
 	view.show_endgame_screen();
 }

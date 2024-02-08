@@ -5,6 +5,7 @@
 #include <mvp/Presenter.hpp>
 
 #include "ship_direction.h"
+#include "score_entry.h"
 
 #define SCREEN_WIDTH 480
 #define SCREEN_HEIGHT 272
@@ -65,6 +66,8 @@ public:
     virtual void set_invincible(bool value);
     virtual bool is_invincible();
 
+    virtual int new_score_position(unsigned int score);
+
     /*
      * SHIP STUFF
      */
@@ -95,7 +98,6 @@ private:
 
     char lives = 3;
     unsigned int score = 0;
-    unsigned int high_score = 0;
 
     ShipDirection direction = NONE;
 

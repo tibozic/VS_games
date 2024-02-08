@@ -23,10 +23,16 @@ public:
     // screen_locked
     void gotoscreen_lockedScreenNoTransition();
 
+    // screen_authorized
+    void gotoscreen_authorizedScreenSlideTransitionEast();
+
     // screen_game_select
     void gotoscreen_game_selectScreenSlideTransitionEast();
 
     void gotoscreen_game_selectScreenSlideTransitionWest();
+
+    // screen_scoreboard
+    void gotoscreen_scoreboardScreenSlideTransitionEast();
 
     // screen_asteroids
     void gotoscreen_asteroidsScreenSlideTransitionEast();
@@ -39,10 +45,16 @@ protected:
     // screen_locked
     void gotoscreen_lockedScreenNoTransitionImpl();
 
+    // screen_authorized
+    void gotoscreen_authorizedScreenSlideTransitionEastImpl();
+
     // screen_game_select
     void gotoscreen_game_selectScreenSlideTransitionEastImpl();
 
     void gotoscreen_game_selectScreenSlideTransitionWestImpl();
+
+    // screen_scoreboard
+    void gotoscreen_scoreboardScreenSlideTransitionEastImpl();
 
     // screen_asteroids
     void gotoscreen_asteroidsScreenSlideTransitionEastImpl();

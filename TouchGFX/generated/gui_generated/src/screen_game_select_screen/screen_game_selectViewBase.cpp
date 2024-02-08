@@ -36,6 +36,7 @@ screen_game_selectViewBase::screen_game_selectViewBase() :
     _btn_scoreboard.setBoxWithBorderPosition(0, 0, 240, 56);
     _btn_scoreboard.setBorderSize(0);
     _btn_scoreboard.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(199, 199, 60), touchgfx::Color::getColorFromRGB(122, 122, 5), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    _btn_scoreboard.setAction(flexButtonCallback);
     _btn_scoreboard.setPosition(0, 0, 240, 56);
     btn_scoreboard.add(_btn_scoreboard);
 
@@ -66,5 +67,12 @@ void screen_game_selectViewBase::flexButtonCallbackHandler(const touchgfx::Abstr
         //When _btn_asteroids clicked change screen to screen_asteroids
         //Go to screen_asteroids with screen transition towards East
         application().gotoscreen_asteroidsScreenSlideTransitionEast();
+    }
+    if (&src == &_btn_scoreboard)
+    {
+        //transition_scoreboard
+        //When _btn_scoreboard clicked change screen to screen_scoreboard
+        //Go to screen_scoreboard with screen transition towards East
+        application().gotoscreen_scoreboardScreenSlideTransitionEast();
     }
 }

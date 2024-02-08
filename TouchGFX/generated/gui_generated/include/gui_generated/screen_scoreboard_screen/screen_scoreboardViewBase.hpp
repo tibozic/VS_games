@@ -11,6 +11,7 @@
 #include <touchgfx/containers/ListLayout.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/ButtonWithIcon.hpp>
 
 class screen_scoreboardViewBase : public touchgfx::View<screen_scoreboardPresenter>
 {
@@ -30,22 +31,58 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box bg_grey;
     touchgfx::ListLayout list_scores;
-    touchgfx::Container container_score_entry;
+    touchgfx::Container container_score_entry_1;
     touchgfx::Box bg_white;
-    touchgfx::TextAreaWithOneWildcard lbl_score;
     touchgfx::TextAreaWithTwoWildcards lbl_player_name;
+    touchgfx::Container container_score_entry_2;
+    touchgfx::Box bg_white_2;
+    touchgfx::TextAreaWithTwoWildcards lbl_player_name_2;
+    touchgfx::Container container_score_entry_3;
+    touchgfx::Box bg_white_3;
+    touchgfx::TextAreaWithTwoWildcards lbl_player_name_3;
+    touchgfx::Container container_score_entry_4;
+    touchgfx::Box bg_white_4;
+    touchgfx::TextAreaWithTwoWildcards lbl_player_name_4;
+    touchgfx::Container container_score_entry_5;
+    touchgfx::Box bg_white_5;
+    touchgfx::TextAreaWithTwoWildcards lbl_player_name_5;
+    touchgfx::ButtonWithIcon btn_back;
 
     /*
      * Wildcard Buffers
      */
-    static const uint16_t LBL_SCORE_SIZE = 6;
-    touchgfx::Unicode::UnicodeChar lbl_scoreBuffer[LBL_SCORE_SIZE];
-    static const uint16_t LBL_PLAYER_NAMEBUFFER1_SIZE = 3;
+    static const uint16_t LBL_PLAYER_NAMEBUFFER1_SIZE = 20;
     touchgfx::Unicode::UnicodeChar lbl_player_nameBuffer1[LBL_PLAYER_NAMEBUFFER1_SIZE];
-    static const uint16_t LBL_PLAYER_NAMEBUFFER2_SIZE = 20;
+    static const uint16_t LBL_PLAYER_NAMEBUFFER2_SIZE = 6;
     touchgfx::Unicode::UnicodeChar lbl_player_nameBuffer2[LBL_PLAYER_NAMEBUFFER2_SIZE];
+    static const uint16_t LBL_PLAYER_NAME_2BUFFER1_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar lbl_player_name_2Buffer1[LBL_PLAYER_NAME_2BUFFER1_SIZE];
+    static const uint16_t LBL_PLAYER_NAME_2BUFFER2_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar lbl_player_name_2Buffer2[LBL_PLAYER_NAME_2BUFFER2_SIZE];
+    static const uint16_t LBL_PLAYER_NAME_3BUFFER1_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar lbl_player_name_3Buffer1[LBL_PLAYER_NAME_3BUFFER1_SIZE];
+    static const uint16_t LBL_PLAYER_NAME_3BUFFER2_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar lbl_player_name_3Buffer2[LBL_PLAYER_NAME_3BUFFER2_SIZE];
+    static const uint16_t LBL_PLAYER_NAME_4BUFFER1_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar lbl_player_name_4Buffer1[LBL_PLAYER_NAME_4BUFFER1_SIZE];
+    static const uint16_t LBL_PLAYER_NAME_4BUFFER2_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar lbl_player_name_4Buffer2[LBL_PLAYER_NAME_4BUFFER2_SIZE];
+    static const uint16_t LBL_PLAYER_NAME_5BUFFER1_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar lbl_player_name_5Buffer1[LBL_PLAYER_NAME_5BUFFER1_SIZE];
+    static const uint16_t LBL_PLAYER_NAME_5BUFFER2_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar lbl_player_name_5Buffer2[LBL_PLAYER_NAME_5BUFFER2_SIZE];
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<screen_scoreboardViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

@@ -5,6 +5,41 @@
         "Name": "screen_locked",
         "Components": [
           {
+            "Type": "FlexButton",
+            "Name": "btn_next",
+            "Width": 480,
+            "Height": 272,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 480,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
             "Type": "Box",
             "Name": "bg_red",
             "Width": 480,
@@ -30,14 +65,28 @@
             "Name": "lbl_instructions",
             "X": 164,
             "Y": 150,
-            "Width": 152,
+            "Width": 145,
             "Height": 72,
             "TextId": "__SingleUse_7J6J",
             "TextRotation": "0",
             "AutoSize": true
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "transition_authorized",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_next"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "screen_authorized"
+            }
+          }
+        ]
       },
       {
         "Name": "screen_authorized",
@@ -328,6 +377,19 @@
               "ScreenTransitionDirection": "East",
               "ActionComponent": "screen_asteroids"
             }
+          },
+          {
+            "InteractionName": "transition_scoreboard",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "_btn_scoreboard"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "screen_scoreboard"
+            }
           }
         ]
       },
@@ -351,12 +413,12 @@
             "X": 120,
             "Y": 12,
             "Width": 240,
-            "Height": 50,
+            "Height": 250,
             "Direction": "South",
             "Components": [
               {
                 "Type": "Container",
-                "Name": "container_score_entry",
+                "Name": "container_score_entry_1",
                 "Width": 240,
                 "Height": 50,
                 "LockPosition": true,
@@ -375,49 +437,238 @@
                   },
                   {
                     "Type": "TextArea",
-                    "Name": "lbl_score",
-                    "X": 166,
-                    "Y": 13,
-                    "Width": 65,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_G1L1",
-                    "TextRotation": "0",
-                    "AutoSize": true,
-                    "Wildcard1": {
-                      "TextId": "player_score",
-                      "UseBuffer": true,
-                      "BufferSize": 6
-                    }
-                  },
-                  {
-                    "Type": "TextArea",
                     "Name": "lbl_player_name",
                     "X": 8,
                     "Y": 13,
-                    "Width": 152,
+                    "Width": 231,
                     "Height": 24,
                     "LockPosition": true,
                     "TextId": "__SingleUse_MBWY",
                     "TextRotation": "0",
                     "AutoSize": true,
                     "Wildcard1": {
-                      "TextId": "player_position",
-                      "UseBuffer": true,
-                      "BufferSize": 3
-                    },
-                    "Wildcard2": {
-                      "TextId": "player_name",
+                      "TextId": "player_name1",
                       "UseBuffer": true,
                       "BufferSize": 20
+                    },
+                    "Wildcard2": {
+                      "TextId": "player_score1",
+                      "UseBuffer": true,
+                      "BufferSize": 6
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "container_score_entry_2",
+                "Y": 50,
+                "Width": 240,
+                "Height": 50,
+                "LockPosition": true,
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "bg_white_2",
+                    "Width": 240,
+                    "Height": 50,
+                    "LockPosition": true,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "lbl_player_name_2",
+                    "X": 8,
+                    "Y": 13,
+                    "Width": 231,
+                    "Height": 24,
+                    "LockPosition": true,
+                    "TextId": "__SingleUse_ZFD2",
+                    "TextRotation": "0",
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "player_name2",
+                      "UseBuffer": true,
+                      "BufferSize": 20
+                    },
+                    "Wildcard2": {
+                      "TextId": "player_score2",
+                      "UseBuffer": true,
+                      "BufferSize": 6
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "container_score_entry_3",
+                "Y": 100,
+                "Width": 240,
+                "Height": 50,
+                "LockPosition": true,
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "bg_white_3",
+                    "Width": 240,
+                    "Height": 50,
+                    "LockPosition": true,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "lbl_player_name_3",
+                    "X": 8,
+                    "Y": 13,
+                    "Width": 231,
+                    "Height": 24,
+                    "LockPosition": true,
+                    "TextId": "__SingleUse_PQFZ",
+                    "TextRotation": "0",
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "player_name3",
+                      "UseBuffer": true,
+                      "BufferSize": 20
+                    },
+                    "Wildcard2": {
+                      "TextId": "player_score3",
+                      "UseBuffer": true,
+                      "BufferSize": 6
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "container_score_entry_4",
+                "Y": 150,
+                "Width": 240,
+                "Height": 50,
+                "LockPosition": true,
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "bg_white_4",
+                    "Width": 240,
+                    "Height": 50,
+                    "LockPosition": true,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "lbl_player_name_4",
+                    "X": 8,
+                    "Y": 13,
+                    "Width": 231,
+                    "Height": 24,
+                    "LockPosition": true,
+                    "TextId": "__SingleUse_15C1",
+                    "TextRotation": "0",
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "player_name4",
+                      "UseBuffer": true,
+                      "BufferSize": 20
+                    },
+                    "Wildcard2": {
+                      "TextId": "player_score4",
+                      "UseBuffer": true,
+                      "BufferSize": 6
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "container_score_entry_5",
+                "Y": 200,
+                "Width": 240,
+                "Height": 50,
+                "LockPosition": true,
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "bg_white_5",
+                    "Width": 240,
+                    "Height": 50,
+                    "LockPosition": true,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "lbl_player_name_5",
+                    "X": 8,
+                    "Y": 13,
+                    "Width": 231,
+                    "Height": 24,
+                    "LockPosition": true,
+                    "TextId": "__SingleUse_13CG",
+                    "TextRotation": "0",
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "player_name5",
+                      "UseBuffer": true,
+                      "BufferSize": 20
+                    },
+                    "Wildcard2": {
+                      "TextId": "player_score5",
+                      "UseBuffer": true,
+                      "BufferSize": 6
                     }
                   }
                 ]
               }
             ]
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "btn_back",
+            "X": 7,
+            "Y": 7,
+            "Width": 36,
+            "Height": 36,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_action.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_micro_fill_action.png",
+            "IconPressed": "__generated\\icon_theme_images_navigation_arrow_back_40_40_E8F6FB.svg.png",
+            "IconReleased": "__generated\\icon_theme_images_navigation_arrow_back_40_40_E8F6FB.svg.png",
+            "IconX": -1,
+            "IconY": -1,
+            "IconHeight": 40,
+            "IconWidth": 40
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "transition_back_to_game_select",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_back"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "screen_game_select"
+            }
+          }
+        ]
       },
       {
         "Name": "screen_asteroids",

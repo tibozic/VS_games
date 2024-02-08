@@ -1,6 +1,8 @@
 #ifndef MODEL_HPP
 #define MODEL_HPP
 
+#include "score_entry.h"
+
 class ModelListener;
 
 class Model
@@ -25,6 +27,12 @@ public:
 
     void start_invincibility_timer();
     void invincibility_timer_ended();
+
+    void update_scoreboard();
+
+
+    score_entry scores[5];
+
 protected:
     ModelListener* modelListener;
 };

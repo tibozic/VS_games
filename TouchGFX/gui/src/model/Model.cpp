@@ -60,6 +60,11 @@ void Model::invincibility_timer_ended()
 	}
 }
 
+void Model::update_scoreboard()
+{
+	modelListener->update_scoreboard();
+}
+
 void Model::resume_asteroids_task()
 {
 }

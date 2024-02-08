@@ -27,6 +27,8 @@ public:
 
     virtual ~screen_scoreboardPresenter() {}
 
+    virtual void update_scoreboard();
+
 private:
     screen_scoreboardPresenter();
 

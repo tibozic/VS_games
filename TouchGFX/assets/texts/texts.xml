@@ -6,20 +6,50 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
-      <Text Id="player_name" Alignment="Left" TypographyId="Default">
+      <Text Id="player_score2" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">00000</Translation>
+      </Text>
+      <Text Id="player_name2" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Player name</Translation>
       </Text>
-      <Text Id="player_score" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">00234</Translation>
+      <Text Id="player_score5" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">00000</Translation>
       </Text>
-      <Text Id="__SingleUse_G1L1" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
+      <Text Id="player_name5" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Player name</Translation>
       </Text>
-      <Text Id="player_position" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">1.</Translation>
+      <Text Id="player_score4" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">00000</Translation>
+      </Text>
+      <Text Id="player_name4" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Player name</Translation>
+      </Text>
+      <Text Id="player_score3" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">00000</Translation>
+      </Text>
+      <Text Id="player_name3" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Player name</Translation>
+      </Text>
+      <Text Id="player_score1" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">00000</Translation>
+      </Text>
+      <Text Id="player_name1" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Player name</Translation>
+      </Text>
+      <Text Id="__SingleUse_13CG" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">5.  &lt;value&gt; &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_15C1" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">4.  &lt;value&gt; &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_PQFZ" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">3.  &lt;value&gt; &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZFD2" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">2.  &lt;value&gt; &lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_MBWY" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt; &lt;value&gt;</Translation>
+        <Translation Language="GB">1.  &lt;value&gt; &lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_NWOF" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">Scoreboard</Translation>
@@ -60,9 +90,9 @@
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0xfe" />
-    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0xfe" />
-    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0xfe" />
-    <Typography Id="Medium" Font="verdana.ttf" Size="30" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7e" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7e" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7e" />
+    <Typography Id="Medium" Font="verdana.ttf" Size="30" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7e" />
   </Typographies>
 </TextDatabase>

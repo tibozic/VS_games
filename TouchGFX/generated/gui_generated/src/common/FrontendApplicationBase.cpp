@@ -51,6 +51,19 @@ void FrontendApplicationBase::gotoscreen_lockedScreenNoTransitionImpl()
     touchgfx::makeTransition<screen_lockedView, screen_lockedPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
+// screen_authorized
+
+void FrontendApplicationBase::gotoscreen_authorizedScreenSlideTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_authorizedScreenSlideTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoscreen_authorizedScreenSlideTransitionEastImpl()
+{
+    touchgfx::makeTransition<screen_authorizedView, screen_authorizedPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
 // screen_game_select
 
 void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionEast()
@@ -73,6 +86,19 @@ void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionWest()
 void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionWestImpl()
 {
     touchgfx::makeTransition<screen_game_selectView, screen_game_selectPresenter, touchgfx::SlideTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// screen_scoreboard
+
+void FrontendApplicationBase::gotoscreen_scoreboardScreenSlideTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_scoreboardScreenSlideTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoscreen_scoreboardScreenSlideTransitionEastImpl()
+{
+    touchgfx::makeTransition<screen_scoreboardView, screen_scoreboardPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 // screen_asteroids

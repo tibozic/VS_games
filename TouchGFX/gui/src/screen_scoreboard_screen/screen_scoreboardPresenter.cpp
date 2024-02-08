@@ -9,10 +9,15 @@ screen_scoreboardPresenter::screen_scoreboardPresenter(screen_scoreboardView& v)
 
 void screen_scoreboardPresenter::activate()
 {
-
+	view.update_scoreboard(model->scores);
 }
 
 void screen_scoreboardPresenter::deactivate()
 {
 
+}
+
+void screen_scoreboardPresenter::update_scoreboard()
+{
+	view.update_scoreboard(model->scores);
 }

@@ -4,8 +4,10 @@
 #include <gui_generated/screen_scoreboard_screen/screen_scoreboardViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
-screen_scoreboardViewBase::screen_scoreboardViewBase()
+screen_scoreboardViewBase::screen_scoreboardViewBase() :
+    buttonCallback(this, &screen_scoreboardViewBase::buttonCallbackHandler)
 {
     __background.setPosition(0, 0, 480, 272);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -17,35 +19,108 @@ screen_scoreboardViewBase::screen_scoreboardViewBase()
 
     list_scores.setXY(120, 12);
     list_scores.setDirection(touchgfx::SOUTH);
-    container_score_entry.setWidth(240);
-    container_score_entry.setHeight(50);
+    container_score_entry_1.setWidth(240);
+    container_score_entry_1.setHeight(50);
     bg_white.setPosition(0, 0, 240, 50);
     bg_white.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    container_score_entry.add(bg_white);
-
-    lbl_score.setXY(166, 13);
-    lbl_score.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    lbl_score.setLinespacing(0);
-    Unicode::snprintf(lbl_scoreBuffer, LBL_SCORE_SIZE, "%s", touchgfx::TypedText(T_PLAYER_SCORE).getText());
-    lbl_score.setWildcard(lbl_scoreBuffer);
-    lbl_score.resizeToCurrentText();
-    lbl_score.setTypedText(touchgfx::TypedText(T___SINGLEUSE_G1L1));
-    container_score_entry.add(lbl_score);
+    container_score_entry_1.add(bg_white);
 
     lbl_player_name.setXY(8, 13);
     lbl_player_name.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     lbl_player_name.setLinespacing(0);
-    touchgfx::Unicode::snprintf(lbl_player_nameBuffer1, LBL_PLAYER_NAMEBUFFER1_SIZE, "%s", touchgfx::TypedText(T_PLAYER_POSITION).getText());
+    touchgfx::Unicode::snprintf(lbl_player_nameBuffer1, LBL_PLAYER_NAMEBUFFER1_SIZE, "%s", touchgfx::TypedText(T_PLAYER_NAME1).getText());
     lbl_player_name.setWildcard1(lbl_player_nameBuffer1);
-    touchgfx::Unicode::snprintf(lbl_player_nameBuffer2, LBL_PLAYER_NAMEBUFFER2_SIZE, "%s", touchgfx::TypedText(T_PLAYER_NAME).getText());
+    touchgfx::Unicode::snprintf(lbl_player_nameBuffer2, LBL_PLAYER_NAMEBUFFER2_SIZE, "%s", touchgfx::TypedText(T_PLAYER_SCORE1).getText());
     lbl_player_name.setWildcard2(lbl_player_nameBuffer2);
     lbl_player_name.resizeToCurrentText();
     lbl_player_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MBWY));
-    container_score_entry.add(lbl_player_name);
+    container_score_entry_1.add(lbl_player_name);
 
-    list_scores.add(container_score_entry);
+    list_scores.add(container_score_entry_1);
+
+    container_score_entry_2.setWidth(240);
+    container_score_entry_2.setHeight(50);
+    bg_white_2.setPosition(0, 0, 240, 50);
+    bg_white_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container_score_entry_2.add(bg_white_2);
+
+    lbl_player_name_2.setXY(8, 13);
+    lbl_player_name_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    lbl_player_name_2.setLinespacing(0);
+    touchgfx::Unicode::snprintf(lbl_player_name_2Buffer1, LBL_PLAYER_NAME_2BUFFER1_SIZE, "%s", touchgfx::TypedText(T_PLAYER_NAME2).getText());
+    lbl_player_name_2.setWildcard1(lbl_player_name_2Buffer1);
+    touchgfx::Unicode::snprintf(lbl_player_name_2Buffer2, LBL_PLAYER_NAME_2BUFFER2_SIZE, "%s", touchgfx::TypedText(T_PLAYER_SCORE2).getText());
+    lbl_player_name_2.setWildcard2(lbl_player_name_2Buffer2);
+    lbl_player_name_2.resizeToCurrentText();
+    lbl_player_name_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ZFD2));
+    container_score_entry_2.add(lbl_player_name_2);
+
+    list_scores.add(container_score_entry_2);
+
+    container_score_entry_3.setWidth(240);
+    container_score_entry_3.setHeight(50);
+    bg_white_3.setPosition(0, 0, 240, 50);
+    bg_white_3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container_score_entry_3.add(bg_white_3);
+
+    lbl_player_name_3.setXY(8, 13);
+    lbl_player_name_3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    lbl_player_name_3.setLinespacing(0);
+    touchgfx::Unicode::snprintf(lbl_player_name_3Buffer1, LBL_PLAYER_NAME_3BUFFER1_SIZE, "%s", touchgfx::TypedText(T_PLAYER_NAME3).getText());
+    lbl_player_name_3.setWildcard1(lbl_player_name_3Buffer1);
+    touchgfx::Unicode::snprintf(lbl_player_name_3Buffer2, LBL_PLAYER_NAME_3BUFFER2_SIZE, "%s", touchgfx::TypedText(T_PLAYER_SCORE3).getText());
+    lbl_player_name_3.setWildcard2(lbl_player_name_3Buffer2);
+    lbl_player_name_3.resizeToCurrentText();
+    lbl_player_name_3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_PQFZ));
+    container_score_entry_3.add(lbl_player_name_3);
+
+    list_scores.add(container_score_entry_3);
+
+    container_score_entry_4.setWidth(240);
+    container_score_entry_4.setHeight(50);
+    bg_white_4.setPosition(0, 0, 240, 50);
+    bg_white_4.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container_score_entry_4.add(bg_white_4);
+
+    lbl_player_name_4.setXY(8, 13);
+    lbl_player_name_4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    lbl_player_name_4.setLinespacing(0);
+    touchgfx::Unicode::snprintf(lbl_player_name_4Buffer1, LBL_PLAYER_NAME_4BUFFER1_SIZE, "%s", touchgfx::TypedText(T_PLAYER_NAME4).getText());
+    lbl_player_name_4.setWildcard1(lbl_player_name_4Buffer1);
+    touchgfx::Unicode::snprintf(lbl_player_name_4Buffer2, LBL_PLAYER_NAME_4BUFFER2_SIZE, "%s", touchgfx::TypedText(T_PLAYER_SCORE4).getText());
+    lbl_player_name_4.setWildcard2(lbl_player_name_4Buffer2);
+    lbl_player_name_4.resizeToCurrentText();
+    lbl_player_name_4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_15C1));
+    container_score_entry_4.add(lbl_player_name_4);
+
+    list_scores.add(container_score_entry_4);
+
+    container_score_entry_5.setWidth(240);
+    container_score_entry_5.setHeight(50);
+    bg_white_5.setPosition(0, 0, 240, 50);
+    bg_white_5.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    container_score_entry_5.add(bg_white_5);
+
+    lbl_player_name_5.setXY(8, 13);
+    lbl_player_name_5.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    lbl_player_name_5.setLinespacing(0);
+    touchgfx::Unicode::snprintf(lbl_player_name_5Buffer1, LBL_PLAYER_NAME_5BUFFER1_SIZE, "%s", touchgfx::TypedText(T_PLAYER_NAME5).getText());
+    lbl_player_name_5.setWildcard1(lbl_player_name_5Buffer1);
+    touchgfx::Unicode::snprintf(lbl_player_name_5Buffer2, LBL_PLAYER_NAME_5BUFFER2_SIZE, "%s", touchgfx::TypedText(T_PLAYER_SCORE5).getText());
+    lbl_player_name_5.setWildcard2(lbl_player_name_5Buffer2);
+    lbl_player_name_5.resizeToCurrentText();
+    lbl_player_name_5.setTypedText(touchgfx::TypedText(T___SINGLEUSE_13CG));
+    container_score_entry_5.add(lbl_player_name_5);
+
+    list_scores.add(container_score_entry_5);
 
     add(list_scores);
+
+    btn_back.setXY(7, 7);
+    btn_back.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_MICRO_FILL_ACTION_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_BACK_40_40_E8F6FB_SVG_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_BACK_40_40_E8F6FB_SVG_ID));
+    btn_back.setIconXY(-1, -1);
+    btn_back.setAction(buttonCallback);
+    add(btn_back);
 }
 
 screen_scoreboardViewBase::~screen_scoreboardViewBase()
@@ -56,4 +131,15 @@ screen_scoreboardViewBase::~screen_scoreboardViewBase()
 void screen_scoreboardViewBase::setupScreen()
 {
 
+}
+
+void screen_scoreboardViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &btn_back)
+    {
+        //transition_back_to_game_select
+        //When btn_back clicked change screen to screen_game_select
+        //Go to screen_game_select with screen transition towards West
+        application().gotoscreen_game_selectScreenSlideTransitionWest();
+    }
 }
