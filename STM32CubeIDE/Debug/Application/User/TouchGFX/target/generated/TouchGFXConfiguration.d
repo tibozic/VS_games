@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
- C:/TouchGFXProjects/VS_games/TouchGFX/target/generated/TouchGFXConfiguration.cpp \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/target/generated/TouchGFXConfiguration.cpp \
  ../../TouchGFX/generated/texts/include/texts/TypedTextDatabase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
@@ -54,7 +54,7 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
- C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h \
  ../../TouchGFX/gui/include/gui/screen_locked_screen/screen_lockedView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_locked_screen/screen_lockedViewBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
@@ -98,7 +98,7 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_asteroids_screen/screen_asteroidsViewBase.hpp \
  ../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp \
- C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/ship_direction.h \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/STM32CubeIDE/Application/User/my_files/ship_direction.h \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Shape.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractShape.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp \
@@ -230,7 +230,7 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
-C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h:
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h:
 ../../TouchGFX/gui/include/gui/screen_locked_screen/screen_lockedView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_locked_screen/screen_lockedViewBase.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
@@ -274,7 +274,7 @@ C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.
 ../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_asteroids_screen/screen_asteroidsViewBase.hpp:
 ../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp:
-C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/ship_direction.h:
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/STM32CubeIDE/Application/User/my_files/ship_direction.h:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Shape.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractShape.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp:

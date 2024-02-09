@@ -37,7 +37,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define RFID_DISABLE
+// #define RFID_DISABLE
 
 /* USER CODE END PD */
 
@@ -108,6 +108,11 @@ const osThreadAttr_t MFRC_Ch_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityHigh7,
 };
+/* Definitions for tagIDQueue */
+osMessageQueueId_t tagIDQueueHandle;
+const osMessageQueueAttr_t tagIDQueue_attributes = {
+  .name = "tagIDQueue"
+};
 /* Definitions for bullet_timer_started_semaphore */
 osSemaphoreId_t bullet_timer_started_semaphoreHandle;
 const osSemaphoreAttr_t bullet_timer_started_semaphore_attributes = {
@@ -165,6 +170,18 @@ void check_resume_asteroids_task() {
 }
 
 void check_suspend_asteroids_task() {
+}
+
+uint32_t convert_array_to_int(uint8_t *arr, int len) {
+
+	uint32_t converted = 0;
+	for (int i = 0; i<len - 1; i++) {
+		converted |= arr[i];
+		converted = converted << 8;
+	}
+
+	return converted;
+
 }
 
 
@@ -253,6 +270,10 @@ int main(void)
   /* USER CODE BEGIN RTOS_TIMERS */
   /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
+
+  /* Create the queue(s) */
+  /* creation of tagIDQueue */
+  tagIDQueueHandle = osMessageQueueNew (8, sizeof(uint32_t), &tagIDQueue_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
@@ -919,21 +940,21 @@ void MFRC_Ch_fun(void *argument)
 	osThreadSuspend(MFRC_ChHandle);
 #endif
 
-	int ok = 0;
-		uint8_t myID[5];
-		uint8_t cmp[] = {145, 221, 185, 27};
-		MFRC522_Init();
+	/*
+	 * 1. Add ID to queue
+	 * 2. Begin screen transition
+	 */
+	volatile uint32_t converted;
+	uint8_t myID[5];
+	uint8_t cmp[] = {145, 221, 185, 27};
+	MFRC522_Init();
   /* Infinite loop */
-  for(;;)
-  {
+  for(;;) {
 	  if (MFRC522_Auth(myID) == MFRC522_OK) {
-	  		  if (MFRC522_Cmp(myID, cmp, 4) == MFRC522_OK) {
-	  			  ok = 1;
-	  			  MFRC522_Print_Terminal(myID);
-	  		  }
-	  		  // MFRC522_Print_Terminal(myID);
-	  	  }
-	  	  osDelay(900);
+		  converted = convert_array_to_int(myID, 5);
+		  osMessageQueuePut(tagIDQueueHandle, (const void *) &converted, 0, 0);
+	  }
+	  osDelay(900);
   }
   /* USER CODE END MFRC_Ch_fun */
 }

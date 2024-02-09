@@ -16,3 +16,9 @@ void screen_lockedPresenter::deactivate()
 {
 
 }
+
+void screen_lockedPresenter::authTransition() {
+
+	view.authTransition();
+
+}

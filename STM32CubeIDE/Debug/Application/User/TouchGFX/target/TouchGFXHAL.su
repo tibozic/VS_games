@@ -8,13 +8,13 @@
 ../../TouchGFX/target/TouchGFXHAL.hpp:35:7:TouchGFXHAL::~TouchGFXHAL()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:156:18:virtual void touchgfx::HAL::setFrameBufferSize(uint16_t, uint16_t)	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:638:18:virtual void touchgfx::HAL::backPorchExited()	8	static
-C:/TouchGFXProjects/VS_games/TouchGFX/target/TouchGFXHAL.cpp:83:11:virtual uint16_t* TouchGFXHAL::getTFTFrameBuffer() const	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/target/TouchGFXHAL.cpp:98:6:virtual void TouchGFXHAL::setTFTFrameBuffer(uint16_t*)	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/target/TouchGFXHAL.cpp:115:6:virtual void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect&)	8	static,ignoring_inline_asm
-C:/TouchGFXProjects/VS_games/TouchGFX/target/TouchGFXHAL.cpp:137:6:virtual void TouchGFXHAL::configureInterrupts()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/target/TouchGFXHAL.cpp:150:6:virtual void TouchGFXHAL::enableInterrupts()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/target/TouchGFXHAL.cpp:163:6:virtual void TouchGFXHAL::disableInterrupts()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/target/TouchGFXHAL.cpp:177:6:virtual void TouchGFXHAL::enableLCDControllerInterrupt()	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/target/TouchGFXHAL.cpp:83:11:virtual uint16_t* TouchGFXHAL::getTFTFrameBuffer() const	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/target/TouchGFXHAL.cpp:98:6:virtual void TouchGFXHAL::setTFTFrameBuffer(uint16_t*)	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/target/TouchGFXHAL.cpp:115:6:virtual void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect&)	8	static,ignoring_inline_asm
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/target/TouchGFXHAL.cpp:137:6:virtual void TouchGFXHAL::configureInterrupts()	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/target/TouchGFXHAL.cpp:150:6:virtual void TouchGFXHAL::enableInterrupts()	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/target/TouchGFXHAL.cpp:163:6:virtual void TouchGFXHAL::disableInterrupts()	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/target/TouchGFXHAL.cpp:177:6:virtual void TouchGFXHAL::enableLCDControllerInterrupt()	0	static
 ../../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:119:18:virtual void TouchGFXGeneratedHAL::unlockFrameBuffer()	8	static
 ../../TouchGFX/target/TouchGFXHAL.hpp:113:18:virtual void TouchGFXHAL::flushFrameBuffer()	0	static
 ../../TouchGFX/target/TouchGFXHAL.hpp:35:7:virtual TouchGFXHAL::~TouchGFXHAL()	8	static
@@ -22,6 +22,6 @@ C:/TouchGFXProjects/VS_games/TouchGFX/target/TouchGFXHAL.cpp:177:6:virtual void 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:1162:18:virtual void touchgfx::HAL::performDisplayOrientationChange()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:1063:21:virtual touchgfx::DMAType touchgfx::HAL::getDMAType()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:720:18:virtual void touchgfx::HAL::setFrameBufferStartAddresses(void*, void*, void*)	8	static
-C:/TouchGFXProjects/VS_games/TouchGFX/target/TouchGFXHAL.cpp:50:6:virtual void TouchGFXHAL::taskEntry()	8	static
-C:/TouchGFXProjects/VS_games/TouchGFX/target/TouchGFXHAL.cpp:35:6:virtual void TouchGFXHAL::initialize()	16	static
-C:/TouchGFXProjects/VS_games/TouchGFX/target/TouchGFXHAL.cpp:189:19:long int IdleTaskHook(void*)	8	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/target/TouchGFXHAL.cpp:50:6:virtual void TouchGFXHAL::taskEntry()	8	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/target/TouchGFXHAL.cpp:35:6:virtual void TouchGFXHAL::initialize()	16	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/target/TouchGFXHAL.cpp:189:19:long int IdleTaskHook(void*)	8	static

@@ -6,11 +6,12 @@
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::check_bullet_collisions()	0	static
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:27:18:virtual void ModelListener::set_allowed_to_shoot(bool)	0	static
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:29:18:virtual void ModelListener::set_invincible(bool)	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:33:18:virtual void ModelListener::authTransition()	0	static
 ../../TouchGFX/gui/include/gui/screen_scoreboard_screen/screen_scoreboardPresenter.hpp:28:13:screen_scoreboardPresenter::~screen_scoreboardPresenter()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_scoreboard_screen/screen_scoreboardPresenter.cpp:10:6:virtual void screen_scoreboardPresenter::activate()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_scoreboard_screen/screen_scoreboardPresenter.cpp:15:6:virtual void screen_scoreboardPresenter::deactivate()	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_scoreboard_screen/screen_scoreboardPresenter.cpp:10:6:virtual void screen_scoreboardPresenter::activate()	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_scoreboard_screen/screen_scoreboardPresenter.cpp:15:6:virtual void screen_scoreboardPresenter::deactivate()	0	static
 ../../TouchGFX/gui/include/gui/screen_scoreboard_screen/screen_scoreboardPresenter.hpp:28:13:virtual screen_scoreboardPresenter::~screen_scoreboardPresenter()	8	static
 ../../TouchGFX/gui/include/gui/screen_scoreboard_screen/screen_scoreboardPresenter.hpp:28:13:virtual void* screen_scoreboardPresenter::_ZThn4_N26screen_scoreboardPresenterD1Ev()	0	static
 ../../TouchGFX/gui/include/gui/screen_scoreboard_screen/screen_scoreboardPresenter.hpp:28:13:virtual void* screen_scoreboardPresenter::_ZThn4_N26screen_scoreboardPresenterD0Ev()	16	static
 ../../TouchGFX/gui/include/gui/screen_scoreboard_screen/screen_scoreboardPresenter.hpp:30:18:virtual void screen_scoreboardPresenter::_ZThn4_N26screen_scoreboardPresenter17update_scoreboardEv()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_scoreboard_screen/screen_scoreboardPresenter.cpp:4:1:screen_scoreboardPresenter::screen_scoreboardPresenter(screen_scoreboardView&)	4	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_scoreboard_screen/screen_scoreboardPresenter.cpp:4:1:screen_scoreboardPresenter::screen_scoreboardPresenter(screen_scoreboardView&)	4	static

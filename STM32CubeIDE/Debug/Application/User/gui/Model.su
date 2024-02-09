@@ -7,16 +7,18 @@
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:27:18:virtual void ModelListener::set_allowed_to_shoot(bool)	0	static
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:29:18:virtual void ModelListener::set_invincible(bool)	0	static
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:31:18:virtual void ModelListener::update_scoreboard()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:14:1:Model::Model()	4	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:26:6:void Model::asteroids_tick()	16	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:19:6:void Model::tick()	8	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:37:6:void Model::start_bullet_timer()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:42:6:void Model::bullet_timer_ended()	16	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:50:6:void Model::start_invincibility_timer()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:55:6:void Model::invincibility_timer_ended()	16	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:63:6:void Model::login(int)	40	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:81:7:char* Model::get_player_name()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:86:5:int Model::get_player_id()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:91:6:void Model::update_scoreboard()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:96:6:void Model::resume_asteroids_task()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp:101:6:void Model::suspend_asteroids_task()	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:33:18:virtual void ModelListener::authTransition()	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:15:1:Model::Model()	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:28:6:void Model::asteroids_tick()	16	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:20:6:void Model::tick()	40	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:39:6:void Model::start_bullet_timer()	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:44:6:void Model::bullet_timer_ended()	16	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:52:6:void Model::start_invincibility_timer()	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:57:6:void Model::invincibility_timer_ended()	16	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:65:6:void Model::check_tag_card_scan()	40	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:76:6:void Model::login(uint32_t)	40	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:98:7:char* Model::get_player_name()	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:103:5:int Model::get_player_id()	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:108:6:void Model::update_scoreboard()	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:113:6:void Model::resume_asteroids_task()	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/model/Model.cpp:118:6:void Model::suspend_asteroids_task()	0	static

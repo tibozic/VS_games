@@ -35,7 +35,7 @@
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_asteroids_screen/screen_asteroidsViewBase.hpp:30:18:virtual void screen_asteroidsViewBase::resume_asteroids_task()	1
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_asteroids_screen/screen_asteroidsViewBase.hpp:34:18:virtual void screen_asteroidsViewBase::suspend_asteroids_task()	1
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_asteroids_screen/screen_asteroidsViewBase.hpp:38:18:virtual void screen_asteroidsViewBase::start_asteroids_game()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroids_screen/screen_asteroidsViewBase.cpp:137:6:virtual void screen_asteroidsViewBase::setupScreen()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroids_screen/screen_asteroidsViewBase.cpp:137:6:virtual void screen_asteroidsViewBase::setupScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<screen_asteroidsViewBase, const touchgfx::AbstractButton&>::~Callback()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Shape.hpp:35:7:touchgfx::Shape<3>::~Shape()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
@@ -52,10 +52,10 @@ C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroi
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Shape.hpp:35:7:virtual touchgfx::Shape<3>::~Shape()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<screen_asteroidsViewBase, const touchgfx::AbstractButton&>::~Callback()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroids_screen/screen_asteroidsViewBase.cpp:132:1:screen_asteroidsViewBase::~screen_asteroidsViewBase()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroids_screen/screen_asteroidsViewBase.cpp:132:1:virtual screen_asteroidsViewBase::~screen_asteroidsViewBase()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroids_screen/screen_asteroidsViewBase.cpp:132:1:screen_asteroidsViewBase::~screen_asteroidsViewBase()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroids_screen/screen_asteroidsViewBase.cpp:132:1:virtual screen_asteroidsViewBase::~screen_asteroidsViewBase()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	3
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroids_screen/screen_asteroidsViewBase.cpp:142:6:void screen_asteroidsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	5
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroids_screen/screen_asteroidsViewBase.cpp:165:6:virtual void screen_asteroidsViewBase::afterTransition()	3
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroids_screen/screen_asteroidsViewBase.cpp:142:6:void screen_asteroidsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	5
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroids_screen/screen_asteroidsViewBase.cpp:165:6:virtual void screen_asteroidsViewBase::afterTransition()	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:127:18:virtual void touchgfx::TextArea::setXBaselineY(int16_t, int16_t)	5
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroids_screen/screen_asteroidsViewBase.cpp:10:1:screen_asteroidsViewBase::screen_asteroidsViewBase()	13
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroids_screen/screen_asteroidsViewBase.cpp:10:1:screen_asteroidsViewBase::screen_asteroidsViewBase()	13

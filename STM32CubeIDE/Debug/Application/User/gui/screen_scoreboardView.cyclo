@@ -1,9 +1,9 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_scoreboard_screen/screen_scoreboardView.cpp:13:6:virtual void screen_scoreboardView::tearDownScreen()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_scoreboard_screen/screen_scoreboardView.cpp:13:6:virtual void screen_scoreboardView::tearDownScreen()	1
 ../../TouchGFX/gui/include/gui/screen_scoreboard_screen/screen_scoreboardView.hpp:13:13:screen_scoreboardView::~screen_scoreboardView()	1
 ../../TouchGFX/gui/include/gui/screen_scoreboard_screen/screen_scoreboardView.hpp:13:13:virtual screen_scoreboardView::~screen_scoreboardView()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_scoreboard_screen/screen_scoreboardView.cpp:3:1:screen_scoreboardView::screen_scoreboardView()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_scoreboard_screen/screen_scoreboardView.cpp:8:6:virtual void screen_scoreboardView::setupScreen()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_scoreboard_screen/screen_scoreboardView.cpp:18:6:virtual void screen_scoreboardView::update_scoreboard(score_entry*)	6
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_scoreboard_screen/screen_scoreboardView.cpp:3:1:screen_scoreboardView::screen_scoreboardView()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_scoreboard_screen/screen_scoreboardView.cpp:8:6:virtual void screen_scoreboardView::setupScreen()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_scoreboard_screen/screen_scoreboardView.cpp:18:6:virtual void screen_scoreboardView::update_scoreboard(score_entry*)	6

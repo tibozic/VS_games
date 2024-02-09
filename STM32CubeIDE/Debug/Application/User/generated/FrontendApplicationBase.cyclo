@@ -27,17 +27,17 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:87:18:void touchgfx::SlideTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::EAST]	8
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:154:18:void touchgfx::SlideTransition<templateDirection>::init() [with touchgfx::Direction templateDirection = touchgfx::WEST]	7
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:154:18:void touchgfx::SlideTransition<templateDirection>::init() [with touchgfx::Direction templateDirection = touchgfx::EAST]	7
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:86:6:void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionWestImpl()	19
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:86:6:void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionWestImpl()	19
 ../../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:59:18:virtual void touchgfx::MVPApplication::handlePendingScreenTransition()	10
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:49:6:void FrontendApplicationBase::gotoscreen_lockedScreenNoTransitionImpl()	12
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:62:6:void FrontendApplicationBase::gotoscreen_authorizedScreenSlideTransitionEastImpl()	19
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:99:6:void FrontendApplicationBase::gotoscreen_scoreboardScreenSlideTransitionEastImpl()	19
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:75:6:void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionEastImpl()	19
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:112:6:void FrontendApplicationBase::gotoscreen_asteroidsScreenSlideTransitionEastImpl()	19
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:25:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	6
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:43:6:void FrontendApplicationBase::gotoscreen_lockedScreenNoTransition()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:56:6:void FrontendApplicationBase::gotoscreen_authorizedScreenSlideTransitionEast()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:69:6:void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionEast()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:80:6:void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionWest()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:93:6:void FrontendApplicationBase::gotoscreen_scoreboardScreenSlideTransitionEast()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:106:6:void FrontendApplicationBase::gotoscreen_asteroidsScreenSlideTransitionEast()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:49:6:void FrontendApplicationBase::gotoscreen_lockedScreenNoTransitionImpl()	12
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:62:6:void FrontendApplicationBase::gotoscreen_authorizedScreenSlideTransitionEastImpl()	19
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:99:6:void FrontendApplicationBase::gotoscreen_scoreboardScreenSlideTransitionEastImpl()	19
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:75:6:void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionEastImpl()	19
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:112:6:void FrontendApplicationBase::gotoscreen_asteroidsScreenSlideTransitionEastImpl()	19
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:25:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	6
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:43:6:void FrontendApplicationBase::gotoscreen_lockedScreenNoTransition()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:56:6:void FrontendApplicationBase::gotoscreen_authorizedScreenSlideTransitionEast()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:69:6:void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionEast()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:80:6:void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionWest()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:93:6:void FrontendApplicationBase::gotoscreen_scoreboardScreenSlideTransitionEast()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:106:6:void FrontendApplicationBase::gotoscreen_asteroidsScreenSlideTransitionEast()	1

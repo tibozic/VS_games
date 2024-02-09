@@ -11,6 +11,7 @@ public:
     virtual ~screen_lockedView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void authTransition();
 protected:
 };
 

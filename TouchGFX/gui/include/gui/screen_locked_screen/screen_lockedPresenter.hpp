@@ -27,6 +27,8 @@ public:
 
     virtual ~screen_lockedPresenter() {}
 
+    virtual void authTransition();
+
 private:
     screen_lockedPresenter();
 

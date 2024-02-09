@@ -8,8 +8,10 @@
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:29:18:virtual void ModelListener::set_invincible(bool)	1
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:31:18:virtual void ModelListener::update_scoreboard()	1
 ../../TouchGFX/gui/include/gui/screen_locked_screen/screen_lockedPresenter.hpp:28:13:screen_lockedPresenter::~screen_lockedPresenter()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_locked_screen/screen_lockedPresenter.cpp:10:6:virtual void screen_lockedPresenter::activate()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_locked_screen/screen_lockedPresenter.cpp:10:6:virtual void screen_lockedPresenter::activate()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_locked_screen/screen_lockedPresenter.cpp:20:6:virtual void screen_lockedPresenter::authTransition()	1
 ../../TouchGFX/gui/include/gui/screen_locked_screen/screen_lockedPresenter.hpp:28:13:virtual screen_lockedPresenter::~screen_lockedPresenter()	1
 ../../TouchGFX/gui/include/gui/screen_locked_screen/screen_lockedPresenter.hpp:28:13:virtual void* screen_lockedPresenter::_ZThn4_N22screen_lockedPresenterD1Ev()	1
 ../../TouchGFX/gui/include/gui/screen_locked_screen/screen_lockedPresenter.hpp:28:13:virtual void* screen_lockedPresenter::_ZThn4_N22screen_lockedPresenterD0Ev()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_locked_screen/screen_lockedPresenter.cpp:4:1:screen_lockedPresenter::screen_lockedPresenter(screen_lockedView&)	1
+../../TouchGFX/gui/include/gui/screen_locked_screen/screen_lockedPresenter.hpp:30:18:virtual void screen_lockedPresenter::_ZThn4_N22screen_lockedPresenter14authTransitionEv()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_locked_screen/screen_lockedPresenter.cpp:4:1:screen_lockedPresenter::screen_lockedPresenter(screen_lockedView&)	1

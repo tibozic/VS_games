@@ -1,5 +1,5 @@
 Application/User/generated/screen_authorizedViewBase.o: \
- C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_authorized_screen/screen_authorizedViewBase.cpp \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/screen_authorized_screen/screen_authorizedViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_authorized_screen/screen_authorizedViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
@@ -42,7 +42,7 @@ Application/User/generated/screen_authorizedViewBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
- C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../../TouchGFX/gui/include/gui/screen_authorized_screen/screen_authorizedPresenter.hpp \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
@@ -115,7 +115,7 @@ Application/User/generated/screen_authorizedViewBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
-C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h:
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h:
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../../TouchGFX/gui/include/gui/screen_authorized_screen/screen_authorizedPresenter.hpp:
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:

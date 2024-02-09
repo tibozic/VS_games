@@ -1,5 +1,5 @@
 Application/User/gui/screen_game_selectPresenter.o: \
- C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_game_select_screen/screen_game_selectPresenter.cpp \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/gui/src/screen_game_select_screen/screen_game_selectPresenter.cpp \
  ../../TouchGFX/gui/include/gui/screen_game_select_screen/screen_game_selectView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_game_select_screen/screen_game_selectViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
@@ -43,7 +43,7 @@ Application/User/gui/screen_game_selectPresenter.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
- C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../../TouchGFX/gui/include/gui/screen_game_select_screen/screen_game_selectPresenter.hpp \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
@@ -113,7 +113,7 @@ Application/User/gui/screen_game_selectPresenter.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
-C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h:
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h:
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../../TouchGFX/gui/include/gui/screen_game_select_screen/screen_game_selectPresenter.hpp:
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:

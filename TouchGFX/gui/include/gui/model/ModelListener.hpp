@@ -29,6 +29,8 @@ public:
     virtual void set_invincible(bool value){}
 
     virtual void update_scoreboard(){}
+
+    virtual void authTransition() {}
 protected:
     Model* model;
 };

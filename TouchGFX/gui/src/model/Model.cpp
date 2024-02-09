@@ -9,6 +9,7 @@ extern "C" {
 
 	extern osSemaphoreId_t invincibility_timer_started_semaphoreHandle;
 	extern osSemaphoreId_t invincibility_timer_ended_semaphoreHandle;
+	extern osMessageQueueId_t tagIDQueueHandle;
 }
 
 Model::Model() : modelListener(0)
@@ -21,6 +22,7 @@ void Model::tick()
 	if( modelListener->is_asteroids_game_started() ) {
 		asteroids_tick();
 	}
+	check_tag_card_scan();
 }
 
 void Model::asteroids_tick() {
@@ -60,14 +62,29 @@ void Model::invincibility_timer_ended()
 	}
 }
 
-void Model::login(int tag_id)
+void Model::check_tag_card_scan() {
+
+	uint32_t value;
+	if (osMessageQueueGet(tagIDQueueHandle, &value, NULL, 0) != osOK) {
+		return;
+	}
+	login(value);
+	modelListener->authTransition();
+
+}
+
+void Model::login(uint32_t tag_id)
 {
 	char name[20];
 
-	if( tag_id == 1 ) {
+	// 1. Function to check if ID is in queue
+
+	// 2. Call login function if true
+
+	if( tag_id == 3398113280 ) {
 		strncpy(name, "Timi", 19);
 	}
-	else if( tag_id == 2 ) {
+	else if( tag_id == 3719895808 ) {
 		strncpy(name, "Nejc", 19);
 	}
 	else {

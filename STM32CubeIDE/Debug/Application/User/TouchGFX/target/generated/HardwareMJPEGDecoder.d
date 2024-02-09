@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/HardwareMJPEGDecoder.o: \
- C:/TouchGFXProjects/VS_games/TouchGFX/target/generated/HardwareMJPEGDecoder.cpp \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/target/generated/HardwareMJPEGDecoder.cpp \
  ../../TouchGFX/target/generated/HardwareMJPEGDecoder.hpp \
  ../../TouchGFX/target/generated/MJPEGDecoder.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

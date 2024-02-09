@@ -27,8 +27,8 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:84:41:virtual const UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	1
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_authorized_screen/screen_authorizedViewBase.cpp:67:1:screen_authorizedViewBase::~screen_authorizedViewBase()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_authorized_screen/screen_authorizedViewBase.cpp:72:6:virtual void screen_authorizedViewBase::setupScreen()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/screen_authorized_screen/screen_authorizedViewBase.cpp:67:1:screen_authorizedViewBase::~screen_authorizedViewBase()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/screen_authorized_screen/screen_authorizedViewBase.cpp:72:6:virtual void screen_authorizedViewBase::setupScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<screen_authorizedViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	1
@@ -40,10 +40,10 @@ C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_authori
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<screen_authorizedViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_authorized_screen/screen_authorizedViewBase.cpp:67:1:virtual screen_authorizedViewBase::~screen_authorizedViewBase()	1
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_authorized_screen/screen_authorizedViewBase.cpp:77:6:void screen_authorizedViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	2
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/screen_authorized_screen/screen_authorizedViewBase.cpp:67:1:virtual screen_authorizedViewBase::~screen_authorizedViewBase()	1
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/screen_authorized_screen/screen_authorizedViewBase.cpp:77:6:void screen_authorizedViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	10
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:127:18:virtual void touchgfx::TextArea::setXBaselineY(int16_t, int16_t)	5
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	14
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_authorized_screen/screen_authorizedViewBase.cpp:9:1:screen_authorizedViewBase::screen_authorizedViewBase()	9
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/screen_authorized_screen/screen_authorizedViewBase.cpp:9:1:screen_authorizedViewBase::screen_authorizedViewBase()	9

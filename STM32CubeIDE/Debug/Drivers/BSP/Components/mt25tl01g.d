@@ -1,6 +1,6 @@
 Drivers/BSP/Components/mt25tl01g.o: \
- C:/TouchGFXProjects/VS_games/Drivers/BSP/Components/mt25tl01g/mt25tl01g.c \
- C:/TouchGFXProjects/VS_games/Drivers/BSP/Components/mt25tl01g/mt25tl01g.h \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Drivers/BSP/Components/mt25tl01g/mt25tl01g.c \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Drivers/BSP/Components/mt25tl01g/mt25tl01g.h \
  ../../Core/Inc/mt25tl01g_conf.h \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h \
@@ -45,7 +45,7 @@ Drivers/BSP/Components/mt25tl01g.o: \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
-C:/TouchGFXProjects/VS_games/Drivers/BSP/Components/mt25tl01g/mt25tl01g.h:
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Drivers/BSP/Components/mt25tl01g/mt25tl01g.h:
 ../../Core/Inc/mt25tl01g_conf.h:
 ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h:

@@ -14,3 +14,9 @@ void screen_lockedView::tearDownScreen()
 {
     screen_lockedViewBase::tearDownScreen();
 }
+
+void screen_lockedView::authTransition() {
+
+	application().gotoscreen_authorizedScreenSlideTransitionEast();
+
+}

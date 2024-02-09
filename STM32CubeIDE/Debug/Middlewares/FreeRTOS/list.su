@@ -1,5 +1,5 @@
-C:/TouchGFXProjects/VS_games/Middlewares/Third_Party/FreeRTOS/Source/list.c:37:6:vListInitialise	0	static
-C:/TouchGFXProjects/VS_games/Middlewares/Third_Party/FreeRTOS/Source/list.c:62:6:vListInitialiseItem	0	static
-C:/TouchGFXProjects/VS_games/Middlewares/Third_Party/FreeRTOS/Source/list.c:74:6:vListInsertEnd	4	static
-C:/TouchGFXProjects/VS_games/Middlewares/Third_Party/FreeRTOS/Source/list.c:103:6:vListInsert	8	static
-C:/TouchGFXProjects/VS_games/Middlewares/Third_Party/FreeRTOS/Source/list.c:170:13:uxListRemove	4	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Middlewares/Third_Party/FreeRTOS/Source/list.c:37:6:vListInitialise	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Middlewares/Third_Party/FreeRTOS/Source/list.c:62:6:vListInitialiseItem	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Middlewares/Third_Party/FreeRTOS/Source/list.c:74:6:vListInsertEnd	4	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Middlewares/Third_Party/FreeRTOS/Source/list.c:103:6:vListInsert	8	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Middlewares/Third_Party/FreeRTOS/Source/list.c:170:13:uxListRemove	4	static

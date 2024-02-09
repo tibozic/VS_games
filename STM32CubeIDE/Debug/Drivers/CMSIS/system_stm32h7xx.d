@@ -1,5 +1,5 @@
 Drivers/CMSIS/system_stm32h7xx.o: \
- C:/TouchGFXProjects/VS_games/Core/Src/system_stm32h7xx.c \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Core/Src/system_stm32h7xx.c \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h \
  ../../Drivers/CMSIS/Include/core_cm7.h \

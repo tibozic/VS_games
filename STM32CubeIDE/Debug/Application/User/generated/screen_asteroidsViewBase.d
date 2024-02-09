@@ -1,5 +1,5 @@
 Application/User/generated/screen_asteroidsViewBase.o: \
- C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroids_screen/screen_asteroidsViewBase.cpp \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/TouchGFX/generated/gui_generated/src/screen_asteroids_screen/screen_asteroidsViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_asteroids_screen/screen_asteroidsViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
@@ -42,11 +42,11 @@ Application/User/generated/screen_asteroidsViewBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
- C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
- C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/ship_direction.h \
+ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/STM32CubeIDE/Application/User/my_files/ship_direction.h \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
@@ -118,11 +118,11 @@ Application/User/generated/screen_asteroidsViewBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
-C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h:
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h:
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp:
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:
-C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/ship_direction.h:
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/STM32CubeIDE/Application/User/my_files/ship_direction.h:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:

@@ -4,6 +4,7 @@
 #include <string.h>
 
 #include "score_entry.h"
+#include <stdint.h>
 
 
 
@@ -34,9 +35,10 @@ public:
 
     void update_scoreboard();
 
-    void login(int tag_id);
+    void login(uint32_t tag_id);
     char* get_player_name();
     int get_player_id();
+    void check_tag_card_scan();
 
     score_entry scores[5];
 
