@@ -45,6 +45,8 @@ protected:
     touchgfx::Unicode::UnicodeChar lbl_nameBuffer[LBL_NAME_SIZE];
     static const uint16_t LBL_HIGH_SCORE_SIZE = 6;
     touchgfx::Unicode::UnicodeChar lbl_high_scoreBuffer[LBL_HIGH_SCORE_SIZE];
+    static const uint16_t LBL_TAG_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar lbl_tagBuffer[LBL_TAG_SIZE];
 
 private:
 

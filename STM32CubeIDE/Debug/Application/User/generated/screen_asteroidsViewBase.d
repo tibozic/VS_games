@@ -42,6 +42,7 @@ Application/User/generated/screen_asteroidsViewBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
+ C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
@@ -117,6 +118,7 @@ Application/User/generated/screen_asteroidsViewBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
+C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h:
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../../TouchGFX/gui/include/gui/screen_asteroids_screen/screen_asteroidsPresenter.hpp:
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:

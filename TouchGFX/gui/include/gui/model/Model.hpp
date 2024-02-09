@@ -1,7 +1,11 @@
 #ifndef MODEL_HPP
 #define MODEL_HPP
 
+#include <string.h>
+
 #include "score_entry.h"
+
+
 
 class ModelListener;
 
@@ -30,10 +34,16 @@ public:
 
     void update_scoreboard();
 
+    void login(int tag_id);
+    char* get_player_name();
+    int get_player_id();
 
     score_entry scores[5];
 
 protected:
+    char player_name[20] = "Guest";
+    int player_id = 0;
+
     ModelListener* modelListener;
 };
 

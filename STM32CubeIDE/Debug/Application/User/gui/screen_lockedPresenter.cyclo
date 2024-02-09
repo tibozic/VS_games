@@ -1,0 +1,15 @@
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:18:18:virtual void ModelListener::move_ship()	1
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:19:18:virtual void ModelListener::move_bullets()	1
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:20:18:virtual void ModelListener::move_rocks()	1
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:22:18:virtual bool ModelListener::is_asteroids_game_started()	1
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:24:18:virtual void ModelListener::check_ship_collisions()	1
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::check_bullet_collisions()	1
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:27:18:virtual void ModelListener::set_allowed_to_shoot(bool)	1
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:29:18:virtual void ModelListener::set_invincible(bool)	1
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:31:18:virtual void ModelListener::update_scoreboard()	1
+../../TouchGFX/gui/include/gui/screen_locked_screen/screen_lockedPresenter.hpp:28:13:screen_lockedPresenter::~screen_lockedPresenter()	1
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_locked_screen/screen_lockedPresenter.cpp:10:6:virtual void screen_lockedPresenter::activate()	1
+../../TouchGFX/gui/include/gui/screen_locked_screen/screen_lockedPresenter.hpp:28:13:virtual screen_lockedPresenter::~screen_lockedPresenter()	1
+../../TouchGFX/gui/include/gui/screen_locked_screen/screen_lockedPresenter.hpp:28:13:virtual void* screen_lockedPresenter::_ZThn4_N22screen_lockedPresenterD1Ev()	1
+../../TouchGFX/gui/include/gui/screen_locked_screen/screen_lockedPresenter.hpp:28:13:virtual void* screen_lockedPresenter::_ZThn4_N22screen_lockedPresenterD0Ev()	1
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_locked_screen/screen_lockedPresenter.cpp:4:1:screen_lockedPresenter::screen_lockedPresenter(screen_lockedView&)	1

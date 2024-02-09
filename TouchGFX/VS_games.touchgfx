@@ -171,7 +171,7 @@
                 "Name": "lbl_name",
                 "X": 106,
                 "Y": 33,
-                "Width": 88,
+                "Width": 189,
                 "Height": 30,
                 "TextId": "__SingleUse_XBZ0",
                 "TextRotation": "0",
@@ -203,13 +203,15 @@
                 "Name": "lbl_tag",
                 "X": 105,
                 "Y": 89,
-                "Width": 139,
+                "Width": 145,
                 "Height": 24,
                 "TextId": "__SingleUse_YUQU",
                 "TextRotation": "0",
                 "AutoSize": true,
                 "Wildcard1": {
-                  "TextId": "user_tag_id"
+                  "TextId": "user_tag_id",
+                  "UseBuffer": true,
+                  "BufferSize": 6
                 }
               }
             ]

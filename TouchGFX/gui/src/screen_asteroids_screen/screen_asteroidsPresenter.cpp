@@ -48,7 +48,8 @@ int screen_asteroidsPresenter::new_score_position(unsigned int score)
 
 void screen_asteroidsPresenter::game_over()
 {
-	char player_name[] = "Timi";
+	model->get_player_name();
+	char *player_name = model->get_player_name();
 	game_started = false;
 
 	// update the scoreboard
@@ -58,7 +59,7 @@ void screen_asteroidsPresenter::game_over()
 		strcpy(new_score_entry.player_name, player_name);
 		new_score_entry.player_score = score;
 
-		for(int i = 3; i > score_position; i--) {
+		for(int i = 3; i >= score_position; i--) {
 			model->scores[i+1] = model->scores[i];
 		}
 

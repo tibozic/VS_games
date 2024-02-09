@@ -55,7 +55,8 @@ screen_authorizedViewBase::screen_authorizedViewBase() :
     lbl_tag.setXY(105, 89);
     lbl_tag.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     lbl_tag.setLinespacing(0);
-    lbl_tag.setWildcard(touchgfx::TypedText(T_USER_TAG_ID).getText());
+    Unicode::snprintf(lbl_tagBuffer, LBL_TAG_SIZE, "%s", touchgfx::TypedText(T_USER_TAG_ID).getText());
+    lbl_tag.setWildcard(lbl_tagBuffer);
     lbl_tag.resizeToCurrentText();
     lbl_tag.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YUQU));
     container_user_data.add(lbl_tag);

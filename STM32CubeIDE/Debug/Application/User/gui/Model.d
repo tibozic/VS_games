@@ -1,6 +1,7 @@
 Application/User/gui/Model.o: \
  C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/model/Model.cpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
+ C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
@@ -14,6 +15,7 @@ Application/User/gui/Model.o: \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
+C:/TouchGFXProjects/VS_games/STM32CubeIDE/Application/User/my_files/score_entry.h:
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:

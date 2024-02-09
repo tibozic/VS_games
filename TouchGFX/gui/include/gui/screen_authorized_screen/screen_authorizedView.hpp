@@ -11,6 +11,8 @@ public:
     virtual ~screen_authorizedView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
+    virtual void set_player_data(char *name, int player_id);
 protected:
 };
 

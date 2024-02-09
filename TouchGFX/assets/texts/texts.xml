@@ -55,7 +55,7 @@
         <Translation Language="GB">Scoreboard</Translation>
       </Text>
       <Text Id="user_tag_id" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">NONE</Translation>
+        <Translation Language="GB">00000</Translation>
       </Text>
       <Text Id="user_high_score" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">0</Translation>
@@ -67,7 +67,7 @@
         <Translation Language="GB">High Score: &lt;value&gt;</Translation>
       </Text>
       <Text Id="user_name" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Guest</Translation>
+        <Translation Language="GB">AAAAAAAAA</Translation>
       </Text>
       <Text Id="__SingleUse_XBZ0" Alignment="Left" TypographyId="Medium">
         <Translation Language="GB">&lt;value&gt;</Translation>

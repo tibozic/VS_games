@@ -9,8 +9,8 @@
 ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:16:13:FrontendApplicationBase::~FrontendApplicationBase()	0	static
 ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:18:18:virtual void FrontendApplicationBase::changeToStartScreen()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp:35:18:virtual void touchgfx::NoTransition::handleTickEvent()	0	static
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:39:7:touchgfx::SlideTransition<touchgfx::EAST>::~SlideTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:39:7:touchgfx::SlideTransition<touchgfx::WEST>::~SlideTransition()	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:39:7:touchgfx::SlideTransition<touchgfx::EAST>::~SlideTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp:31:7:touchgfx::NoTransition::~NoTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:touchgfx::Callback<FrontendApplicationBase>::~Callback()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = FrontendApplicationBase]	0	static
@@ -18,20 +18,26 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp:31:7:virtual touchgfx::NoTransition::~NoTransition()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:virtual touchgfx::Callback<FrontendApplicationBase>::~Callback()	8	static
 ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:16:13:virtual FrontendApplicationBase::~FrontendApplicationBase()	8	static
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:39:7:virtual touchgfx::SlideTransition<touchgfx::EAST>::~SlideTransition()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:39:7:virtual touchgfx::SlideTransition<touchgfx::WEST>::~SlideTransition()	8	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:39:7:virtual touchgfx::SlideTransition<touchgfx::EAST>::~SlideTransition()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:89:18:virtual void touchgfx::Transition::invalidate()	8	static
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:146:18:void touchgfx::SlideTransition<templateDirection>::tearDown() [with touchgfx::Direction templateDirection = touchgfx::EAST]	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:146:18:void touchgfx::SlideTransition<templateDirection>::tearDown() [with touchgfx::Direction templateDirection = touchgfx::WEST]	0	static
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:87:18:void touchgfx::SlideTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::EAST]	16	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:146:18:void touchgfx::SlideTransition<templateDirection>::tearDown() [with touchgfx::Direction templateDirection = touchgfx::EAST]	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:87:18:void touchgfx::SlideTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::WEST]	16	static
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:154:18:void touchgfx::SlideTransition<templateDirection>::init() [with touchgfx::Direction templateDirection = touchgfx::EAST]	16	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:87:18:void touchgfx::SlideTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::EAST]	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:154:18:void touchgfx::SlideTransition<templateDirection>::init() [with touchgfx::Direction templateDirection = touchgfx::WEST]	16	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:154:18:void touchgfx::SlideTransition<templateDirection>::init() [with touchgfx::Direction templateDirection = touchgfx::EAST]	16	static
+C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:86:6:void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionWestImpl()	40	static
 ../../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:59:18:virtual void touchgfx::MVPApplication::handlePendingScreenTransition()	16	static
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:56:6:void FrontendApplicationBase::gotoscreen_game_selectScreenNoTransitionImpl()	40	static
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:67:6:void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionWestImpl()	40	static
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:43:6:void FrontendApplicationBase::gotoscreen_asteroidsScreenSlideTransitionEastImpl()	40	static
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:19:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	16	static
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:37:6:void FrontendApplicationBase::gotoscreen_asteroidsScreenSlideTransitionEast()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:50:6:void FrontendApplicationBase::gotoscreen_game_selectScreenNoTransition()	0	static
-C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:61:6:void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionWest()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:49:6:void FrontendApplicationBase::gotoscreen_lockedScreenNoTransitionImpl()	40	static
+C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:62:6:void FrontendApplicationBase::gotoscreen_authorizedScreenSlideTransitionEastImpl()	40	static
+C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:99:6:void FrontendApplicationBase::gotoscreen_scoreboardScreenSlideTransitionEastImpl()	40	static
+C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:75:6:void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionEastImpl()	40	static
+C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:112:6:void FrontendApplicationBase::gotoscreen_asteroidsScreenSlideTransitionEastImpl()	40	static
+C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:25:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	16	static
+C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:43:6:void FrontendApplicationBase::gotoscreen_lockedScreenNoTransition()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:56:6:void FrontendApplicationBase::gotoscreen_authorizedScreenSlideTransitionEast()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:69:6:void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionEast()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:80:6:void FrontendApplicationBase::gotoscreen_game_selectScreenSlideTransitionWest()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:93:6:void FrontendApplicationBase::gotoscreen_scoreboardScreenSlideTransitionEast()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:106:6:void FrontendApplicationBase::gotoscreen_asteroidsScreenSlideTransitionEast()	0	static

@@ -60,6 +60,34 @@ void Model::invincibility_timer_ended()
 	}
 }
 
+void Model::login(int tag_id)
+{
+	char name[20];
+
+	if( tag_id == 1 ) {
+		strncpy(name, "Timi", 19);
+	}
+	else if( tag_id == 2 ) {
+		strncpy(name, "Nejc", 19);
+	}
+	else {
+		strncpy(name, "Guest", 19);
+	}
+
+	player_id = tag_id;
+	strncpy(player_name, name, 20);
+}
+
+char* Model::get_player_name()
+{
+	return player_name;
+}
+
+int Model::get_player_id()
+{
+	return player_id;
+}
+
 void Model::update_scoreboard()
 {
 	modelListener->update_scoreboard();

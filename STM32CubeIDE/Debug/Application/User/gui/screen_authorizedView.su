@@ -1,0 +1,9 @@
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_authorized_screen/screen_authorizedView.cpp:13:6:virtual void screen_authorizedView::tearDownScreen()	0	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_authorized_screen/screen_authorizedView.cpp:18:6:virtual void screen_authorizedView::set_player_data(char*, int)	56	static
+../../TouchGFX/gui/include/gui/screen_authorized_screen/screen_authorizedView.hpp:11:13:screen_authorizedView::~screen_authorizedView()	8	static
+../../TouchGFX/gui/include/gui/screen_authorized_screen/screen_authorizedView.hpp:11:13:virtual screen_authorizedView::~screen_authorizedView()	8	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_authorized_screen/screen_authorizedView.cpp:3:1:screen_authorizedView::screen_authorizedView()	8	static
+C:/TouchGFXProjects/VS_games/TouchGFX/gui/src/screen_authorized_screen/screen_authorizedView.cpp:8:6:virtual void screen_authorizedView::setupScreen()	0	static
