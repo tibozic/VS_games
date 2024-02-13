@@ -63,9 +63,6 @@
       <Text Id="__SingleUse_YUQU" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Tag ID: &lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_0N4R" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">High Score: &lt;value&gt;</Translation>
-      </Text>
       <Text Id="user_name" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">AAAAAAAAA</Translation>
       </Text>

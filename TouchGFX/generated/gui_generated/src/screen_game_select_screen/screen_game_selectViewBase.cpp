@@ -4,6 +4,7 @@
 #include <gui_generated/screen_game_select_screen/screen_game_selectViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
 screen_game_selectViewBase::screen_game_selectViewBase() :
     flexButtonCallback(this, &screen_game_selectViewBase::flexButtonCallbackHandler)
@@ -47,6 +48,25 @@ screen_game_selectViewBase::screen_game_selectViewBase() :
     btn_scoreboard.add(lbl_scoreboard);
 
     add(btn_scoreboard);
+
+    btn_logout.setPosition(0, 0, 50, 50);
+    _btn_logout.setBoxWithBorderPosition(0, 0, 50, 50);
+    _btn_logout.setBorderSize(5);
+    _btn_logout.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    _btn_logout.setAction(flexButtonCallback);
+    _btn_logout.setPosition(0, 0, 50, 50);
+    btn_logout.add(_btn_logout);
+
+    background_light_grey.setPosition(0, 0, 50, 50);
+    background_light_grey.setColor(touchgfx::Color::getColorFromRGB(140, 140, 140));
+    btn_logout.add(background_light_grey);
+
+    icon_lock.setBitmap(touchgfx::Bitmap(BITMAP_LOCK_ID));
+    icon_lock.setPosition(0, 0, 50, 50);
+    icon_lock.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    btn_logout.add(icon_lock);
+
+    add(btn_logout);
 }
 
 screen_game_selectViewBase::~screen_game_selectViewBase()
@@ -74,5 +94,12 @@ void screen_game_selectViewBase::flexButtonCallbackHandler(const touchgfx::Abstr
         //When _btn_scoreboard clicked change screen to screen_scoreboard
         //Go to screen_scoreboard with screen transition towards East
         application().gotoscreen_scoreboardScreenSlideTransitionEast();
+    }
+    if (&src == &_btn_logout)
+    {
+        //intr_logout
+        //When _btn_logout clicked change screen to screen_locked
+        //Go to screen_locked with screen transition towards West
+        application().gotoscreen_lockedScreenSlideTransitionWest();
     }
 }

@@ -11,6 +11,7 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/ScalableImage.hpp>
 
 class screen_game_selectViewBase : public touchgfx::View<screen_game_selectPresenter>
 {
@@ -35,6 +36,10 @@ protected:
     touchgfx::Container btn_scoreboard;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  _btn_scoreboard;
     touchgfx::TextArea lbl_scoreboard;
+    touchgfx::Container btn_logout;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  _btn_logout;
+    touchgfx::Box background_light_grey;
+    touchgfx::ScalableImage icon_lock;
 
 private:
 

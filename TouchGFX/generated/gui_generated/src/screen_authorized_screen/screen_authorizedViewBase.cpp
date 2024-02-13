@@ -43,15 +43,6 @@ screen_authorizedViewBase::screen_authorizedViewBase() :
     lbl_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_XBZ0));
     container_user_data.add(lbl_name);
 
-    lbl_high_score.setXY(106, 65);
-    lbl_high_score.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    lbl_high_score.setLinespacing(0);
-    Unicode::snprintf(lbl_high_scoreBuffer, LBL_HIGH_SCORE_SIZE, "%s", touchgfx::TypedText(T_USER_HIGH_SCORE).getText());
-    lbl_high_score.setWildcard(lbl_high_scoreBuffer);
-    lbl_high_score.resizeToCurrentText();
-    lbl_high_score.setTypedText(touchgfx::TypedText(T___SINGLEUSE_0N4R));
-    container_user_data.add(lbl_high_score);
-
     lbl_tag.setXY(105, 89);
     lbl_tag.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     lbl_tag.setLinespacing(0);

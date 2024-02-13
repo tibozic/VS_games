@@ -23,6 +23,8 @@ public:
     // screen_locked
     void gotoscreen_lockedScreenNoTransition();
 
+    void gotoscreen_lockedScreenSlideTransitionWest();
+
     // screen_authorized
     void gotoscreen_authorizedScreenSlideTransitionEast();
 
@@ -44,6 +46,8 @@ protected:
 
     // screen_locked
     void gotoscreen_lockedScreenNoTransitionImpl();
+
+    void gotoscreen_lockedScreenSlideTransitionWestImpl();
 
     // screen_authorized
     void gotoscreen_authorizedScreenSlideTransitionEastImpl();

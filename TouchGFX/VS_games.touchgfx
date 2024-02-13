@@ -184,22 +184,6 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "lbl_high_score",
-                "X": 106,
-                "Y": 65,
-                "Width": 138,
-                "Height": 24,
-                "TextId": "__SingleUse_0N4R",
-                "TextRotation": "0",
-                "AutoSize": true,
-                "Wildcard1": {
-                  "TextId": "user_high_score",
-                  "UseBuffer": true,
-                  "BufferSize": 6
-                }
-              },
-              {
-                "Type": "TextArea",
                 "Name": "lbl_tag",
                 "X": 105,
                 "Y": 89,
@@ -364,6 +348,68 @@
                 "AutoSize": true
               }
             ]
+          },
+          {
+            "Type": "Container",
+            "Name": "btn_logout",
+            "Width": 50,
+            "Height": 50,
+            "Components": [
+              {
+                "Type": "FlexButton",
+                "Name": "_btn_logout",
+                "Width": 50,
+                "Height": 50,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 50,
+                    "Height": 50,
+                    "LockToFlexButtonSize": true,
+                    "BorderSize": 5,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Box",
+                "Name": "background_light_grey",
+                "Width": 50,
+                "Height": 50,
+                "Color": {
+                  "Red": 140,
+                  "Green": 140,
+                  "Blue": 140
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "icon_lock",
+                "Width": 50,
+                "Height": 50,
+                "Filename": "lock.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -391,6 +437,19 @@
               "ScreenTransitionType": "ScreenTransitionSlide",
               "ScreenTransitionDirection": "East",
               "ActionComponent": "screen_scoreboard"
+            }
+          },
+          {
+            "InteractionName": "intr_logout",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "_btn_logout"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "screen_locked"
             }
           }
         ]

@@ -51,6 +51,17 @@ void FrontendApplicationBase::gotoscreen_lockedScreenNoTransitionImpl()
     touchgfx::makeTransition<screen_lockedView, screen_lockedPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
+void FrontendApplicationBase::gotoscreen_lockedScreenSlideTransitionWest()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_lockedScreenSlideTransitionWestImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoscreen_lockedScreenSlideTransitionWestImpl()
+{
+    touchgfx::makeTransition<screen_lockedView, screen_lockedPresenter, touchgfx::SlideTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
 // screen_authorized
 
 void FrontendApplicationBase::gotoscreen_authorizedScreenSlideTransitionEast()
