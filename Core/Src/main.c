@@ -946,7 +946,6 @@ void MFRC_Ch_fun(void *argument)
 	 */
 	volatile uint32_t converted;
 	uint8_t myID[5];
-	uint8_t cmp[] = {145, 221, 185, 27};
 	MFRC522_Init();
   /* Infinite loop */
   for(;;) {

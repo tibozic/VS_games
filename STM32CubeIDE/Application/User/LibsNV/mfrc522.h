@@ -18,6 +18,7 @@
  */
 
 #define DUMMY 0x00 // this is idiotic
+#define TimerIRq	0x01
 
 // commands
 #define CMD_IDLE		0x00 // no action, cancels current command execution
