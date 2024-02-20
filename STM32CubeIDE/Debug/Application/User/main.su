@@ -7,5 +7,5 @@ C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Core/Src/main.c:172:6:chec
 C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Core/Src/main.c:175:10:convert_array_to_int	0	static
 C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Core/Src/main.c:330:6:SystemClock_Config	136	static
 C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Core/Src/main.c:195:5:main	112	static,ignoring_inline_asm
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Core/Src/main.c:1041:6:HAL_TIM_PeriodElapsedCallback	0	static
-C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Core/Src/main.c:1058:6:Error_Handler	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Core/Src/main.c:1042:6:HAL_TIM_PeriodElapsedCallback	0	static
+C:/Users/nejcv/Desktop/Nejc/Fakulteta/VS_SRC/VS_games/Core/Src/main.c:1059:6:Error_Handler	0	static

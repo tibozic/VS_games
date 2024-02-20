@@ -945,6 +945,7 @@ void MFRC_Ch_fun(void *argument)
 	 * 2. Begin screen transition
 	 */
 	volatile uint32_t converted;
+	// store ID of card here
 	uint8_t myID[5];
 	MFRC522_Init();
   /* Infinite loop */

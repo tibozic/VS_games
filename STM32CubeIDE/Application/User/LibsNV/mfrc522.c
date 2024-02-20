@@ -49,7 +49,12 @@ enum MFRC522_Status __MFRC522_Compute(uint8_t, uint8_t *, uint8_t, uint8_t *, ui
   */
 void MFRC522_Init(void) {
 
+	// Initializes the MFRC522 by reseting it and configuring its registers
+
+	// reset
 	__MFRC522_Reset();
+
+	// set the timer mode and prescaler
 
 	// address, value to be written to the address
 	// prescaler is Where TPreScaler = [TPrescaler_Hi:TPrescaler_Lo] = 1101 0011 1110 (12b) = 3390 = D3E
@@ -80,6 +85,8 @@ void MFRC522_Init(void) {
 	// The ratio of the output signal power to the input signal power of a receiver, usually expressed in decibels
 	__MFRC522_Write(REG_RF_GAIN, 0x70);
 
+	// enable the auto timer for transmission and set mode
+
 	// controls the setting of the transmission modulation
 	// write 0x40 = 64 = 01000000
 	// only bit 6 is used, which is set to 1
@@ -97,6 +104,7 @@ void MFRC522_Init(void) {
 	// TxWaitRF = 1, which means transmitter can only be started if an RF field is generated
 	__MFRC522_Write(REG_MODE, 0x3D);
 
+	// turn on the antenna
 	__MFRC522_Antenna_On();
 
 }
@@ -163,6 +171,12 @@ void MFRC522_Print_Terminal(uint8_t *myID) {
 
 // private functions go here
 
+/**
+  * @brief Sends a request command to a tag or card to initiate communication
+  * @param command:		command to executed (usually CMD_TRANSCEIVE)
+  * @param *myID:		array where ID of card will be stored
+  * @retval MFRC522_Status
+  */
 enum MFRC522_Status __MFRC522_Req(uint8_t command, uint8_t *myID) {
 
 	enum MFRC522_Status status;
@@ -177,6 +191,7 @@ enum MFRC522_Status __MFRC522_Req(uint8_t command, uint8_t *myID) {
 	__MFRC522_Write(REG_BIT_FRAMING, 0x07);
 	myID[0] = command;
 
+	// send request to card
 	// if status is different than OK or received different number of bits from 16
 	if (((status = __MFRC522_Compute(CMD_TRANSCEIVE, myID, 1, myID, &rcv)) != MFRC522_OK ) || (rcv != 0x10)) {
 		status = MFRC522_ERR;
@@ -186,11 +201,20 @@ enum MFRC522_Status __MFRC522_Req(uint8_t command, uint8_t *myID) {
 
 }
 
+/**
+  * @brief Execute a command on the MFRC522 and communicate with tag/card
+  * @param command:			command to executed (usually CMD_TRANSCEIVE)
+  * @param *input:			array where ID of card will be stored
+  * @param inputLenght:		size of input array
+  * @param *output:			array of bytes received from tag/card
+  * @param *outputLength:	size of output array
+  * @retval MFRC522_Status
+  */
 enum MFRC522_Status __MFRC522_Compute(uint8_t command, uint8_t *input, uint8_t inputLength, uint8_t *output, uint16_t *outputLength) {
 
 	enum MFRC522_Status status = MFRC522_ERR; // assume error
 	uint8_t enIrq = 0x00, // enable interrupt on MFCR522
-			waitIrq = 0x00,
+			waitIrq = 0x00, // interrupt request enable flag
 			lastBits,
 			value;
 	uint16_t wait = 2000; // this is according to the clock frequency adjustment
@@ -208,6 +232,8 @@ enum MFRC522_Status __MFRC522_Compute(uint8_t command, uint8_t *input, uint8_t i
 			break;
 	}
 
+	// enable interrupts and reset FIFO buffer
+
 	// enable and disable interrupt request control bits
 	// signal on pin IRQ is inverted with respect to the Status1Reg register’s IRq bit
 	__MFRC522_Write(REG_EN_IRQ, enIrq | 0x80);
@@ -222,6 +248,7 @@ enum MFRC522_Status __MFRC522_Compute(uint8_t command, uint8_t *input, uint8_t i
 	// reading this bit always returns 0
 	Set_Bits(REG_FIFO_LEVEL, 0x80)
 
+	// put MFRC522 into idle state
 	// starts and stops command execution
 	__MFRC522_Write(REG_CMD, CMD_IDLE);
 
@@ -238,7 +265,7 @@ enum MFRC522_Status __MFRC522_Compute(uint8_t command, uint8_t *input, uint8_t i
 	// writes [3:0] -> 4 bits that indicate a command
 	__MFRC522_Write(REG_CMD, command);
 
-	// if that command is to transmits data from
+	// if that command is to transmit data from
 	// FIFO buffer to antenna and automatically
 	// activates the receiver after transmission
 	if (command == CMD_TRANSCEIVE) {
@@ -248,6 +275,7 @@ enum MFRC522_Status __MFRC522_Compute(uint8_t command, uint8_t *input, uint8_t i
 		Set_Bits(REG_BIT_FRAMING, 0x80)
 	}
 
+	// wait for command execution (timeout)
 	do {
 		// check in the interrupt request bits register
 		// check if we have detected the end of a valid data stream
@@ -256,10 +284,12 @@ enum MFRC522_Status __MFRC522_Compute(uint8_t command, uint8_t *input, uint8_t i
 		wait--;
 	} while ((wait != 0) && !(value & TimerIRq) && !(value & waitIrq));
 	// value & TimerIRq (0x01) means to check if the timer decremented its value to 0
+	// break if interrupt request received or timeout
 
 	// delete bit 7 from register adjustments for bit-oriented frame
 	Clear_Bits(REG_BIT_FRAMING, 0x80)
 
+	// check for errors and update status
 	// if an "timeout" did not occur
 	if (wait != 0) {
 		// error bits showing the error status of the last command executed
@@ -275,7 +305,8 @@ enum MFRC522_Status __MFRC522_Compute(uint8_t command, uint8_t *input, uint8_t i
 			if (value & enIrq & 0x01) {
 				status = MFRC522_ERR; // remove later
 			}
-			// if the command is
+			// read response data
+			// if the command is CMD_TRANSCEIVE
 			// transmits data from FIFO buffer to antenna and automatically
 			// activates the receiver after transmission
 			if (command == CMD_TRANSCEIVE) {
@@ -317,6 +348,10 @@ enum MFRC522_Status __MFRC522_Compute(uint8_t command, uint8_t *input, uint8_t i
 
 enum MFRC522_Status __MFRC522_Col(uint8_t *number) {
 
+	// send an anticollison command and
+	// perform an anticollison algorithm
+	// on tag/card to prevent multiple tags from responding
+
 	enum MFRC522_Status status;
 	uint8_t serNumCheck = 0, i = 0;
 	uint16_t dataSize;
@@ -335,9 +370,11 @@ enum MFRC522_Status __MFRC522_Col(uint8_t *number) {
 	if ((status = __MFRC522_Compute(CMD_TRANSCEIVE, number, 2, number, &dataSize)) == MFRC522_OK) {
 		// check card serial number
 		while (i<ID_BUFFER_SIZE) {
+			// calculate the XOR checksum on the first four bytes
 			serNumCheck ^= number[i];
 			i++;
 		}
+		// check, if the calculated checksum matches the last (fifth) byte
 		if (serNumCheck != number[i]) {
 			status = MFRC522_ERR;
 		}
@@ -359,8 +396,8 @@ void __MFRC522_Stop(void) {
 }
 
 /**
-  * @brief Calculate CRC
-  * @param *input:		buffer for CRC
+  * @brief Calculate CRC for the given input data
+  * @param *input:		input data for which to calculate CRC
   * @param *output:		array where CRC result will be stored
   * @param	length:		length of array
   * @retval None
@@ -426,11 +463,15 @@ HAL_StatusTypeDef __SPI_Write_Receive(uint8_t send, uint8_t *receive, uint16_t s
   */
 void __MFRC522_Antenna_On() {
 
+	// turns on the antenna of MFRC522 by setting the REG_TX_CONTROL to 0x03
+	// if it is already set, then this does nothing
+
 	// register being read:
 	// 	controls the logical behavior of the antenna driver pins TX1 and TX2
 	uint8_t rcv;
 	if (!((rcv = __MFRC522_Read(REG_TX_CONTROL)) & 0x03)) { // check if rcv is NOT 0x03 = 0011
 		// set the fist two bits to 1, without effecting any other bits (they stay the same)
+		// set register to 0x03S
 		Set_Bits(REG_TX_CONTROL, 0x03)
 	}
 	// 0x03 for this register means:
