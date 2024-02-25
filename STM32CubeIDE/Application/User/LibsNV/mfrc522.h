@@ -17,7 +17,7 @@
  * 	- version: Rev. 3.9 — 27 April 2016
  */
 
-#define DUMMY 0x00 // this is idiotic
+#define DUMMY 		0x00
 #define TimerIRq	0x01
 
 // commands

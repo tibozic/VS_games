@@ -123,7 +123,6 @@ enum MFRC522_Status MFRC522_Auth(uint8_t *myID) {
 		// if status is MFRC522_OK, then a card was detected
 		status = __MFRC522_Col(myID);
 	}
-	// if no card was detected, then send MFCR522 to sleep
 	__MFRC522_Stop();
 
 	return status;
@@ -253,7 +252,7 @@ enum MFRC522_Status __MFRC522_Compute(uint8_t command, uint8_t *input, uint8_t i
 	__MFRC522_Write(REG_CMD, CMD_IDLE);
 
 	// write data to the FIFO
-	for (int i = 0; i<inputLength; i++) {//  (wait < inputLength) {
+	for (int i = 0; i<inputLength; i++) {
 		// input and output of 64 byte FIFO buffer
 		//  data input and output port for the internal 64-byte FIFO buffer FIFO buffer acts as parallel in/parallel out converter for all serial data stream inputs and outputs
 		// the register takes a byte that is to be written to the FIFO
@@ -406,11 +405,10 @@ void __MFRC522_CRC(uint8_t *input, uint8_t *output, uint8_t lenght) {
 
 	uint8_t wait = 0xFF, value = 0;
 
-	// write to DivIrqReg register
+	// CRCIRq
 	// clear 0x04 = 00000100
-	// effect:	MFIN is active
-	//			this interrupt is set when either a rising or falling signal edge is
-	//			detected
+	// effect:
+	// 		the CalcCRC command is active and all data is processed
 	Clear_Bits(REG_IRQ_BITS2, 0x04)
 
 	// flush FIFO buffer
@@ -418,7 +416,7 @@ void __MFRC522_CRC(uint8_t *input, uint8_t *output, uint8_t lenght) {
 	// and ErrorReg register’s BufferOvfl bit
 	Set_Bits(REG_FIFO_LEVEL, 0x80)
 
-	for (int i = 0; i<lenght; i++) { //while (wait < lenght) {
+	for (int i = 0; i<lenght; i++) {
 		// write input to FIFO buffer
 		__MFRC522_Write(REG_FIFO_DATA, input[i]);
 	}
