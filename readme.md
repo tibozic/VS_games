@@ -1,7 +1,30 @@
-# STM32H750B-DK TBS
+# Igralna konzola z igro Asteroids na STM32H750
+Projekt implementira preprosto igralno konzolo na osnovi mikrokontrolerja STM32H750. <br>
+Konzola vključuje priljubljeno arkadno igro Asteroids in omogoča beleženje rezultatov igralcev s pomočjo RFID avtentikacije.
 
-The default IDE is set to STM32CubeIDE, to change IDE open the STM32H750B-DK.ioc with CubeMX and select from the supported IDEs (EWARM, MDK-ARM, and STM32CubeIDE). Supports flashing of the STM32H750B-DK board directly from TouchGFX Designer using GCC and STM32CubeProgrammer.Flashing the board requires STM32CubeProgrammer which can be downloaded from the ST webpage.
+## Funkcionalnosti konzole:
+1. Priredba igre Asteroids:
+- Klasična igra, kjer igralec upravlja vesoljsko ladjo in uničuje asteroide.
+- Igra uporablja grafiko in zaslon na dotik.
 
-This TBS is configured for 272 x 480 pixels 16bpp screen resolution.
+2. Avtentikacija igralcev z RFID:
+- Vsak igralec lahko uporablja RFID kartico za prijavo. Kartica vsebuje le ID igralca, ostali podatki se hranijo na konzoli.
+- Igralci, ki se ne prijavijo, lahko igrajo kot Guest, vendar njihov rezultat ni vezan na noben profil.
 
-Performance testing can be done using the GPIO pins designated with the following signals: VSYNC_FREQ - Pin PG3 (D2), RENDER_TIME - Pin PB7 (D0), FRAME_RATE - Pin PB6 (D1), MCU_ACTIVE - Pin PA6 (D3).
+3. Hranjenje rezultatov:
+- Konzola shranjuje profile igralcev in njihove dosežene rezultate lokalno na napravi.
+- Rezultati se resetirajo ob ponovnem zagonu konzole.
+
+## Tehnologije
+- C
+- RFID
+- SPI
+- UART
+- Timers
+- Tasks
+- Semaphores
+
+## Možne izboljšave
+- Več iger.
+- Persistentna hramba rezultatov.
+- Hranjenje 3rezultatov igralca na kartici.
