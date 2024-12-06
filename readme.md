@@ -27,4 +27,4 @@ Konzola vključuje priljubljeno arkadno igro Asteroids in omogoča beleženje re
 ## Možne izboljšave
 - Več iger.
 - Persistentna hramba rezultatov.
-- Hranjenje 3rezultatov igralca na kartici.
+- Hranjenje rezultatov igralca na kartici.
