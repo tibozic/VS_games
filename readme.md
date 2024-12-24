@@ -17,6 +17,8 @@ Konzola vključuje priljubljeno arkadno igro Asteroids in omogoča beleženje re
 
 ## Tehnologije
 - C
+- STM32
+- TouchGFX
 - RFID
 - SPI
 - UART
