@@ -1,4 +1,4 @@
-# Gaming Console with Asteroids Game on STM32H750  
+# Gaming Console with Asteroids Game on STM32H750   - [Slovenian README](README_SLO.md)
 This project implements a simple gaming console based on the STM32H750 microcontroller. <br>  
 The console includes the popular arcade game Asteroids and allows players' scores to be recorded through RFID authentication.
 
